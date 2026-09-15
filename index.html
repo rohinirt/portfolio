@@ -1,1644 +1,1502 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rohini Tembhurnikar</title>
-
-  <!--
-    - favicon
-  -->
-  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
-
-  <!--
-    - custom css link
-  -->
-  <link rel="stylesheet" href="./assets/css/style.css">
-
-  <!--
-    - google font link
-  -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rohini Tembhurnikar — Data Analyst</title>
+<meta name="description" content="Rohini Tembhurnikar — Data Analyst portfolio. Dashboards, SQL &amp; Python projects, and analytics case studies.">
+<link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+<link rel="stylesheet" href="./assets/css/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
-
 <body>
 
-  <!--
-    - #MAIN
-  -->
+<div class="bg-decor" aria-hidden="true">
+  <span class="blob-1"></span>
+  <span class="blob-2"></span>
+  <span class="blob-3"></span>
+</div>
 
-  <main>
+<!-- =========================================================
+     TOP NAVIGATION
+========================================================= -->
+<header class="topbar" data-topbar>
+  <div class="topbar-inner">
+    <a href="#" class="brand" data-nav-link data-target="home">
+      <span class="brand-mark"></span>
+      <span>Rohini</span>
+    </a>
 
-    <!--
-      - #SIDEBAR
-    -->
+    <ul class="nav-list" data-nav-list>
+      <li><button class="nav-link active" data-nav-link data-target="home">Home</button></li>
+      <li><button class="nav-link" data-nav-link data-target="about">About</button></li>
+      <li><button class="nav-link" data-nav-link data-target="resume">Resume</button></li>
+      <li><button class="nav-link" data-nav-link data-target="projects">Projects</button></li>
+      <li><button class="nav-link" data-nav-link data-target="contact">Contact</button></li>
+      <span class="nav-underline" data-nav-underline></span>
+    </ul>
 
-    <aside class="sidebar" data-sidebar>
+    <button class="btn btn-pine btn-sm nav-cta" data-nav-link data-target="contact">
+      <span>Let's Connect</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </button>
 
-      <div class="sidebar-info">
+    <button class="hamburger" data-hamburger aria-label="Toggle menu">
+      <span></span>
+    </button>
+  </div>
+</header>
 
-        <figure class="avatar-box">
-          <img src="./assets/images/rohini.jpg" alt="Rohini" width="80">
-        </figure>
+<main>
 
-        <div class="info-content">
-          <h1 class="name" title="Rohini Tembhurnikar">Rohini T</h1>
+<!-- =========================================================
+     HOME
+========================================================= -->
+<section class="page active" data-page="home" id="home">
 
-          <p class="title">Data Analyst</p>
-        </div>
-
-        <button class="info_more-btn" data-sidebar-btn>
-          <span>Show Contacts</span>
-
-          <ion-icon name="chevron-down"></ion-icon>
+  <div class="hero">
+    <div class="hero-copy">
+      <p class="eyebrow">Data Analyst</p>
+      <h1 class="h1">Turning Data into<br>Meaningful <span class="accent">Insights</span></h1>
+      <p class="lead">I analyze, visualize, and tell stories with data — helping teams move from raw numbers to decisions they can act on.</p>
+      <div class="hero-actions">
+        <button class="btn btn-coral" data-nav-link data-target="projects">
+          <span>View My Projects</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </button>
-
+        <a class="btn btn-outline" href="./assets/Resume.pdf" download>
+          <span>Download Resume</span>
+        </a>
       </div>
+    </div>
 
-      <div class="sidebar-info_more">
+    <div class="hero-visual">
+      <span class="blob"></span>
+      <figure class="hero-photo">
+        <img src="./assets/images/rohini.jpg" alt="Rohini Tembhurnikar">
+      </figure>
+      <span class="hero-tag">Data Drives<br>Better Decisions<span class="rule"></span></span>
+    </div>
+  </div>
 
-        <div class="separator"></div>
-
-        <ul class="contacts-list">
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="mail-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Email</p>
-
-              <a href="mailto:rohinitembhurnikar3@gmail.com" class="contact-link">rohinitembhurnikar3@gmail.com</a>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="phone-portrait-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Phone</p>
-
-              <a href="tel:+918010132326" class="contact-link">+91 80101 32326</a>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="calendar-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Birthday</p>
-
-              <time datetime="2002-04-27">April 27, 2002</time>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="location-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Location</p>
-
-              <address>Gondia, India</address>
-            </div>
-
-          </li>
-
-        </ul>
-
-        <div class="separator"></div>
-
-        <ul class="social-list">
-
-          <li class="social-item">
-            <a href="#" class="social-link">
-              <ion-icon name="logo-facebook"></ion-icon>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="#" class="social-link">
-              <ion-icon name="logo-twitter"></ion-icon>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="#" class="social-link">
-              <ion-icon name="logo-instagram"></ion-icon>
-            </a>
-          </li>
-
-        </ul>
-
+  <div class="kpi-row">
+    <div class="kpi">
+      <div class="kpi-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
       </div>
+      <div><div class="kpi-num">1+</div><div class="kpi-label">Years Experience</div></div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>
+      </div>
+      <div><div class="kpi-num">53</div><div class="kpi-label">Projects Completed</div></div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94Z"/></svg>
+      </div>
+      <div><div class="kpi-num">6+</div><div class="kpi-label">Tools &amp; Technologies</div></div>
+    </div>
+  </div>
 
-    </aside>
+  <div class="testimonials">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">Kind Words</p>
+        <h2 class="h2">Testimonials</h2>
+        <p>What managers, mentors and collaborators say about working with me.</p>
+      </div>
+      <div class="t-controls">
+        <button class="t-arrow" data-t-prev aria-label="Previous">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M15 6l-6 6 6 6"/></svg>
+        </button>
+        <button class="t-arrow" data-t-next aria-label="Next">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M9 6l6 6-6 6"/></svg>
+        </button>
+      </div>
+    </div>
 
-
-
-
-
-    <!--
-      - #main-content
-    -->
-
-    <div class="main-content">
-
-      <!--
-        - #NAVBAR
-      -->
-
-      <nav class="navbar">
-
-        <ul class="navbar-list">
-
-          <li class="navbar-item">
-            <button class="navbar-link  active" data-nav-link>About</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Resume</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Projects</button>
-          </li>
-
-        </ul>
-
-      </nav>
-
-
-      <!--
-        - #ABOUT
-      -->
-
-      <article class="about  active" data-page="about">
-
-        <header>
-          <h2 class="h2 article-title">About me</h2>
-        </header>
-
-        <section class="about-text">
-          <p>
-            Hi, I’m Rohini Tembhurnikar, a detail-oriented data analyst who thrives at the intersection of complex datasets, automation, and intuitive storytelling. 
-            With over a year of progressive experience, including high-impact analytics at Uber, I specialize in transforming raw numbers into strategic advantages.
-          </p>
-          <p>
-            Whether I'm architecting automated ETL pipelines, migrating interactive dashboards to streamline reporting, or writing complex Python and SQL scripts to clean high-volume data, my focus is always on operational efficiency and actionable clarity. 
-            Beyond the code, I bridge the gap between technical teams and global stakeholders to resolve discrepancies and align on key metrics.
-          </p>
-          <p><strong>My core technical toolkit includes:</strong></p>
-          <ul>
-          <li>⬤ <strong>Languages & Core:</strong> Python, SQL, Advanced Data Modeling</li>
-          <li>⬤ <strong>BI & Visualization:</strong> Tableau (Viz of the Day creator & community advocate), Looker Studio</li>
-          <li>⬤ <strong>Engineering & Operations:</strong> Automated ETL Pipelines, Data Migration, Cross-Functional Stakeholder Management</li>
-          </ul>
-    
- 
-        </section>
-
-
-        <!--
-          - service
-        -->
-
-        <section class="service">
-
-          <h3 class="h3 service-title">What i'm doing</h3>
-
-          <ul class="service-list">
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-design.svg
-                " alt="Real-Time Sports Analytics icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">ETL & Data Pipelines</h4>
-
-                <p class="service-item-text">
-                Automated end-to-end data workflows and consolidated fragmented sources using Python, SQL, and Google Sheets, reducing performance-tracking time by 40% and saving 10+ hours of manual weekly reporting.
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-dev.svg" alt="Predictive Modeling & Forecasting icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Dashboard Migration & BI</h4>
-
-                <p class="service-item-text">
-                  Designed interactive dashboards and migrated reporting systems in Tableau, Looker Studio, and Streamlit—replacing 20 manual spreadsheets and accelerating reporting efficiency by 20%.
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-app.svg" alt="Data Visualization & Storytelling icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Big Data & SQL Analytics</h4>
-
-                <p class="service-item-text">
-                  Performed complex data extraction, manipulation, and univariate/bivariate analysis across high-volume datasets (1M+ orders) to uncover key sales drivers and optimization strategies.
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-photo.svg" alt="Data Quality & Automation icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Data Quality & Cross-Functional Ops</h4>
-
-                <p class="service-item-text">
-                Partnered with engineering and global stakeholders to audit pipelines, web-scrape real-time data using Python (Pandas, NumPy, BeautifulSoup), and resolve discrepancies, improving data accuracy by 85%.
-                </p>
-              </div>
-
-            </li>
-
-          </ul>
-
-        </section>
-
-
-     
-        
- <!-- ===================== TESTIMONIALS ===================== -->
-
-<section class="testimonials">
-
-  <h3 class="h3 testimonials-title">Testimonials</h3>
-
-  <ul class="testimonials-list has-scrollbar">
-
-    <!-- Tasneem -->
-    <li class="testimonials-item">
-      <div class="content-card" data-testimonials-item>
-
-        <figure class="testimonials-avatar-box">
-          <img src="./assets/images/tasneem.jpg" alt="Tasneem Hesham" width="60" data-testimonials-avatar>
-        </figure>
-
-        <h4 class="h4 testimonials-item-title" data-testimonials-title>
-          Tasneem Hesham
-        </h4>
-
-        <!-- Hidden Role -->
-        <p class="testimonials-role" style="display: none;">
-        Global Quality Compliance - Program Specialist
-        </p>
-
-        <div class="testimonials-text" data-testimonials-text>
-          <p>
-          I had the pleasure of working with Rohini on several Payment Compliance Quality data projects, and I was consistently impressed by her expertise. She played a key role in building global dashboards for Payment Compliance Quality data, creating multiple views that made it easier to analyze and monitor quality trends. She also supported us in building the queues and queries for APAC Payment Compliance Quality programs, ensuring the data and reporting were aligned with our internal proceeses and regulatory requirements. 
-          </p>
-          <p>
-          What stood out most was how responsive and collaborative she was. Whether it was a planned project or an ad-hoc request, she was always willing to help, understand the requirement, and find the best way to deliver it.
-          </p>
-          <p>
-          I highly recommend Rohini to anyone looking for a skilled, reliable, and professional Data Analyst who is genuinely committed to supporting her stakeholders and delivering high-quality work.          
-          </p>
+    <div class="t-track-wrap">
+      <ul class="t-track" data-t-track>
+      <li class="t-card">
+        <div class="t-person">
+          <div class="t-avatar"><img src="./assets/images/tasneem.jpg" alt="Tasneem Hesham"></div>
+          <div>
+            <p class="t-name">Tasneem Hesham</p>
+            <p class="t-role">Global Quality Compliance – Program Specialist</p>
+          </div>
         </div>
-
-      </div>
-    </li>
-
-    <!-- Mary -->
-    <li class="testimonials-item">
-      <div class="content-card" data-testimonials-item>
-
-        <figure class="testimonials-avatar-box">
-          <img src="./assets/images/mary.png" alt="Mary Ann Simuangco" width="60" data-testimonials-avatar>
-        </figure>
-
-        <h4 class="h4 testimonials-item-title" data-testimonials-title>
-          Mary Ann Simuangco
-        </h4>
-
-        <p class="testimonials-role" style="display: none;">
-          Program Specialist, Uber
-        </p>
-
-        <div class="testimonials-text" data-testimonials-text>
-          <p>
-          Rohini is a fantastic collaborator who brings an impressive level of detail to everything she does. Throughout our project together, she proved to be thorough, meticulous, and incredibly cooperative, always willing to step up and work together to get the job done right. I only wish we had the opportunity to work together longer. 
-          Any team would be incredibly lucky to have her, and I am confident she will be a valuable asset wherever she goes.
-          </p>
+        <div class="t-text">
+          <p>I had the pleasure of working with Rohini on several Payment Compliance Quality data projects, and I was consistently impressed by her expertise. She played a key role in building global dashboards for Payment Compliance Quality data, creating multiple views that made it easier to analyze and monitor quality trends.</p>
+          <p>I highly recommend Rohini to anyone looking for a skilled, reliable, and professional Data Analyst who is genuinely committed to supporting her stakeholders and delivering high-quality work.</p>
         </div>
-
-      </div>
-    </li>
-
-    <!-- Penelope Apostolatou -->
-    <li class="testimonials-item">
-      <div class="content-card" data-testimonials-item>
-
-        <figure class="testimonials-avatar-box">
-          <img src="./assets/images/penelope.jpg" alt="Gaurav Rao" width="60" data-testimonials-avatar>
-        </figure>
-
-        <h4 class="h4 testimonials-item-title" data-testimonials-title>
-          Penelope Apostolatou
-        </h4>
-
-        <p class="testimonials-role" style="display: none;">
-          Global Quality Analytics Lead, Uber
-        </p>
-
-        <div class="testimonials-text" data-testimonials-text>
-          <p>
-          Rohini combines sharp analytical skills with reliable, cross-functional teamwork.
-          From identifying data discrepancies to designing intuitive dashboards, she approaches projects with a high standard for quality and user experience.
-          </p>
-          <p>
-          She navigates fast-paced environments effectively, keeps stakeholders clearly informed, and consistently turns complex data into actionable answers.
-          Any team would be lucky to have her proactive drive and attention to detail.          
-          </p>
+      </li>
+      <li class="t-card">
+        <div class="t-person">
+          <div class="t-avatar"><img src="./assets/images/mary.png" alt="Mary Ann Simuangco"></div>
+          <div>
+            <p class="t-name">Mary Ann Simuangco</p>
+            <p class="t-role">Program Specialist, Uber</p>
+          </div>
         </div>
-
-      </div>
-    </li>
-
-    <!-- Anany Porwal -->
-    <li class="testimonials-item">
-      <div class="content-card" data-testimonials-item>
-
-        <figure class="testimonials-avatar-box">
-          <img src="./assets/images/anany.jpg" alt="Anany Porwal" width="60" data-testimonials-avatar>
-        </figure>
-
-        <h4 class="h4 testimonials-item-title" data-testimonials-title>
-          Anany Porwal
-        </h4>
-
-        <p class="testimonials-role" style="display: none;">
-          Data Analytics Specialist, Uber
-        </p>
-
-        <div class="testimonials-text" data-testimonials-text>
-          <p>
-          I had the opportunity to mentor Rohini during her time with the Quality Analytics team at Uber, and she was a great teammate to work with.   
-          Rohini consistently demonstrated a strong sense of ownership, taking responsibility for her work and quickly picking up new skills and concepts. 
-          She delivered high-quality, impactful work and could be relied upon to follow through on her responsibilities. 
-          </p>
-          <p>
-          She also showed strong stakeholder management skills, communicating effectively and collaborating well across the team. Her technical proficiency in SQL, Python, Looker, and Tableau enabled her to translate data into meaningful insights and contribute to impactful outcomes for the team. 
-          Rohini is a quick learner, dependable teammate, and capable analytics professional. I enjoyed mentoring and working with her, and I’m confident she will bring the same ownership and impact to her future roles.          
-          </p>
+        <div class="t-text">
+          <p>Rohini is a fantastic collaborator who brings an impressive level of detail to everything she does. Throughout our project together, she proved to be thorough, meticulous, and incredibly cooperative, always willing to step up and work together to get the job done right.</p>
+          <p>Any team would be incredibly lucky to have her, and I am confident she will be a valuable asset wherever she goes.</p>
         </div>
-
-      </div>
-    </li>
-
-    <!-- Danish -->
-    <li class="testimonials-item">
-      <div class="content-card" data-testimonials-item>
-
-        <figure class="testimonials-avatar-box">
-          <img src="./assets/images/danish.jpg" alt="Danish Sayyed" width="60" data-testimonials-avatar>
-        </figure>
-
-        <h4 class="h4 testimonials-item-title" data-testimonials-title>
-          Danish Sayyed
-        </h4>
-
-        <p class="testimonials-role" style="display: none;">
-          VR Analyst, Hawk-Eye Innovations
-        </p>
-
-        <div class="testimonials-text" data-testimonials-text>
-          <p>
-          I have had the pleasure of mentoring Rohini since the start of her career in 2023. Over the past three years, I have been consistently impressed by her confidence, sincerity, and exceptional ability to multitask.
-          </p>
-          <p>
-          Every project she undertook showcased a rare blend of true creativity and a sharp analytical mindset. 
-          As the industry evolved, her adept use of AI tools allowed her to rapidly accelerate her technical development and execution before taking on her role at Uber. 
-          </p>
-          <p>
-          Rohini is a dynamic and deeply talented data professional who brings immense value to any team, I'll be keenly watching her future endeavours.
-          </p>
-        </div>  
-
-      </div>
-    </li>
-
-  </ul>
+      </li>
+      <li class="t-card">
+        <div class="t-person">
+          <div class="t-avatar"><img src="./assets/images/penelope.jpg" alt="Penelope Apostolatou"></div>
+          <div>
+            <p class="t-name">Penelope Apostolatou</p>
+            <p class="t-role">Global Quality Analytics Lead, Uber</p>
+          </div>
+        </div>
+        <div class="t-text">
+          <p>Rohini combines sharp analytical skills with reliable, cross-functional teamwork. From identifying data discrepancies to designing intuitive dashboards, she approaches projects with a high standard for quality and user experience.</p>
+          <p>She navigates fast-paced environments effectively, keeps stakeholders clearly informed, and consistently turns complex data into actionable answers.</p>
+        </div>
+      </li>
+      <li class="t-card">
+        <div class="t-person">
+          <div class="t-avatar"><img src="./assets/images/anany.jpg" alt="Anany Porwal"></div>
+          <div>
+            <p class="t-name">Anany Porwal</p>
+            <p class="t-role">Data Analytics Specialist, Uber</p>
+          </div>
+        </div>
+        <div class="t-text">
+          <p>I had the opportunity to mentor Rohini during her time with the Quality Analytics team at Uber, and she was a great teammate to work with. Rohini consistently demonstrated a strong sense of ownership, taking responsibility for her work and quickly picking up new skills and concepts.</p>
+          <p>Her technical proficiency in SQL, Python, Looker, and Tableau enabled her to translate data into meaningful insights and contribute to impactful outcomes for the team.</p>
+        </div>
+      </li>
+      <li class="t-card">
+        <div class="t-person">
+          <div class="t-avatar"><img src="./assets/images/danish.jpg" alt="Danish Sayyed"></div>
+          <div>
+            <p class="t-name">Danish Sayyed</p>
+            <p class="t-role">VR Analyst, Hawk-Eye Innovations</p>
+          </div>
+        </div>
+        <div class="t-text">
+          <p>I have had the pleasure of mentoring Rohini since the start of her career in 2023. Over the past three years, I have been consistently impressed by her confidence, sincerity, and exceptional ability to multitask.</p>
+          <p>Rohini is a dynamic and deeply talented data professional who brings immense value to any team, I&#x27;ll be keenly watching her future endeavours.</p>
+        </div>
+      </li>
+      </ul>
+    </div>
+  </div>
 
 </section>
 
+<!-- =========================================================
+     ABOUT
+========================================================= -->
+<section class="page" data-page="about" id="about">
 
-<!-- ===================== MODAL ===================== -->
-
-<div class="modal-container" data-modal-container>
-
-  <div class="overlay" data-overlay></div>
-
-  <section class="testimonials-modal">
-
-    <button class="modal-close-btn" data-modal-close-btn>
-      <ion-icon name="close-outline"></ion-icon>
-    </button>
-
-    <div class="modal-img-wrapper">
-      <figure class="modal-avatar-box">
-        <img src="./assets/images/avatar-1.png" alt="" width="80" data-modal-img>
-      </figure>
-
-      <img src="./assets/images/icon-quote.svg" alt="quote icon">
+  <div class="about-top">
+    <div class="about-copy">
+      <p class="eyebrow">About Me</p>
+      <h2 class="h1">Hi, I'm Rohini</h2>
+      <p>I'm a data analyst who enjoys turning messy, disconnected data into dashboards and stories that people actually use. With hands-on experience at Uber and TopN Analytics, I've built automated pipelines, migrated reporting systems, and partnered with stakeholders across regions to keep numbers honest and decisions fast.</p>
+      <p>Outside of work, I'm a Tableau Public creator — I like exploring open datasets on everything from cricket to box-office numbers and turning them into visuals worth a second look.</p>
     </div>
+    <figure class="about-photo">
+      <img src="./assets/images/ro.jpg" alt="Rohini Tembhurnikar">
+    </figure>
+  </div>
 
-    <div class="modal-content">
+  <div class="doing-grid">
+    <div class="doing-card">
+      <div class="doing-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5h16M4 12h16M4 19h10"/></svg>
+      </div>
+      <div class="doing-title">ETL &amp; Data Pipelines</div>
+      <div class="doing-text">Automated end-to-end workflows with Python, SQL &amp; Sheets, cutting reporting time by 40%.</div>
+    </div>
+    <div class="doing-card">
+      <div class="doing-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+      </div>
+      <div class="doing-title">Dashboard Migration &amp; BI</div>
+      <div class="doing-text">Designed and migrated interactive dashboards in Tableau, Looker Studio &amp; Streamlit.</div>
+    </div>
+    <div class="doing-card">
+      <div class="doing-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><rect x="7" y="12" width="3" height="6"/><rect x="12" y="8" width="3" height="10"/><rect x="17" y="5" width="3" height="13"/></svg>
+      </div>
+      <div class="doing-title">Big Data &amp; SQL Analytics</div>
+      <div class="doing-text">Extracted and analyzed high-volume datasets (1M+ rows) to surface key sales drivers.</div>
+    </div>
+    <div class="doing-card">
+      <div class="doing-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4.5 8-11V5l-8-3-8 3v6c0 6.5 8 11 8 11Z"/><path d="M9 12l2 2 4-4"/></svg>
+      </div>
+      <div class="doing-title">Data Quality &amp; Cross-Functional Ops</div>
+      <div class="doing-text">Partnered with global stakeholders to audit pipelines and resolve data discrepancies.</div>
+    </div>
+  </div>
 
-      <h4 class="h3 modal-title" data-modal-title></h4>
+  <div class="journey">
+    <h3>My Journey</h3>
+    <div class="journey-track">
+      <div class="journey-step">
+        <span class="journey-dot"></span>
+        <div class="journey-label">Education</div>
+        <div class="journey-title">B.Sc &amp; MCA</div>
+        <div class="journey-sub">2020 – 2025</div>
+      </div>
+      <div class="journey-step">
+        <span class="journey-dot"></span>
+        <div class="journey-label">Early Career</div>
+        <div class="journey-title">Data Analyst Intern</div>
+        <div class="journey-sub">TopN Analytics</div>
+      </div>
+      <div class="journey-step">
+        <span class="journey-dot"></span>
+        <div class="journey-label">Professional</div>
+        <div class="journey-title">Data Analytics Specialist</div>
+        <div class="journey-sub">Uber · 2026 – Present</div>
+      </div>
+      <div class="journey-step">
+        <span class="journey-dot"></span>
+        <div class="journey-label">Today</div>
+        <div class="journey-title">Building Impactful Solutions</div>
+        <div class="journey-sub">With data, one dashboard at a time</div>
+      </div>
+    </div>
+  </div>
 
-      <!-- ROLE HERE -->
-      <p class="modal-role" data-modal-role></p>
+</section>
 
-      <div data-modal-text>
-        <p></p>
+<!-- =========================================================
+     RESUME
+========================================================= -->
+<section class="page" data-page="resume" id="resume">
+
+  <div class="resume-head">
+    <div>
+      <p class="eyebrow">My Resume</p>
+      <h2 class="h2">Experience, Skills &amp; More</h2>
+      <p style="margin-top:8px;max-width:48ch;">A quick overview of my professional journey.</p>
+    </div>
+    <div class="resume-actions">
+      <a class="btn btn-coral" href="./assets/Resume.pdf" download>
+        <span>Download Resume</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 4v12m0 0l-4-4m4 4l4-4M5 20h14"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <div class="resume-grid">
+    <div>
+      <div class="panel">
+        <div class="panel-head">
+          <div class="panel-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 7h-4V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2H4a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1Z"/><path d="M10 5h4v2h-4z"/></svg>
+          </div>
+          <h3>Work Experience</h3>
+        </div>
+
+        <div class="exp-item">
+          <p class="exp-title h4"><b>Data Analytics Specialist</b> — Uber</p>
+          <span class="exp-span">January 2026 – Present</span>
+          <p style="font-size:.87rem;line-height:1.65;color:var(--ink-soft);">Worked on end-to-end analytics solutions supporting Payment Compliance and operational reporting. Built data pipelines, automated reporting workflows, and developed dashboards using SQL, Python, BigQuery, Looker Studio, and Streamlit. Partnered with stakeholders across multiple regions and programs to translate business requirements into reliable analytics solutions, troubleshoot data discrepancies, and improve reporting efficiency.</p>
+        </div>
+
+        <div class="exp-item">
+          <p class="exp-title h4"><b>Data Analyst Intern</b> — TopN Analytics</p>
+          <span class="exp-span">October 2024 – March 2025</span>
+          <p style="font-size:.87rem;line-height:1.65;color:var(--ink-soft);">Worked on data extraction, cleaning, analysis, and visualization using Python, Beautiful Soup, Pandas, and NumPy. Processed 1,000+ records and developed 4+ Tableau and Looker Studio dashboards for 3+ stakeholder teams, improving dataset accuracy by 85% and enabling more reliable business reporting.</p>
+        </div>
       </div>
 
-    </div>
+      <div class="panel">
+        <div class="panel-head">
+          <div class="panel-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10L12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5"/></svg>
+          </div>
+          <h3>Education</h3>
+        </div>
 
-  </section>
-
-</div>
-
-        <!--
-          - Skills
-        -->
-
-        <section class="Skills">
-
-          <h3 class="h3 Skills-title">Skills</h3>
-
-          <ul class="Skills-list has-scrollbar">
-
-            <li class="Skills-item">
-              <a href="#">
-                <img src="./assets/images/logo-1-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="Skills-item">
-              <a href="#">
-                <img src="./assets/images/logo-2-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="Skills-item">
-              <a href="#">
-                <img src="./assets/images/logo-3-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="Skills-item">
-              <a href="#">
-                <img src="./assets/images/logo-4-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="Skills-item">
-              <a href="#">
-                <img src="./assets/images/logo-5-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="Skills-item">
-              <a href="#">
-                <img src="./assets/images/logo-6-color.png" alt="client logo">
-              </a>
-            </li>
-
-          </ul>
-
-        </section>
-
-      </article>
-
-
-
-
-
-      <!--
-      ================================================================
-        - #RESUME
-      ================================================================
-      -->
-
-     <article class="resume" data-page="resume">
-
-  <header>
-    <h2 class="h2 article-title">Resume</h2>
-  </header>
-
-  <!-- EXPERIENCE -->
-  <section class="timeline">
-
-    <div class="title-wrapper">
-      <div class="icon-box">
-        <ion-icon name="book-outline"></ion-icon>
+        <div class="edu-item">
+          <p class="exp-title h4"><b>Master of Computer Application</b></p>
+          <span class="exp-span">SNDT University, Mumbai · May 2025</span>
+        </div>
+        <div class="edu-item">
+          <p class="exp-title h4"><b>Bachelor of Science</b></p>
+          <span class="exp-span">Nagpur University · June 2023</span>
+        </div>
       </div>
-      <h3 class="h3">Experience</h3>
     </div>
 
-    <ol class="timeline-list">
-
-      <li class="timeline-item">
-        <h4 class="h4 timeline-item-title">
-          <strong>Data Analytics Specialist</strong>, Uber
-        </h4>
-        <span>January 2026 — August 2026</span>
-        <ul class="timeline-text">
-          <li>• Automated end-to-end data pipelines using Google Sheets, Python and SQL, consolidating fragmented data into a single source of truth and reducing performance-tracking time by 40%.</li>
-          <li>• Built and maintained dashboards to track Quality and A-metrics across 5+ regions and 10+ programs, giving program teams a consolidated view of performance.</li>
-          <li>• Replaced 20 manual Google Sheets with SQL queries and a Looker Studio dashboard, reducing weekly reporting time from 4 hours to 30 minutes and saving approximately 10 hours of reporting effort each week.</li>
-          <li>• Rebuilt a Looker Studio dashboard in Streamlit with a live BigQuery connection and new SQL queries for additional metrics, improving metric discovery by 20%.</li>
-          <li>• Identified incorrect data being pulled from a query, worked with engineering to add the correct column and updated the query, reducing stakeholder time spent resolving the issue by 50%.</li>
+    <div>
+      <div class="panel skills-panel">
+        <div class="panel-head">
+          <div class="panel-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.6 6.6L22 9l-5.4 4.3L18 22l-6-4-6 4 1.4-8.7L2 9l7.4-.4L12 2Z"/></svg>
+          </div>
+          <h3>Skills</h3>
+        </div>
+        <ul class="skill-chip-list">
+          <li class="skill-chip"><span class="dot" style="background:var(--tool-tableau-fg);"></span>Tableau</li>
+          <li class="skill-chip"><span class="dot" style="background:var(--tool-sql-fg);"></span>SQL</li>
+          <li class="skill-chip"><span class="dot" style="background:var(--tool-python-fg);"></span>Python</li>
+          <li class="skill-chip"><span class="dot" style="background:var(--tool-excel-fg);"></span>Excel</li>
+          <li class="skill-chip"><span class="dot" style="background:var(--tool-looker-fg);"></span>Looker Studio</li>
+          <li class="skill-chip"><span class="dot" style="background:var(--tool-powerbi-fg);"></span>Power BI</li>
+          <li class="skill-chip"><span class="dot" style="background:#B47418;"></span>Data Visualization</li>
+          <li class="skill-chip"><span class="dot" style="background:var(--pine);"></span>Storytelling</li>
         </ul>
-      </li>
-
-      <li class="timeline-item">
-        <h4 class="h4 timeline-item-title">
-          <strong>Data Analyst Intern</strong>, TopN Analytics
-        </h4>
-        <span>October 2024 — March 2025</span>
-        <ul class="timeline-text">
-          <li>• Accelerated reporting efficiency by 20% for 3+ stakeholder teams by building 4+ interactive Tableau and Google Looker Studio dashboards across Procurement, Retail, and Sustainability domains.</li>
-          <li>• Improved data accuracy by 85% by scraping and processing 1000+ rows of real-time data using Python (Beautiful Soup, Pandas, NumPy) to create reliable datasets for analysis.</li>
-          <li>• Increased cross-functional dashboard adoption by collaborating with teams to translate business requirements into effective analytical solutions.</li>
-        </ul>
-      </li>
-
-    </ol>
-
-  </section>
-
-  <!-- EDUCATION -->
-  <section class="timeline">
-
-    <div class="title-wrapper">
-      <div class="icon-box">
-        <ion-icon name="book-outline"></ion-icon>
       </div>
-      <h3 class="h3">Education</h3>
+
+      <div class="panel">
+        <div class="panel-head">
+          <div class="panel-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 15a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z"/><path d="M5.5 21l1-4.5M17.5 21l-1-4.5"/><path d="M9 20.5l3-1.7 3 1.7"/></svg>
+          </div>
+          <h3>Certifications</h3>
+        </div>
+        <div class="cert-placeholder">Certification 1 — details coming soon</div>
+        <div class="cert-placeholder">Certification 2 — details coming soon</div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- =========================================================
+     PROJECTS
+========================================================= -->
+<section class="page" data-page="projects" id="projects">
+
+  <div class="projects-head">
+    <p class="eyebrow">My Work</p>
+    <h2 class="h2">Projects</h2>
+    <p style="margin-top:8px;max-width:56ch;">A collection of dashboards and data-analytics projects turning raw numbers into meaningful insights.</p>
+  </div>
+
+  <ul class="filter-list" data-filter-list>
+    <li><button class="filter-btn active" data-filter-btn data-filter="all">All</button></li>
+    <li><button class="filter-btn" data-filter-btn data-filter="tableau-dashboards">Tableau Dashboards</button></li>
+    <li><button class="filter-btn" data-filter-btn data-filter="tableau-vizzes">Tableau Vizzes</button></li>
+    <li><button class="filter-btn" data-filter-btn data-filter="power-bi">Power BI</button></li>
+    <li><button class="filter-btn" data-filter-btn data-filter="looker-studio">Looker Studio</button></li>
+    <li><button class="filter-btn" data-filter-btn data-filter="python">Python</button></li>
+    <li><button class="filter-btn" data-filter-btn data-filter="sql">SQL</button></li>
+    <li><button class="filter-btn" data-filter-btn data-filter="excel">Excel</button></li>
+  </ul>
+
+  <ul class="projects-grid" data-projects-grid>
+      <li class="project-card show" data-category="tableau-dashboards">
+        <a href="https://public.tableau.com/app/profile/rohini.tembhurnikar/viz/MerchaniseSales/PRODUCTS" target="_blank" rel="noopener" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/merchandise.png" alt="Merchandise Sales" loading="lazy">
+              <div class="project-overlay">
+                <p>Built a 5-page interactive Merchandise Sales Dashboard for the Onyx Data #DataDNA Challenge, analyzing product performance, sales, orders, geography, customer demographics, and review sentiment. Runner-up in the January 2025 challenge, demonstrating strong data visualization and business analytics skills.</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-tableau-bg); color:var(--tool-tableau-fg);">Tableau</span>
+            <h3 class="project-title h3">Merchandise Sales</h3>
+          </div>
+        </a>
+      </li>
+      <li class="project-card show" data-category="tableau-dashboards">
+        <a href="https://public.tableau.com/app/profile/rohini.tembhurnikar/viz/HealthcareDashboard_17800441891940/HEALTHCARE" target="_blank" rel="noopener" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/healthcare.png" alt="Healthcare Analytics" loading="lazy">
+              <div class="project-overlay">
+                <p>Interactive Tableau dashboard providing a comprehensive view of 55,500 patients, healthcare costs, admissions, demographics, medical conditions, treatments, insurance providers, and hospital performance. It enables stakeholders to identify patient trends, cost drivers, treatment patterns, and operational insights.</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-tableau-bg); color:var(--tool-tableau-fg);">Tableau</span>
+            <h3 class="project-title h3">Healthcare Analytics</h3>
+          </div>
+        </a>
+      </li>
+      <li class="project-card show" data-category="looker-studio">
+        <a href="#" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/hr.png" alt="HR Attrition Dashboard" loading="lazy">
+              <div class="project-overlay">
+                <p>An interactive Dashboard analyzing 1,470 employees, with demographic, job, compensation, tenure, travel, and work-environment insights to identify key attrition patterns and support targeted employee retention strategies.</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-looker-bg); color:var(--tool-looker-fg);">Looker Studio</span>
+            <h3 class="project-title h3">HR Attrition Dashboard</h3>
+          </div>
+        </a>
+      </li>
+      <li class="project-card show" data-category="tableau-dashboards">
+        <a href="https://public.tableau.com/app/profile/rohini.tembhurnikar/viz/AmazonStockMarketTrends_17800442486380/Dashboard1" target="_blank" rel="noopener" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/amazonstocks.png" alt="Amazon Stock Market Trends" loading="lazy">
+              <div class="project-overlay">
+                <p>Interactive Tableau dashboard analyzing Amazon’s stock performance across price, volume, daily movements, and moving averages. It enables users to monitor market trends, identify volatility, compare price movements, and evaluate short-term momentum through dynamic time-period and metric selections.</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-tableau-bg); color:var(--tool-tableau-fg);">Tableau</span>
+            <h3 class="project-title h3">Amazon Stock Market Trends</h3>
+          </div>
+        </a>
+      </li>
+      <li class="project-card show" data-category="power-bi">
+        <a href="https://app.powerbi.com/view?r=eyJrIjoiZGU5NDI2MmItY2Y2OC00YTcwLTkzMjktNWRhYTAzNTc5YjM2IiwidCI6ImMwZDdmYjJmLTczZDItNDA5NC1iNzY5LTFkZTQ0NDNlNzg5YiJ9" target="_blank" rel="noopener" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/content.png" alt="Social Media Content Performance" loading="lazy">
+              <div class="project-overlay">
+                <p>Built a 2-page interactive Social Media Content Performance dashboard for the Onyx Data Challenge, analyzing 213 posts across platforms, content categories, regions, engagement, clicks, views, hashtags, and audience response to identify high-performing content and posting opportunities.</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-powerbi-bg); color:var(--tool-powerbi-fg);">Power BI</span>
+            <h3 class="project-title h3">Social Media Content Performance</h3>
+          </div>
+        </a>
+      </li>
+      <li class="project-card show" data-category="tableau-vizzes">
+        <a href="https://public.tableau.com/app/profile/rohini.tembhurnikar/viz/WTC-2023/TOURNAMENT" target="_blank" rel="noopener" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/wtc.png" alt="World Test Championship 2023" loading="lazy">
+              <div class="project-overlay">
+                <p>A multipage Tableau dashboard analyzing the World Test Championship cycle through tournament and team-level views. It explores points-table performance, win rates, batting and bowling contributions, opponent matchups, partnerships, scoring patterns, and ground-level performance to uncover competitive trends and team strengths.</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-vizzes-bg); color:var(--tool-vizzes-fg);">Tableau</span>
+            <h3 class="project-title h3">World Test Championship 2023</h3>
+          </div>
+        </a>
+      </li>
+      <li class="project-card show" data-category="tableau-vizzes">
+        <a href="https://public.tableau.com/app/profile/rohini.tembhurnikar/viz/AkshayKumarMovies/Dashboard1" target="_blank" rel="noopener" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/akshay.png" alt="Akshay Kumar Movies" loading="lazy">
+              <div class="project-overlay">
+                <p>A single-page  viz exploring Akshay Kumar’s movies through IMDb ratings, audience votes, genres, release years, and ranking. Interactive highlights enable comparison of film performance, revealing rating patterns, audience engagement, genre distribution, and career trends across the century.</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-vizzes-bg); color:var(--tool-vizzes-fg);">Tableau</span>
+            <h3 class="project-title h3">Akshay Kumar Movies</h3>
+          </div>
+        </a>
+      </li>
+      <li class="project-card show" data-category="tableau-dashboards">
+        <a href="https://public.tableau.com/app/profile/rohini.tembhurnikar/viz/EmployeePerformanceDashboard_17800432813530/MetrixOverview" target="_blank" rel="noopener" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/employee.png" alt="Employee Performance" loading="lazy">
+              <div class="project-overlay">
+                <p>A three-page dashboard analyzing 200 employees across performance, productivity, satisfaction, feedback, salary, experience, and project metrics. Interactive department, position, and employee filters enable comparison of workforce performance, identify high-performing employees, and uncover organizational trends</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-tableau-bg); color:var(--tool-tableau-fg);">Tableau</span>
+            <h3 class="project-title h3">Employee Performance</h3>
+          </div>
+        </a>
+      </li>
+      <li class="project-card show" data-category="tableau-vizzes">
+        <a href="https://public.tableau.com/app/profile/rohini.tembhurnikar/viz/ViratKohliTestCareer/Dashboard1" target="_blank" rel="noopener" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/kohli.png" alt="Virat Kohli Test Career" loading="lazy">
+              <div class="project-overlay">
+                <p>A single-page Viz analyzing Virat Kohli’s 14-year Test career through runs, averages, strike rate, milestones, opposition performance, venues, innings, and yearly trends. It combines career KPIs with detailed visual analysis to highlight consistency, evolution, achievements, and performance patterns.</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-vizzes-bg); color:var(--tool-vizzes-fg);">Tableau</span>
+            <h3 class="project-title h3">Virat Kohli Test Career</h3>
+          </div>
+        </a>
+      </li>
+      <li class="project-card show" data-category="tableau-vizzes">
+        <a href="https://public.tableau.com/app/profile/rohini.tembhurnikar/viz/CustomerChurnReport_17800433402480/ChurnReport" target="_blank" rel="noopener" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/churn.png" alt="Customer Churn Report" loading="lazy">
+              <div class="project-overlay">
+                <p>A three-page analytical report investigating bank customer churn across demographics, account behavior, balances, products, tenure, salary, and credit scores. It examines independent variables, relationships between measures, and high-risk customer segments to identify patterns associated with increased churn.</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-vizzes-bg); color:var(--tool-vizzes-fg);">Tableau</span>
+            <h3 class="project-title h3">Customer Churn Report</h3>
+          </div>
+        </a>
+      </li>
+      <li class="project-card show" data-category="tableau-vizzes">
+        <a href="https://public.tableau.com/app/profile/rohini.tembhurnikar/viz/VineetaSinghsInvestmentsinSharkTankIndiaS1-S3/Dashboard1" target="_blank" rel="noopener" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/vineeta.png" alt="Vineeta Singh&#x27;s Investments in Shark Tank India" loading="lazy">
+              <div class="project-overlay">
+                <p>A single-page Tableau dashboard analyzing Vineeta Singh’s 67 Shark Tank India investments across seasons, industries, deal structures, equity, valuation, and investment ranges. It highlights investment patterns, industry preferences, deal sizes, and company-level insights to evaluate her investment strategy.</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-vizzes-bg); color:var(--tool-vizzes-fg);">Tableau</span>
+            <h3 class="project-title h3">Vineeta Singh&#x27;s Investments in Shark Tank India</h3>
+          </div>
+        </a>
+      </li>
+      <li class="project-card show" data-category="tableau-vizzes">
+        <a href="https://public.tableau.com/app/profile/rohini.tembhurnikar/viz/ArijitSinghallSongs/Dashboard3" target="_blank" rel="noopener" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/arijit.png" alt="Arijit Singh all Songs" loading="lazy">
+              <div class="project-overlay">
+                <p>A single-page data-driven infographic exploring Arijit Singh’s musical journey through 731 songs, 492 albums, languages, composers, writers, co-singers, and career milestones. It combines storytelling, timelines, charts, and interactive song exploration to highlight his evolving musical contributions and collaborations.</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-vizzes-bg); color:var(--tool-vizzes-fg);">Tableau</span>
+            <h3 class="project-title h3">Arijit Singh all Songs</h3>
+          </div>
+        </a>
+      </li>
+      <li class="project-card show" data-category="tableau-dashboards">
+        <a href="https://public.tableau.com/app/profile/rohini.tembhurnikar/viz/MarketingCampaignInsights_17800421171760/POSTENGAGEMENT" target="_blank" rel="noopener" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/marketing.png" alt="Marketing Campaign Analytics" loading="lazy">
+              <div class="project-overlay">
+                <p>A two-page dashboard evaluating marketing campaign performance across post engagement and link clicks. It tracks 1M engagements, 95K link clicks, CTR, CPC, engagement rates, and campaign-level performance to identify high-performing campaigns and optimize content and advertising efficiency</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-tableau-bg); color:var(--tool-tableau-fg);">Tableau</span>
+            <h3 class="project-title h3">Marketing Campaign Analytics</h3>
+          </div>
+        </a>
+      </li>
+      <li class="project-card show" data-category="tableau-dashboards">
+        <a href="https://public.tableau.com/app/profile/rohini.tembhurnikar/viz/FitnessCompanyFinanceTracker/Dashboard1" target="_blank" rel="noopener" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/fitness.png" alt="Fitness Financial Analytics" loading="lazy">
+              <div class="project-overlay">
+                <p>A single-page financial dashboard evaluating revenue, expenses, gross profit, net profit, and margins across business lines. It highlights cost structures, monthly trends, sub-category performance, and profitability gaps, with actionable recommendations for cost optimization, pricing, and improving underperforming segments.</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-tableau-bg); color:var(--tool-tableau-fg);">Tableau</span>
+            <h3 class="project-title h3">Fitness Financial Analytics</h3>
+          </div>
+        </a>
+      </li>
+      <li class="project-card show" data-category="tableau-dashboards">
+        <a href="https://public.tableau.com/app/profile/rohini.tembhurnikar/viz/SupplyChainDashboard_17800431050760/PRODUCTS" target="_blank" rel="noopener" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/supply.png" alt="Supply Chain Dashboard" loading="lazy">
+              <div class="project-overlay">
+                <p>A three-page interactive dashboard analyzing 4,922 orders, 46.1K products sold, ₹578K revenue, shipping costs, product availability, suppliers, carriers, and defects. It connects product, shipping, and supplier performance to identify operational inefficiencies and supply-chain improvement opportunities</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-tableau-bg); color:var(--tool-tableau-fg);">Tableau</span>
+            <h3 class="project-title h3">Supply Chain Dashboard</h3>
+          </div>
+        </a>
+      </li>
+      <li class="project-card show" data-category="tableau-dashboards">
+        <a href="https://public.tableau.com/app/profile/rohini.tembhurnikar/viz/Top15NSEStocksbyMarketCapitalization/NSEStocks" target="_blank" rel="noopener" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/nsestocks.png" alt="Top 15 NSE Stocks" loading="lazy">
+              <div class="project-overlay">
+                <p>A single-page Tableau dashbard comparing 15 leading NSE stocks by market capitalization across 1-month, 6-month, 1-year, and custom periods. It highlights price movements, relative performance, and trend direction, enabling quick comparison of short- and long-term market behavior.</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-tableau-bg); color:var(--tool-tableau-fg);">Tableau</span>
+            <h3 class="project-title h3">Top 15 NSE Stocks</h3>
+          </div>
+        </a>
+      </li>
+      <li class="project-card show" data-category="tableau-vizzes">
+        <a href="https://public.tableau.com/app/profile/rohini.tembhurnikar/viz/GooglePlaystoreAnalysis_17800429453970/PLAYSTORE" target="_blank" rel="noopener" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/playstore.png" alt="Google Playstore" loading="lazy">
+              <div class="project-overlay">
+                <p>A single-page Viz analyzing Google Play Store apps through ratings, reviews, installs, genres, and Android-version compatibility. It explores rating distributions, highly reviewed apps, review-to-rating relationships, and platform adoption patterns to uncover trends in app performance and user engagement.</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-vizzes-bg); color:var(--tool-vizzes-fg);">Tableau</span>
+            <h3 class="project-title h3">Google Playstore</h3>
+          </div>
+        </a>
+      </li>
+      <li class="project-card show" data-category="tableau-dashboards">
+        <a href="https://public.tableau.com/app/profile/rohini.tembhurnikar/viz/PuneUberTrips/Dashboard1" target="_blank" rel="noopener" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/uber.png" alt="Uber Pune Rides" loading="lazy">
+              <div class="project-overlay">
+                <p>A single-page Tableau dashboard analyzing Pune Uber trips by distance, fare, duration, weekday, time of day, and pickup or drop-off location. Interactive metric selection and map-based filtering reveal travel patterns, demand distribution, and variations in trip characteristics across time.</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-tableau-bg); color:var(--tool-tableau-fg);">Tableau</span>
+            <h3 class="project-title h3">Uber Pune Rides</h3>
+          </div>
+        </a>
+      </li>
+      <li class="project-card show" data-category="tableau-dashboards">
+        <a href="https://public.tableau.com/app/profile/rohini.tembhurnikar/viz/ExecutiveCEDashboard/Overview" target="_blank" rel="noopener" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/ceo.png" alt="Executive CEO Dashboard" loading="lazy">
+              <div class="project-overlay">
+                <p>A five-page executive dashboard providing a consolidated view of business performance across revenue, customers, products, marketing, sales leads, finance, and customer support. It tracks key KPIs, trends, operational metrics, and performance drivers to support data-driven executive decision-making.</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-tableau-bg); color:var(--tool-tableau-fg);">Tableau</span>
+            <h3 class="project-title h3">Executive CEO Dashboard</h3>
+          </div>
+        </a>
+      </li>
+      <li class="project-card show" data-category="tableau-vizzes">
+        <a href="https://public.tableau.com/app/profile/rohini.tembhurnikar/viz/PIXARMOVIES/MovieSpotlight" target="_blank" rel="noopener" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/pixer.png" alt="Pixar Films" loading="lazy">
+              <div class="project-overlay">
+                <p>A four-page Tableau viz exploring Pixar’s movies through box office performance, budgets, ROI, ratings, reviews, genres, awards, and creators. It combines financial and audience metrics to compare films, identify standout releases, and uncover patterns across Pixar’s cinematic history.</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-vizzes-bg); color:var(--tool-vizzes-fg);">Tableau</span>
+            <h3 class="project-title h3">Pixar Films</h3>
+          </div>
+        </a>
+      </li>
+      <li class="project-card show" data-category="tableau-dashboards">
+        <a href="https://public.tableau.com/app/profile/rohini.tembhurnikar/viz/GlobalHighVoltageTransmissionProjects/OVERVIEW" target="_blank" rel="noopener" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/voltage.png" alt="Global High Voltage Transmission Projects" loading="lazy">
+              <div class="project-overlay">
+                <p>A multipage dashboard analyzing 106 global high-voltage transmission projects with $180.7B estimated cost, $2.5B funding, and 43,222 km of line length. It examines project status, regions, technologies, voltage levels, developers, project types, and geographic distribution.</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-tableau-bg); color:var(--tool-tableau-fg);">Tableau</span>
+            <h3 class="project-title h3">Global High Voltage Transmission Projects</h3>
+          </div>
+        </a>
+      </li>
+      <li class="project-card show" data-category="tableau-vizzes">
+        <a href="https://public.tableau.com/app/profile/rohini.tembhurnikar/viz/MavenRewardsChallenge_17800424569720/Dashboard2" target="_blank" rel="noopener" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/rewards.png" alt="Maven Rewards Challenge" loading="lazy">
+              <div class="project-overlay">
+                <p>A single-page dashboard evaluating a 30-day rewards campaign through offer completion, engagement, rewards distribution, customer demographics, and channel performance. It identifies stronger offer types, high-engagement segments, optimal durations, and effective multi-channel combinations to improve promotional performance.</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-vizzes-bg); color:var(--tool-vizzes-fg);">Tableau</span>
+            <h3 class="project-title h3">Maven Rewards Challenge</h3>
+          </div>
+        </a>
+      </li>
+      <li class="project-card show" data-category="tableau-dashboards">
+        <a href="https://public.tableau.com/app/profile/rohini.tembhurnikar/viz/BikeSalesinEurope_17800428612320/Overview" target="_blank" rel="noopener" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/bike.png" alt="Bike Sales" loading="lazy">
+              <div class="project-overlay">
+                <p>A two-page dashboard analyzing 289K orders, £20.0M revenue, £7.5M profit, and £2.4M discounts across bike sales. It explores customer age groups, geographic revenue, product categories, profit performance, discounting, and relationships between revenue, profitability, and pricing.</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-tableau-bg); color:var(--tool-tableau-fg);">Tableau</span>
+            <h3 class="project-title h3">Bike Sales</h3>
+          </div>
+        </a>
+      </li>
+      <li class="project-card show" data-category="tableau-dashboards">
+        <a href="https://public.tableau.com/app/profile/rohini.tembhurnikar/viz/FlipcartClone/FlipkartClone" target="_blank" rel="noopener" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/flipkart.png" alt="Flipkart Clone" loading="lazy">
+              <div class="project-overlay">
+                <p>A single-page interactive e-commerce Dashboard replicating a Flipkart-style laptop shopping experience. It enables product discovery through filters for brand, price, processor, RAM, storage, graphics, gaming, and other specifications, with price sorting and detailed product-level hardware information.</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-tableau-bg); color:var(--tool-tableau-fg);">Tableau</span>
+            <h3 class="project-title h3">Flipkart Clone</h3>
+          </div>
+        </a>
+      </li>
+      <li class="project-card show" data-category="tableau-dashboards">
+        <a href="https://public.tableau.com/app/profile/rohini.tembhurnikar/viz/PersonalFinanceDashboard_17800427751280/Dashboard1" target="_blank" rel="noopener" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/finance.png" alt="Personal Finance" loading="lazy">
+              <div class="project-overlay">
+                <p>A two-page personal finance dashboard tracking bank balances, investments, cash, rent, and financial contributions over time. It provides portfolio-level and account-specific analysis through trends, distributions, forecasts, contribution history, and transaction details to monitor financial performance and allocation patterns.</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-tableau-bg); color:var(--tool-tableau-fg);">Tableau</span>
+            <h3 class="project-title h3">Personal Finance</h3>
+          </div>
+        </a>
+      </li>
+      <li class="project-card show" data-category="tableau-dashboards">
+        <a href="https://public.tableau.com/app/profile/rohini.tembhurnikar/viz/CabRidesAnalysis/OVERVIEW" target="_blank" rel="noopener" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/cabs.png" alt="Cab Rides" loading="lazy">
+              <div class="project-overlay">
+                <p>A two-page dashboard analyzing 4,785 cab rides, $1.30M in trip costs, 57,981 km traveled, and average ratings. It explores ride categories, trip purposes, gender, distance, time-of-day patterns, monthly trends, driver and commission shares, and ride frequency.</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-tableau-bg); color:var(--tool-tableau-fg);">Tableau</span>
+            <h3 class="project-title h3">Cab Rides</h3>
+          </div>
+        </a>
+      </li>
+      <li class="project-card show" data-category="tableau-dashboards">
+        <a href="https://public.tableau.com/app/profile/rohini.tembhurnikar/viz/Gen-AITrendsin2024/Dashboard1" target="_blank" rel="noopener" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/genai.png" alt="Gen AI Google Trends" loading="lazy">
+              <div class="project-overlay">
+                <p>A single-page Tableau dashboard analyzing Google search interest in generative AI during 2024. It compares trends for major AI tools, regional interest, related queries, and topics, highlighting shifts in search behavior and growing interest across the global AI landscape.</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-tableau-bg); color:var(--tool-tableau-fg);">Tableau</span>
+            <h3 class="project-title h3">Gen AI Google Trends</h3>
+          </div>
+        </a>
+      </li>
+      <li class="project-card show" data-category="tableau-vizzes">
+        <a href="https://public.tableau.com/app/profile/rohini.tembhurnikar/viz/LokSabhaElections2019_17800435164240/Dashboard1" target="_blank" rel="noopener" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/elections.png" alt="Lok Sabha Elections 2019" loading="lazy">
+              <div class="project-overlay">
+                <p>The project analyzes the 2019 Lok Sabha election from multiple perspectives, including party-wise seats and vote share, alliance performance by region, candidate demographics, state-level results, winning margins, NOTA votes, metro-city seat distribution, and performance of top candidates.</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-vizzes-bg); color:var(--tool-vizzes-fg);">Tableau</span>
+            <h3 class="project-title h3">Lok Sabha Elections 2019</h3>
+          </div>
+        </a>
+      </li>
+      <li class="project-card show" data-category="tableau-vizzes">
+        <a href="https://public.tableau.com/app/profile/rohini.tembhurnikar/viz/NewYorkCityAccidentAnalysisJan2020-Aug2020/Dashboard1" target="_blank" rel="noopener" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/nyc.png" alt="New York City Accidents 2020" loading="lazy">
+              <div class="project-overlay">
+                <p>A single-page Tableau dashboard analyzing 74,881 NYC accidents, including 27,448 injuries and 144 fatalities. It examines accident hotspots, boroughs, weekly and hourly patterns, contributing reasons, and vehicle involvement to identify temporal and geographic accident patterns.</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-vizzes-bg); color:var(--tool-vizzes-fg);">Tableau</span>
+            <h3 class="project-title h3">New York City Accidents 2020</h3>
+          </div>
+        </a>
+      </li>
+      <li class="project-card show" data-category="tableau-vizzes">
+        <a href="https://public.tableau.com/app/profile/rohini.tembhurnikar/viz/UnemplymentStatusinIndia/Dashboard1" target="_blank" rel="noopener" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/unemployment.png" alt="Unemployment in India" loading="lazy">
+              <div class="project-overlay">
+                <p>A single-page infographic examining India’s unemployment trends from 2016 to 2023. It compares national, rural, urban, and state-level unemployment rates, highlighting changes over time, regional disparities, pandemic impact, and states with notable increases or declines.</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-vizzes-bg); color:var(--tool-vizzes-fg);">Tableau</span>
+            <h3 class="project-title h3">Unemployment in India</h3>
+          </div>
+        </a>
+      </li>
+      <li class="project-card show" data-category="tableau-vizzes">
+        <a href="https://public.tableau.com/app/profile/rohini.tembhurnikar/viz/MavenLegoChallenge/Dashboard1" target="_blank" rel="noopener" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/lego.png" alt="Maven Lego" loading="lazy">
+              <div class="project-overlay">
+                <p>A data-driven visual exploration of LEGO’s evolution across decades, analyzing the growth of sets, themes, theme groups, product longevity, age ranges, pricing, and the most prominent LEGO sets. The infographic combines historical trends with detailed product-level analysis to show how LEGO’s product portfolio has evolved over time.</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-vizzes-bg); color:var(--tool-vizzes-fg);">Tableau</span>
+            <h3 class="project-title h3">Maven Lego</h3>
+          </div>
+        </a>
+      </li>
+      <li class="project-card show" data-category="power-bi">
+        <a href="https://app.powerbi.com/view?r=eyJrIjoiM2MwNWE3MTAtYzg3OS00ZGI3LWI5NDUtMmRiM2EyNTJiM2U5IiwidCI6ImMwZDdmYjJmLTczZDItNDA5NC1iNzY5LTFkZTQ0NDNlNzg5YiJ9" target="_blank" rel="noopener" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/healthcare.png" alt="Healthcare Analytics" loading="lazy">
+              <div class="project-overlay">
+                <p>Interactive Power BI dashboard providing a comprehensive view of 55,500 patients, healthcare costs, admissions, demographics, medical conditions, treatments, insurance providers, and hospital performance. It enables stakeholders to identify patient trends, cost drivers, treatment patterns, and operational insights.</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-powerbi-bg); color:var(--tool-powerbi-fg);">Power BI</span>
+            <h3 class="project-title h3">Healthcare Analytics</h3>
+          </div>
+        </a>
+      </li>
+      <li class="project-card show" data-category="tableau-dashboards">
+        <a href="https://public.tableau.com/app/profile/rohini.tembhurnikar/viz/Maven_SlopesChallenge/Dashboard1" target="_blank" rel="noopener" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/slopes.png" alt="Maven Slopes" loading="lazy">
+              <div class="project-overlay">
+                <p>An interactive ski-resort exploration dashboard designed to help users plan a skiing trip. It analyzes resort locations, pricing, ski seasons, snow coverage, slopes, lifts, snow cannons, resort features, and altitude ranges, with filters for country, season, price, child-friendliness, and slope difficulty.</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-tableau-bg); color:var(--tool-tableau-fg);">Tableau</span>
+            <h3 class="project-title h3">Maven Slopes</h3>
+          </div>
+        </a>
+      </li>
+      <li class="project-card show" data-category="sql">
+        <a href="https://github.com/rohinirt/SQL_Projects/tree/main/Instacart_Market_Basket_Analysis" target="_blank" rel="noopener" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/instacart.png" alt="Instacart Market Masket Analysis" loading="lazy">
+              <div class="project-overlay">
+                <p>Analyzed 1M+ orders and 32M+ order items using SQL to uncover product trends, peak ordering periods, and high-value customer segments.</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-sql-bg); color:var(--tool-sql-fg);">SQL</span>
+            <h3 class="project-title h3">Instacart Market Masket Analysis</h3>
+          </div>
+        </a>
+      </li>
+      <li class="project-card show" data-category="sql">
+        <a href="https://github.com/rohinirt/SQL_Projects/tree/main/YouTube%20Top%20200%20Trending%20Video%20Analysis" target="_blank" rel="noopener" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/youtube.png" alt="Youtube Top 200 Trending Video Analysis" loading="lazy">
+              <div class="project-overlay">
+                <p>Built an API-to-MySQL ETL pipeline and analyzed 200 trending videos using SQL to uncover engagement patterns and content performance insights.</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-sql-bg); color:var(--tool-sql-fg);">SQL</span>
+            <h3 class="project-title h3">Youtube Top 200 Trending Video Analysis</h3>
+          </div>
+        </a>
+      </li>
+      <li class="project-card show" data-category="sql">
+        <a href="https://github.com/rohinirt/SQL_Projects/tree/main/Spotify_Analysis" target="_blank" rel="noopener" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/spotify.png" alt="Spotify Songs Analysis" loading="lazy">
+              <div class="project-overlay">
+                <p>Used advanced PostgreSQL techniques to analyze streams, engagement, audio attributes, and artist performance, solving business problems across tracks, albums, and platforms.</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-sql-bg); color:var(--tool-sql-fg);">SQL</span>
+            <h3 class="project-title h3">Spotify Songs Analysis</h3>
+          </div>
+        </a>
+      </li>
+      <li class="project-card show" data-category="sql">
+        <a href="https://github.com/rohinirt/SQL_Projects/tree/main/Pizza%20Sales" target="_blank" rel="noopener" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/pizza.png" alt="Pizza Hut Sales" loading="lazy">
+              <div class="project-overlay">
+                <p>Analyzed 21K+ orders using advanced SQL to identify revenue trends, peak ordering periods, top products, and opportunities for inventory and staffing optimization.</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-sql-bg); color:var(--tool-sql-fg);">SQL</span>
+            <h3 class="project-title h3">Pizza Hut Sales</h3>
+          </div>
+        </a>
+      </li>
+      <li class="project-card show" data-category="sql">
+        <a href="https://github.com/rohinirt/SQL_Projects/tree/main/Music-Store-Analysis" target="_blank" rel="noopener" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/music.png" alt="Music Store Analysis" loading="lazy">
+              <div class="project-overlay">
+                <p>This SQL music store analysis project delves into customer behavior, sales patterns, and genre preferences. It identifies senior employees, top-selling countries, high-spending customers, and best-selling albums, aiding strategic decision-making.</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-sql-bg); color:var(--tool-sql-fg);">SQL</span>
+            <h3 class="project-title h3">Music Store Analysis</h3>
+          </div>
+        </a>
+      </li>
+      <li class="project-card show" data-category="sql">
+        <a href="https://github.com/rohinirt/SQL_Projects/tree/main/Superstore-Sales-Analysis" target="_blank" rel="noopener" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/superstore.png" alt="Superstore Sales" loading="lazy">
+              <div class="project-overlay">
+                <p>This SQL project analyzes sales data to extract insights for strategic decisions, covering metrics like total sales and profit, as well as trends in sales distribution.</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-sql-bg); color:var(--tool-sql-fg);">SQL</span>
+            <h3 class="project-title h3">Superstore Sales</h3>
+          </div>
+        </a>
+      </li>
+      <li class="project-card show" data-category="sql">
+        <a href="https://github.com/rohinirt/SQL_Projects/tree/main/Fraud-Detection" target="_blank" rel="noopener" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/fraud.png" alt="Fraud Detection" loading="lazy">
+              <div class="project-overlay">
+                <p>This SQL project aims to detect fraud within transactional data by querying for anomalies or irregular patterns suggestive of fraudulent activity</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-sql-bg); color:var(--tool-sql-fg);">SQL</span>
+            <h3 class="project-title h3">Fraud Detection</h3>
+          </div>
+        </a>
+      </li>
+      <li class="project-card show" data-category="sql">
+        <a href="https://github.com/rohinirt/SQL_Projects/tree/main/India-Census-2011" target="_blank" rel="noopener" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/census.png" alt="India-Census 2011" loading="lazy">
+              <div class="project-overlay">
+                <p>This SQL project examines India Census datasets to analyze population demographics, literacy rates, and growth trends by state</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-sql-bg); color:var(--tool-sql-fg);">SQL</span>
+            <h3 class="project-title h3">India-Census 2011</h3>
+          </div>
+        </a>
+      </li>
+      <li class="project-card show" data-category="sql">
+        <a href="https://github.com/rohinirt/SQL_Projects/tree/main/Customer-Segmentation" target="_blank" rel="noopener" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/customer.png" alt="Customer Segmentation" loading="lazy">
+              <div class="project-overlay">
+                <p>This SQL-driven customer segmentation project explores diverse aspects of an e-commerce dataset, including demographics, purchasing behavior, and satisfaction levels. total customer count, popular categories.</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-sql-bg); color:var(--tool-sql-fg);">SQL</span>
+            <h3 class="project-title h3">Customer Segmentation</h3>
+          </div>
+        </a>
+      </li>
+      <li class="project-card show" data-category="python">
+        <a href="https://github.com/rohinirt/Python_Projects/tree/main/Case%20Study%3A%20Retail%20Price%20Optimization" target="_blank" rel="noopener" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/retail.png" alt="Retail Price Optimization" loading="lazy">
+              <div class="project-overlay">
+                <p>Built a Random Forest demand model and pricing simulator, identifying optimal prices that delivered a 28% average revenue increase per product.</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-python-bg); color:var(--tool-python-fg);">Python</span>
+            <h3 class="project-title h3">Retail Price Optimization</h3>
+          </div>
+        </a>
+      </li>
+      <li class="project-card show" data-category="python">
+        <a href="https://github.com/rohinirt/Python_Projects/tree/main/Customer%20Lifetime%20Value%20Analysis" target="_blank" rel="noopener" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/clv.png" alt="Customer Lifetime Value Analysis" loading="lazy">
+              <div class="project-overlay">
+                <p>Evaluated acquisition channels using CLTV, ROI, conversion, and revenue metrics, identifying Social Media for highest CLTV and Email for strongest ROI.</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-python-bg); color:var(--tool-python-fg);">Python</span>
+            <h3 class="project-title h3">Customer Lifetime Value Analysis</h3>
+          </div>
+        </a>
+      </li>
+      <li class="project-card show" data-category="python">
+        <a href="https://github.com/rohinirt/Python_Projects/tree/main/Zepto%20Inventory%20-%20EDA" target="_blank" rel="noopener" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/zepto.png" alt="Zepto Inventory - EDA" loading="lazy">
+              <div class="project-overlay">
+                <p>Analyzed 3,200+ Zepto products to uncover pricing, discount, inventory, and category trends, identifying opportunities for pricing optimization and stock planning.</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-python-bg); color:var(--tool-python-fg);">Python</span>
+            <h3 class="project-title h3">Zepto Inventory - EDA</h3>
+          </div>
+        </a>
+      </li>
+      <li class="project-card show" data-category="python">
+        <a href="https://github.com/rohinirt/Python_Projects/tree/main/Amazon-Review_Sentiment-Analysis" target="_blank" rel="noopener" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/amazon.png" alt="Amazon Review Sentiment Analysis" loading="lazy">
+              <div class="project-overlay">
+                <p>Performed sentiment analysis on amazon reviews of toys to distribute reviews as positive, negative and neutral reviews and finding ratings given and keywords of each sentiment.</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-python-bg); color:var(--tool-python-fg);">Python</span>
+            <h3 class="project-title h3">Amazon Review Sentiment Analysis</h3>
+          </div>
+        </a>
+      </li>
+      <li class="project-card show" data-category="python">
+        <a href="https://github.com/rohinirt/Python_Projects/tree/main/House%20Price%20Prediction" target="_blank" rel="noopener" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/house.png" alt="House Price Prediction" loading="lazy">
+              <div class="project-overlay">
+                <p>Created a machine learning model using logistic regression to predict the house price based on variables such as location, size, year.</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-python-bg); color:var(--tool-python-fg);">Python</span>
+            <h3 class="project-title h3">House Price Prediction</h3>
+          </div>
+        </a>
+      </li>
+      <li class="project-card show" data-category="python">
+        <a href="https://github.com/rohinirt/Python_Projects/tree/main/Loan%20Approval%20Analysis" target="_blank" rel="noopener" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/loan.png" alt="Loan Approval Analysis" loading="lazy">
+              <div class="project-overlay">
+                <p>Identified impact of various factors such as age, gender, income, employment, and credit history on the loan approval decisions.</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-python-bg); color:var(--tool-python-fg);">Python</span>
+            <h3 class="project-title h3">Loan Approval Analysis</h3>
+          </div>
+        </a>
+      </li>
+      <li class="project-card show" data-category="python">
+        <a href="https://github.com/rohinirt/Python_Projects/tree/main/LinkedIn%20Data%20Analyst%20Jobs%20Analysis" target="_blank" rel="noopener" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/linkedIn.png" alt="LinkedIn Data Analysts Jobs" loading="lazy">
+              <div class="project-overlay">
+                <p>Analysed data analyst jobs posted on LinkedIn to identify industry trends, popular keywords in job description,top paying industries and job roles, job availability by locations to enhance job applications strategies</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-python-bg); color:var(--tool-python-fg);">Python</span>
+            <h3 class="project-title h3">LinkedIn Data Analysts Jobs</h3>
+          </div>
+        </a>
+      </li>
+      <li class="project-card show" data-category="python">
+        <a href="https://github.com/rohinirt/Python_Projects/tree/main/Heart%20Disease%20Risk%20Factors%20Analysis" target="_blank" rel="noopener" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/heart.png" alt="Heart Disease Risk Factors" loading="lazy">
+              <div class="project-overlay">
+                <p>Investigated multifactorial influences such as lifestyle, genetics, and medical history to discern key risk factors contributing to increased susceptibility to cardiovascular issues.</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-python-bg); color:var(--tool-python-fg);">Python</span>
+            <h3 class="project-title h3">Heart Disease Risk Factors</h3>
+          </div>
+        </a>
+      </li>
+      <li class="project-card show" data-category="excel">
+        <a href="https://drive.google.com/file/d/1tXsIa-Pic3MS9uvbG-iOjut7NohHQqdQ/view?usp=sharing" target="_blank" rel="noopener" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/superstoreexcel.png" alt="Superstore Sales" loading="lazy">
+              <div class="project-overlay">
+                <p>This Dashboard provides insights into sales trends by segment, shipping mode, and top states. It also visualizes region-wise sales, sales distribution across categories and subcategories, and analyzes the relationship between discounts and profit percentages</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-excel-bg); color:var(--tool-excel-fg);">Excel</span>
+            <h3 class="project-title h3">Superstore Sales</h3>
+          </div>
+        </a>
+      </li>
+      <li class="project-card show" data-category="excel">
+        <a href="https://drive.google.com/file/d/1FBemrkeipfGPZkB0wYiE2oa9oU0GKSgT/view?usp=sharing" target="_blank" rel="noopener" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/bikeexcel.png" alt="Bike Sales" loading="lazy">
+              <div class="project-overlay">
+                <p>This Dashboard differentiates customers based on purchase status, offering insights into average income, purchase behavior, analyzes age-group preferences, average income by occupation, and purchase tendencies such as distance traveled and number of cars owned.</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-excel-bg); color:var(--tool-excel-fg);">Excel</span>
+            <h3 class="project-title h3">Bike Sales</h3>
+          </div>
+        </a>
+      </li>
+      <li class="project-card show" data-category="excel">
+        <a href="https://drive.google.com/file/d/1LrkPhWjNQGhs4eoedw62O0TpKvEVbfmA/view?usp=sharing" target="_blank" rel="noopener" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/amazonexcel.png" alt="Amazon Ads" loading="lazy">
+              <div class="project-overlay">
+                <p>This Dashboard tracks weekly trends of impressions, clicks, carts added, and purchases of the advertised products, distinguishing between total and unique ASINs (Amazon Standard Identification Numbers). It also highlights top search queries by clicks, carts, and purchases.</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-excel-bg); color:var(--tool-excel-fg);">Excel</span>
+            <h3 class="project-title h3">Amazon Ads</h3>
+          </div>
+        </a>
+      </li>
+  </ul>
+
+  <p class="projects-empty" data-projects-empty>No projects in this category yet.</p>
+
+</section>
+
+<!-- =========================================================
+     CONTACT
+========================================================= -->
+<section class="page" data-page="contact" id="contact">
+
+  <div class="contact-head">
+    <p class="eyebrow">Get In Touch</p>
+    <h2 class="h2">Let's Connect</h2>
+    <p style="margin-top:8px;">I'm always open to discussing new opportunities, collaborations, or just talking about data.</p>
+  </div>
+
+  <div class="contact-grid">
+    <div>
+      <div class="contact-list">
+        <div class="contact-row">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+          </div>
+          <div>
+            <div class="contact-label">Email</div>
+            <a class="contact-value" href="mailto:rohinitembhurnikar3@gmail.com">rohinitembhurnikar3@gmail.com</a>
+          </div>
+        </div>
+        <div class="contact-row">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="18" rx="3"/><rect x="6" y="9" width="3" height="9"/><circle cx="7.5" cy="6" r="1.3" fill="currentColor" stroke="none"/><path d="M12 9v9M12 13c0-2.2 1.8-4 4-4s3 1.8 3 4v5"/></svg>
+          </div>
+          <div>
+            <div class="contact-label">LinkedIn</div>
+            <a class="contact-value" href="https://www.linkedin.com/in/rohinit3/" target="_blank" rel="noopener">linkedin.com/in/rohinit3</a>
+          </div>
+        </div>
+        <div class="contact-row">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.3 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.35 4.68-4.58 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>
+          </div>
+          <div>
+            <div class="contact-label">GitHub</div>
+            <a class="contact-value" href="https://github.com/rohinirt" target="_blank" rel="noopener">github.com/rohinirt</a>
+          </div>
+        </div>
+        <div class="contact-row">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s7-6.4 7-12A7 7 0 0 0 5 10c0 5.6 7 12 7 12Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+          </div>
+          <div>
+            <div class="contact-label">Location</div>
+            <div class="contact-value">Gondia, India</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-note">
+        <div class="contact-note-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 7h-4V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2H4a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1Z"/><path d="M10 5h4v2h-4z"/><path d="M3 12h5l1 2h6l1-2h5"/></svg>
+        </div>
+        <div>
+          <b>Open to opportunities</b>
+          <span>Feel free to reach out for full-time roles, freelance projects, or just a friendly chat about data.</span>
+        </div>
+      </div>
     </div>
 
-    <ol class="timeline-list">
+    <form class="contact-form" data-form>
+      <div class="field">
+        <label for="cf-name">Name</label>
+        <input id="cf-name" type="text" placeholder="Your name" required data-form-input>
+      </div>
+      <div class="field">
+        <label for="cf-email">Email</label>
+        <input id="cf-email" type="email" placeholder="Your email" required data-form-input>
+      </div>
+      <div class="field">
+        <label for="cf-message">Message</label>
+        <textarea id="cf-message" placeholder="Write your message here..." required data-form-input></textarea>
+      </div>
+      <button type="submit" class="btn btn-coral" data-form-btn style="width:100%;">
+        <span>Send Message</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </button>
+      <p class="form-msg" data-form-msg></p>
+    </form>
+  </div>
 
-      <li class="timeline-item">
-        <h4 class="h4 timeline-item-title">
-          <strong>Master of Computer Application</strong>, SNDT University Mumbai
-        </h4>
-        <span>May 2025</span>
-      </li>
+</section>
 
-      <li class="timeline-item">
-        <h4 class="h4 timeline-item-title">
-          <strong>Bachelor Of Science</strong>, Nagpur University
-        </h4>
-        <span>June 2023</span>
-      </li>
+</main>
 
-    </ol>
+<footer class="site-footer">
+  © <span data-year></span> Rohini Tembhurnikar. Built with data, curiosity and a lot of dashboards.
+</footer>
 
-  </section>
-       
-  <!-- SKILLS -->
-  <section class="skill">
-
-    <h3 class="h3 skills-title">My skills</h3>
-
-    <ul class="skills-list content-card">
-
-      <li class="skills-item">
-        <div class="title-wrapper">
-          <h5 class="h5">SQL (MySQL, Oracle)</h5>
-          <data value="80">80%</data>
-        </div>
-        <div class="skill-progress-bg">
-          <div class="skill-progress-fill" style="width: 80%;"></div>
-        </div>
-      </li>
-
-      <li class="skills-item">
-        <div class="title-wrapper">
-          <h5 class="h5">Python (Pandas, NumPy, Matplotlib)</h5>
-          <data value="70">70%</data>
-        </div>
-        <div class="skill-progress-bg">
-          <div class="skill-progress-fill" style="width: 70%;"></div>
-        </div>
-      </li>
-
-      <li class="skills-item">
-        <div class="title-wrapper">
-          <h5 class="h5">Tableau</h5>
-          <data value="80">80%</data>
-        </div>
-        <div class="skill-progress-bg">
-          <div class="skill-progress-fill" style="width: 90%;"></div>
-        </div>
-      </li>
-
-      <li class="skills-item">
-        <div class="title-wrapper">
-          <h5 class="h5">Looker Studio</h5>
-          <data value="70">70%</data>
-        </div>
-        <div class="skill-progress-bg">
-          <div class="skill-progress-fill" style="width: 75%;"></div>
-        </div>
-      </li>
-      
-      <li class="skills-item">
-        <div class="title-wrapper">
-          <h5 class="h5">Power BI</h5>
-          <data value="60">60%</data>
-        </div>
-        <div class="skill-progress-bg">
-          <div class="skill-progress-fill" style="width: 75%;"></div>
-        </div>
-      </li>
-
-      <li class="skills-item">
-        <div class="title-wrapper">
-          <h5 class="h5">Excel (Advanced)</h5>
-          <data value="80">80%</data>
-        </div>
-        <div class="skill-progress-bg">
-          <div class="skill-progress-fill" style="width: 90%;"></div>
-        </div>
-      </li>
-
-      <li class="skills-item">
-        <div class="title-wrapper">
-          <h5 class="h5">Google Sheets</h5>
-          <data value="70">70%</data>
-        </div>
-        <div class="skill-progress-bg">
-          <div class="skill-progress-fill" style="width: 90%;"></div>
-        </div>
-      </li>
-
-      <li class="skills-item">
-        <div class="title-wrapper">
-          <h5 class="h5">AI Automation</h5>
-          <data value="70">70%</data>
-        </div>
-        <div class="skill-progress-bg">
-          <div class="skill-progress-fill" style="width: 90%;"></div>
-        </div>
-      </li>
-
-    </ul>
-
-  </section>
-
-</article>
-
-
-<!-- ================= PROJECTS ================= -->
-
-<article class="projects" data-page="projects">
-
-  <header>
-    <h2 class="h2 article-title">Projects</h2>
-  </header>
-
-  <section class="projects-posts">
-
-    <!-- FILTER BUTTONS -->
-    <ul class="filter-list">
-
-    <li class="filter-item"><button class="active" data-filter-btn>All</button></li>
-<li class="filter-item"><button data-filter-btn>Tableau Dashboards</button></li>
-<li class="filter-item"><button data-filter-btn>Google Looker Studio</button></li>
-<li class="filter-item"><button data-filter-btn>Power BI</button></li>
-<li class="filter-item"><button data-filter-btn>Tableau Vizzes</button></li>
-<li class="filter-item"><button data-filter-btn>SQL</button></li>
-<li class="filter-item"><button data-filter-btn>Python</button></li>
-<li class="filter-item"><button data-filter-btn>Excel</button></li>
-
-    </ul>
-
-    <!-- PROJECT LIST -->
-    <ul class="projects-posts-list">
-
-      <li class="projects-post-item active" data-filter-item data-category="tableau dashboards">
-        <a href="https://public.tableau.com/app/profile/rohini.tembhurnikar/viz/MerchaniseSales/PRODUCTS" target="_blank" rel="noopener">
-          <figure class="projects-banner-box">
-            <img src="./assets/images/merchandise.png" alt="Tableau" loading="lazy">
-          </figure>
-          <div class="projects-content">
-            <div class="projects-meta">
-              <p class="projects-category">Tableau</p>
-            </div>
-            <h3 class="h3 projects-item-title">Merchandise Sales</h3>
-            <p class="projects-text">
-              Built a 5-page interactive Merchandise Sales Dashboard for the Onyx Data #DataDNA Challenge, analyzing product performance, sales, orders, geography, customer demographics, and review sentiment. Runner-up in the January 2025 challenge, demonstrating strong data visualization and business analytics skills.
-            </p>
-          </div>
-        </a>
-      </li>
-      <li class="projects-post-item active" data-filter-item data-category="tableau dashboards">
-        <a href="https://public.tableau.com/app/profile/rohini.tembhurnikar/viz/HealthcareDashboard_17800441891940/HEALTHCARE" target="_blank" rel="noopener">
-          <figure class="projects-banner-box">
-            <img src="./assets/images/healthcare.png" alt="Tableau" loading="lazy">
-          </figure>
-          <div class="projects-content">
-            <div class="projects-meta">
-              <p class="projects-category">Tableau</p>
-            </div>
-            <h3 class="h3 projects-item-title">Healthcare Analytics</h3>
-            <p class="projects-text">
-              Interactive Tableau dashboard providing a comprehensive view of 55,500 patients, healthcare costs, admissions, demographics, medical conditions, treatments, insurance providers, and hospital performance. It enables stakeholders to identify patient trends, cost drivers, treatment patterns, and operational insights.
-            </p>
-          </div>
-        </a>
-      </li>
-      <li class="projects-post-item active" data-filter-item data-category="google looker studio">
-        <a href="" target="_blank" rel="noopener">
-          <figure class="projects-banner-box">
-            <img src="./assets/images/hr.png" alt="Google Looker Studion" loading="lazy">
-          </figure>
-          <div class="projects-content">
-            <div class="projects-meta">
-              <p class="projects-category">Google Looker Studion</p>
-            </div>
-            <h3 class="h3 projects-item-title">HR Attrition Dashboard</h3>
-            <p class="projects-text">
-              An interactive Dashboard analyzing 1,470 employees, with demographic, job, compensation, tenure, travel, and work-environment insights to identify key attrition patterns and support targeted employee retention strategies.
-            </p>
-          </div>
-        </a>
-      </li>
-      <li class="projects-post-item active" data-filter-item data-category="tableau dashboards">
-        <a href="https://public.tableau.com/app/profile/rohini.tembhurnikar/viz/AmazonStockMarketTrends_17800442486380/Dashboard1" target="_blank" rel="noopener">
-          <figure class="projects-banner-box">
-            <img src="./assets/images/amazonstocks.png" alt="Tableau" loading="lazy">
-          </figure>
-          <div class="projects-content">
-            <div class="projects-meta">
-              <p class="projects-category">Tableau</p>
-            </div>
-            <h3 class="h3 projects-item-title">Amazon Stock Market Trends</h3>
-            <p class="projects-text">
-              Interactive Tableau dashboard analyzing Amazon’s stock performance across price, volume, daily movements, and moving averages. It enables users to monitor market trends, identify volatility, compare price movements, and evaluate short-term momentum through dynamic time-period and metric selections.
-            </p>
-          </div>
-        </a>
-      </li>
-      <li class="projects-post-item active" data-filter-item data-category="power bi">
-        <a href="https://app.powerbi.com/view?r=eyJrIjoiZGU5NDI2MmItY2Y2OC00YTcwLTkzMjktNWRhYTAzNTc5YjM2IiwidCI6ImMwZDdmYjJmLTczZDItNDA5NC1iNzY5LTFkZTQ0NDNlNzg5YiJ9" target="_blank" rel="noopener">
-          <figure class="projects-banner-box">
-            <img src="./assets/images/content.png" alt="Power BI" loading="lazy">
-          </figure>
-          <div class="projects-content">
-            <div class="projects-meta">
-              <p class="projects-category">Power BI</p>
-            </div>
-            <h3 class="h3 projects-item-title">Social Media Content Performance</h3>
-            <p class="projects-text">
-              Built a 2-page interactive Social Media Content Performance dashboard for the Onyx Data Challenge, analyzing 213 posts across platforms, content categories, regions, engagement, clicks, views, hashtags, and audience response to identify high-performing content and posting opportunities.
-            </p>
-          </div>
-        </a>
-      </li>
-      <li class="projects-post-item active" data-filter-item data-category="tableau vizzes">
-        <a href="https://public.tableau.com/app/profile/rohini.tembhurnikar/viz/WTC-2023/TOURNAMENT" target="_blank" rel="noopener">
-          <figure class="projects-banner-box">
-            <img src="./assets/images/wtc.png" alt="Tableau" loading="lazy">
-          </figure>
-          <div class="projects-content">
-            <div class="projects-meta">
-              <p class="projects-category">Tableau</p>
-            </div>
-            <h3 class="h3 projects-item-title">World Test Championship 2023</h3>
-            <p class="projects-text">
-              A multipage Tableau dashboard analyzing the World Test Championship cycle through tournament and team-level views. It explores points-table performance, win rates, batting and bowling contributions, opponent matchups, partnerships, scoring patterns, and ground-level performance to uncover competitive trends and team strengths.
-            </p>
-          </div>
-        </a>
-      </li>
-      <li class="projects-post-item active" data-filter-item data-category="tableau vizzes">
-        <a href="https://public.tableau.com/app/profile/rohini.tembhurnikar/viz/AkshayKumarMovies/Dashboard1" target="_blank" rel="noopener">
-          <figure class="projects-banner-box">
-            <img src="./assets/images/akshay.png" alt="Tableau" loading="lazy">
-          </figure>
-          <div class="projects-content">
-            <div class="projects-meta">
-              <p class="projects-category">Tableau</p>
-            </div>
-            <h3 class="h3 projects-item-title">Akshay Kumar Movies</h3>
-            <p class="projects-text">
-              A single-page  viz exploring Akshay Kumar’s movies through IMDb ratings, audience votes, genres, release years, and ranking. Interactive highlights enable comparison of film performance, revealing rating patterns, audience engagement, genre distribution, and career trends across the century.
-            </p>
-          </div>
-        </a>
-      </li>
-      <li class="projects-post-item active" data-filter-item data-category="tableau dashboards">
-        <a href="https://public.tableau.com/app/profile/rohini.tembhurnikar/viz/EmployeePerformanceDashboard_17800432813530/MetrixOverview" target="_blank" rel="noopener">
-          <figure class="projects-banner-box">
-            <img src="./assets/images/employee.png" alt="Tableau" loading="lazy">
-          </figure>
-          <div class="projects-content">
-            <div class="projects-meta">
-              <p class="projects-category">Tableau</p>
-            </div>
-            <h3 class="h3 projects-item-title">Employee Performance</h3>
-            <p class="projects-text">
-              A three-page dashboard analyzing 200 employees across performance, productivity, satisfaction, feedback, salary, experience, and project metrics. Interactive department, position, and employee filters enable comparison of workforce performance, identify high-performing employees, and uncover organizational trends
-            </p>
-          </div>
-        </a>
-      </li>
-      <li class="projects-post-item active" data-filter-item data-category="tableau vizzes">
-        <a href="https://public.tableau.com/app/profile/rohini.tembhurnikar/viz/ViratKohliTestCareer/Dashboard1" target="_blank" rel="noopener">
-          <figure class="projects-banner-box">
-            <img src="./assets/images/kohli.png" alt="Tableau" loading="lazy">
-          </figure>
-          <div class="projects-content">
-            <div class="projects-meta">
-              <p class="projects-category">Tableau</p>
-            </div>
-            <h3 class="h3 projects-item-title">Virat Kohli Test Career</h3>
-            <p class="projects-text">
-              A single-page Viz analyzing Virat Kohli’s 14-year Test career through runs, averages, strike rate, milestones, opposition performance, venues, innings, and yearly trends. It combines career KPIs with detailed visual analysis to highlight consistency, evolution, achievements, and performance patterns.
-            </p>
-          </div>
-        </a>
-      </li>
-      <li class="projects-post-item active" data-filter-item data-category="tableau vizzes">
-        <a href="https://public.tableau.com/app/profile/rohini.tembhurnikar/viz/CustomerChurnReport_17800433402480/ChurnReport" target="_blank" rel="noopener">
-          <figure class="projects-banner-box">
-            <img src="./assets/images/churn.png" alt="Tableau" loading="lazy">
-          </figure>
-          <div class="projects-content">
-            <div class="projects-meta">
-              <p class="projects-category">Tableau</p>
-            </div>
-            <h3 class="h3 projects-item-title">Customer Churn Report</h3>
-            <p class="projects-text">
-              A three-page analytical report investigating bank customer churn across demographics, account behavior, balances, products, tenure, salary, and credit scores. It examines independent variables, relationships between measures, and high-risk customer segments to identify patterns associated with increased churn.
-            </p>
-          </div>
-        </a>
-      </li>
-      <li class="projects-post-item active" data-filter-item data-category="tableau vizzes">
-        <a href="https://public.tableau.com/app/profile/rohini.tembhurnikar/viz/VineetaSinghsInvestmentsinSharkTankIndiaS1-S3/Dashboard1" target="_blank" rel="noopener">
-          <figure class="projects-banner-box">
-            <img src="./assets/images/vineeta.png" alt="Tableau" loading="lazy">
-          </figure>
-          <div class="projects-content">
-            <div class="projects-meta">
-              <p class="projects-category">Tableau</p>
-            </div>
-            <h3 class="h3 projects-item-title">Vineeta Singh&#x27;s Investments in Shark Tank India</h3>
-            <p class="projects-text">
-              A single-page Tableau dashboard analyzing Vineeta Singh’s 67 Shark Tank India investments across seasons, industries, deal structures, equity, valuation, and investment ranges. It highlights investment patterns, industry preferences, deal sizes, and company-level insights to evaluate her investment strategy.
-            </p>
-          </div>
-        </a>
-      </li>
-      <li class="projects-post-item active" data-filter-item data-category="tableau vizzes">
-        <a href="https://public.tableau.com/app/profile/rohini.tembhurnikar/viz/ArijitSinghallSongs/Dashboard3" target="_blank" rel="noopener">
-          <figure class="projects-banner-box">
-            <img src="./assets/images/arijit.png" alt="Tableau" loading="lazy">
-          </figure>
-          <div class="projects-content">
-            <div class="projects-meta">
-              <p class="projects-category">Tableau</p>
-            </div>
-            <h3 class="h3 projects-item-title">Arijit Singh all Songs</h3>
-            <p class="projects-text">
-              A single-page data-driven infographic exploring Arijit Singh’s musical journey through 731 songs, 492 albums, languages, composers, writers, co-singers, and career milestones. It combines storytelling, timelines, charts, and interactive song exploration to highlight his evolving musical contributions and collaborations.
-            </p>
-          </div>
-        </a>
-      </li>
-      <li class="projects-post-item active" data-filter-item data-category="tableau dashboards">
-        <a href="https://public.tableau.com/app/profile/rohini.tembhurnikar/viz/MarketingCampaignInsights_17800421171760/POSTENGAGEMENT" target="_blank" rel="noopener">
-          <figure class="projects-banner-box">
-            <img src="./assets/images/marketing.png" alt="Tableau" loading="lazy">
-          </figure>
-          <div class="projects-content">
-            <div class="projects-meta">
-              <p class="projects-category">Tableau</p>
-            </div>
-            <h3 class="h3 projects-item-title">Marketing Campaign Analytics</h3>
-            <p class="projects-text">
-              A two-page dashboard evaluating marketing campaign performance across post engagement and link clicks. It tracks 1M engagements, 95K link clicks, CTR, CPC, engagement rates, and campaign-level performance to identify high-performing campaigns and optimize content and advertising efficiency
-            </p>
-          </div>
-        </a>
-      </li>
-      <li class="projects-post-item active" data-filter-item data-category="tableau dashboards">
-        <a href="https://public.tableau.com/app/profile/rohini.tembhurnikar/viz/FitnessCompanyFinanceTracker/Dashboard1" target="_blank" rel="noopener">
-          <figure class="projects-banner-box">
-            <img src="./assets/images/fitness.png" alt="Tableau" loading="lazy">
-          </figure>
-          <div class="projects-content">
-            <div class="projects-meta">
-              <p class="projects-category">Tableau</p>
-            </div>
-            <h3 class="h3 projects-item-title">Fitness Financial Analytics</h3>
-            <p class="projects-text">
-              A single-page financial dashboard evaluating revenue, expenses, gross profit, net profit, and margins across business lines. It highlights cost structures, monthly trends, sub-category performance, and profitability gaps, with actionable recommendations for cost optimization, pricing, and improving underperforming segments.
-            </p>
-          </div>
-        </a>
-      </li>
-      <li class="projects-post-item active" data-filter-item data-category="tableau dashboards">
-        <a href="https://public.tableau.com/app/profile/rohini.tembhurnikar/viz/SupplyChainDashboard_17800431050760/PRODUCTS" target="_blank" rel="noopener">
-          <figure class="projects-banner-box">
-            <img src="./assets/images/supply.png" alt="Tableau" loading="lazy">
-          </figure>
-          <div class="projects-content">
-            <div class="projects-meta">
-              <p class="projects-category">Tableau</p>
-            </div>
-            <h3 class="h3 projects-item-title">Supply Chain Dashboard</h3>
-            <p class="projects-text">
-              A three-page interactive dashboard analyzing 4,922 orders, 46.1K products sold, ₹578K revenue, shipping costs, product availability, suppliers, carriers, and defects. It connects product, shipping, and supplier performance to identify operational inefficiencies and supply-chain improvement opportunities
-            </p>
-          </div>
-        </a>
-      </li>
-      <li class="projects-post-item active" data-filter-item data-category="tableau dashboards">
-        <a href="https://public.tableau.com/app/profile/rohini.tembhurnikar/viz/Top15NSEStocksbyMarketCapitalization/NSEStocks" target="_blank" rel="noopener">
-          <figure class="projects-banner-box">
-            <img src="./assets/images/nsestocks.png" alt="Tableau" loading="lazy">
-          </figure>
-          <div class="projects-content">
-            <div class="projects-meta">
-              <p class="projects-category">Tableau</p>
-            </div>
-            <h3 class="h3 projects-item-title">Top 15 NSE Stocks</h3>
-            <p class="projects-text">
-              A single-page Tableau dashbard comparing 15 leading NSE stocks by market capitalization across 1-month, 6-month, 1-year, and custom periods. It highlights price movements, relative performance, and trend direction, enabling quick comparison of short- and long-term market behavior.
-            </p>
-          </div>
-        </a>
-      </li>
-      <li class="projects-post-item active" data-filter-item data-category="tableau vizzes">
-        <a href="https://public.tableau.com/app/profile/rohini.tembhurnikar/viz/GooglePlaystoreAnalysis_17800429453970/PLAYSTORE" target="_blank" rel="noopener">
-          <figure class="projects-banner-box">
-            <img src="./assets/images/playstore.png" alt="Tableau" loading="lazy">
-          </figure>
-          <div class="projects-content">
-            <div class="projects-meta">
-              <p class="projects-category">Tableau</p>
-            </div>
-            <h3 class="h3 projects-item-title">Google Playstore</h3>
-            <p class="projects-text">
-              A single-page Viz analyzing Google Play Store apps through ratings, reviews, installs, genres, and Android-version compatibility. It explores rating distributions, highly reviewed apps, review-to-rating relationships, and platform adoption patterns to uncover trends in app performance and user engagement.
-            </p>
-          </div>
-        </a>
-      </li>
-      <li class="projects-post-item active" data-filter-item data-category="tableau dashboards">
-        <a href="https://public.tableau.com/app/profile/rohini.tembhurnikar/viz/PuneUberTrips/Dashboard1" target="_blank" rel="noopener">
-          <figure class="projects-banner-box">
-            <img src="./assets/images/uber.png" alt="Tableau" loading="lazy">
-          </figure>
-          <div class="projects-content">
-            <div class="projects-meta">
-              <p class="projects-category">Tableau</p>
-            </div>
-            <h3 class="h3 projects-item-title">Uber Pune Rides</h3>
-            <p class="projects-text">
-              A single-page Tableau dashboard analyzing Pune Uber trips by distance, fare, duration, weekday, time of day, and pickup or drop-off location. Interactive metric selection and map-based filtering reveal travel patterns, demand distribution, and variations in trip characteristics across time.
-            </p>
-          </div>
-        </a>
-      </li>
-      <li class="projects-post-item active" data-filter-item data-category="tableau dashboards">
-        <a href="https://public.tableau.com/app/profile/rohini.tembhurnikar/viz/ExecutiveCEDashboard/Overview" target="_blank" rel="noopener">
-          <figure class="projects-banner-box">
-            <img src="./assets/images/ceo.png" alt="Tableau" loading="lazy">
-          </figure>
-          <div class="projects-content">
-            <div class="projects-meta">
-              <p class="projects-category">Tableau</p>
-            </div>
-            <h3 class="h3 projects-item-title">Executive CEO Dashboard</h3>
-            <p class="projects-text">
-              A five-page executive dashboard providing a consolidated view of business performance across revenue, customers, products, marketing, sales leads, finance, and customer support. It tracks key KPIs, trends, operational metrics, and performance drivers to support data-driven executive decision-making.
-            </p>
-          </div>
-        </a>
-      </li>
-      <li class="projects-post-item active" data-filter-item data-category="tableau vizzes">
-        <a href="https://public.tableau.com/app/profile/rohini.tembhurnikar/viz/PIXARMOVIES/MovieSpotlight" target="_blank" rel="noopener">
-          <figure class="projects-banner-box">
-            <img src="./assets/images/pixer.png" alt="Tableau" loading="lazy">
-          </figure>
-          <div class="projects-content">
-            <div class="projects-meta">
-              <p class="projects-category">Tableau</p>
-            </div>
-            <h3 class="h3 projects-item-title">Pixar Films</h3>
-            <p class="projects-text">
-              A four-page Tableau viz exploring Pixar’s movies through box office performance, budgets, ROI, ratings, reviews, genres, awards, and creators. It combines financial and audience metrics to compare films, identify standout releases, and uncover patterns across Pixar’s cinematic history.
-            </p>
-          </div>
-        </a>
-      </li>
-      <li class="projects-post-item active" data-filter-item data-category="tableau dashboards">
-        <a href="https://public.tableau.com/app/profile/rohini.tembhurnikar/viz/GlobalHighVoltageTransmissionProjects/OVERVIEW" target="_blank" rel="noopener">
-          <figure class="projects-banner-box">
-            <img src="./assets/images/voltage.png" alt="Tableau" loading="lazy">
-          </figure>
-          <div class="projects-content">
-            <div class="projects-meta">
-              <p class="projects-category">Tableau</p>
-            </div>
-            <h3 class="h3 projects-item-title">Global High Voltage Transmission Projects</h3>
-            <p class="projects-text">
-              A multipage dashboard analyzing 106 global high-voltage transmission projects with $180.7B estimated cost, $2.5B funding, and 43,222 km of line length. It examines project status, regions, technologies, voltage levels, developers, project types, and geographic distribution.
-            </p>
-          </div>
-        </a>
-      </li>
-      <li class="projects-post-item active" data-filter-item data-category="tableau vizzes">
-        <a href="https://public.tableau.com/app/profile/rohini.tembhurnikar/viz/MavenRewardsChallenge_17800424569720/Dashboard2" target="_blank" rel="noopener">
-          <figure class="projects-banner-box">
-            <img src="./assets/images/rewards.png" alt="Tableau" loading="lazy">
-          </figure>
-          <div class="projects-content">
-            <div class="projects-meta">
-              <p class="projects-category">Tableau</p>
-            </div>
-            <h3 class="h3 projects-item-title">Maven Rewards Challenge</h3>
-            <p class="projects-text">
-              A single-page dashboard evaluating a 30-day rewards campaign through offer completion, engagement, rewards distribution, customer demographics, and channel performance. It identifies stronger offer types, high-engagement segments, optimal durations, and effective multi-channel combinations to improve promotional performance.
-            </p>
-          </div>
-        </a>
-      </li>
-      <li class="projects-post-item active" data-filter-item data-category="tableau dashboards">
-        <a href="https://public.tableau.com/app/profile/rohini.tembhurnikar/viz/BikeSalesinEurope_17800428612320/Overview" target="_blank" rel="noopener">
-          <figure class="projects-banner-box">
-            <img src="./assets/images/bike.png" alt="Tableau" loading="lazy">
-          </figure>
-          <div class="projects-content">
-            <div class="projects-meta">
-              <p class="projects-category">Tableau</p>
-            </div>
-            <h3 class="h3 projects-item-title">Bike Sales</h3>
-            <p class="projects-text">
-              A two-page dashboard analyzing 289K orders, £20.0M revenue, £7.5M profit, and £2.4M discounts across bike sales. It explores customer age groups, geographic revenue, product categories, profit performance, discounting, and relationships between revenue, profitability, and pricing.
-            </p>
-          </div>
-        </a>
-      </li>
-      <li class="projects-post-item active" data-filter-item data-category="tableau dashboards">
-        <a href="https://public.tableau.com/app/profile/rohini.tembhurnikar/viz/FlipcartClone/FlipkartClone" target="_blank" rel="noopener">
-          <figure class="projects-banner-box">
-            <img src="./assets/images/flipkart.png" alt="Tableau" loading="lazy">
-          </figure>
-          <div class="projects-content">
-            <div class="projects-meta">
-              <p class="projects-category">Tableau</p>
-            </div>
-            <h3 class="h3 projects-item-title">Flipkart Clone</h3>
-            <p class="projects-text">
-              A single-page interactive e-commerce Dashboard replicating a Flipkart-style laptop shopping experience. It enables product discovery through filters for brand, price, processor, RAM, storage, graphics, gaming, and other specifications, with price sorting and detailed product-level hardware information.
-            </p>
-          </div>
-        </a>
-      </li>
-      <li class="projects-post-item active" data-filter-item data-category="tableau dashboards">
-        <a href="https://public.tableau.com/app/profile/rohini.tembhurnikar/viz/PersonalFinanceDashboard_17800427751280/Dashboard1" target="_blank" rel="noopener">
-          <figure class="projects-banner-box">
-            <img src="./assets/images/finance.png" alt="Tableau" loading="lazy">
-          </figure>
-          <div class="projects-content">
-            <div class="projects-meta">
-              <p class="projects-category">Tableau</p>
-            </div>
-            <h3 class="h3 projects-item-title">Personal Finance</h3>
-            <p class="projects-text">
-              A two-page personal finance dashboard tracking bank balances, investments, cash, rent, and financial contributions over time. It provides portfolio-level and account-specific analysis through trends, distributions, forecasts, contribution history, and transaction details to monitor financial performance and allocation patterns.
-            </p>
-          </div>
-        </a>
-      </li>
-      <li class="projects-post-item active" data-filter-item data-category="tableau dashboards">
-        <a href="https://public.tableau.com/app/profile/rohini.tembhurnikar/viz/CabRidesAnalysis/OVERVIEW" target="_blank" rel="noopener">
-          <figure class="projects-banner-box">
-            <img src="./assets/images/cabs.png" alt="Tableau" loading="lazy">
-          </figure>
-          <div class="projects-content">
-            <div class="projects-meta">
-              <p class="projects-category">Tableau</p>
-            </div>
-            <h3 class="h3 projects-item-title">Cab Rides</h3>
-            <p class="projects-text">
-              A two-page dashboard analyzing 4,785 cab rides, $1.30M in trip costs, 57,981 km traveled, and average ratings. It explores ride categories, trip purposes, gender, distance, time-of-day patterns, monthly trends, driver and commission shares, and ride frequency.
-            </p>
-          </div>
-        </a>
-      </li>
-      <li class="projects-post-item active" data-filter-item data-category="tableau dashboards">
-        <a href="https://public.tableau.com/app/profile/rohini.tembhurnikar/viz/Gen-AITrendsin2024/Dashboard1" target="_blank" rel="noopener">
-          <figure class="projects-banner-box">
-            <img src="./assets/images/genai.png" alt="Tableau" loading="lazy">
-          </figure>
-          <div class="projects-content">
-            <div class="projects-meta">
-              <p class="projects-category">Tableau</p>
-            </div>
-            <h3 class="h3 projects-item-title">Gen AI Google Trends</h3>
-            <p class="projects-text">
-              A single-page Tableau dashboard analyzing Google search interest in generative AI during 2024. It compares trends for major AI tools, regional interest, related queries, and topics, highlighting shifts in search behavior and growing interest across the global AI landscape.
-            </p>
-          </div>
-        </a>
-      </li>
-      <li class="projects-post-item active" data-filter-item data-category="tableau vizzes">
-        <a href="https://public.tableau.com/app/profile/rohini.tembhurnikar/viz/LokSabhaElections2019_17800435164240/Dashboard1" target="_blank" rel="noopener">
-          <figure class="projects-banner-box">
-            <img src="./assets/images/elections.png" alt="Tableau" loading="lazy">
-          </figure>
-          <div class="projects-content">
-            <div class="projects-meta">
-              <p class="projects-category">Tableau</p>
-            </div>
-            <h3 class="h3 projects-item-title">Lok Sabha Elections 2019</h3>
-            <p class="projects-text">
-              The project analyzes the 2019 Lok Sabha election from multiple perspectives, including party-wise seats and vote share, alliance performance by region, candidate demographics, state-level results, winning margins, NOTA votes, metro-city seat distribution, and performance of top candidates.
-            </p>
-          </div>
-        </a>
-      </li>
-      <li class="projects-post-item active" data-filter-item data-category="tableau vizzes">
-        <a href="https://public.tableau.com/app/profile/rohini.tembhurnikar/viz/NewYorkCityAccidentAnalysisJan2020-Aug2020/Dashboard1" target="_blank" rel="noopener">
-          <figure class="projects-banner-box">
-            <img src="./assets/images/nyc.png" alt="Tableau" loading="lazy">
-          </figure>
-          <div class="projects-content">
-            <div class="projects-meta">
-              <p class="projects-category">Tableau</p>
-            </div>
-            <h3 class="h3 projects-item-title">New York City Accidents 2020</h3>
-            <p class="projects-text">
-              A single-page Tableau dashboard analyzing 74,881 NYC accidents, including 27,448 injuries and 144 fatalities. It examines accident hotspots, boroughs, weekly and hourly patterns, contributing reasons, and vehicle involvement to identify temporal and geographic accident patterns.
-            </p>
-          </div>
-        </a>
-      </li>
-      <li class="projects-post-item active" data-filter-item data-category="tableau vizzes">
-        <a href="https://public.tableau.com/app/profile/rohini.tembhurnikar/viz/UnemplymentStatusinIndia/Dashboard1" target="_blank" rel="noopener">
-          <figure class="projects-banner-box">
-            <img src="./assets/images/unemployment.png" alt="Tableau" loading="lazy">
-          </figure>
-          <div class="projects-content">
-            <div class="projects-meta">
-              <p class="projects-category">Tableau</p>
-            </div>
-            <h3 class="h3 projects-item-title">Unemployment in India</h3>
-            <p class="projects-text">
-              A single-page infographic examining India’s unemployment trends from 2016 to 2023. It compares national, rural, urban, and state-level unemployment rates, highlighting changes over time, regional disparities, pandemic impact, and states with notable increases or declines.
-            </p>
-          </div>
-        </a>
-      </li>
-      <li class="projects-post-item active" data-filter-item data-category="tableau vizzes">
-        <a href="https://public.tableau.com/app/profile/rohini.tembhurnikar/viz/MavenLegoChallenge/Dashboard1" target="_blank" rel="noopener">
-          <figure class="projects-banner-box">
-            <img src="./assets/images/lego.png" alt="Tableau" loading="lazy">
-          </figure>
-          <div class="projects-content">
-            <div class="projects-meta">
-              <p class="projects-category">Tableau</p>
-            </div>
-            <h3 class="h3 projects-item-title">Maven Lego</h3>
-            <p class="projects-text">
-              A data-driven visual exploration of LEGO’s evolution across decades, analyzing the growth of sets, themes, theme groups, product longevity, age ranges, pricing, and the most prominent LEGO sets. The infographic combines historical trends with detailed product-level analysis to show how LEGO’s product portfolio has evolved over time.
-            </p>
-          </div>
-        </a>
-      </li>
-      <li class="projects-post-item active" data-filter-item data-category="power bi">
-        <a href="https://app.powerbi.com/view?r=eyJrIjoiM2MwNWE3MTAtYzg3OS00ZGI3LWI5NDUtMmRiM2EyNTJiM2U5IiwidCI6ImMwZDdmYjJmLTczZDItNDA5NC1iNzY5LTFkZTQ0NDNlNzg5YiJ9" target="_blank" rel="noopener">
-          <figure class="projects-banner-box">
-            <img src="./assets/images/healthcare.png" alt="Power BI" loading="lazy">
-          </figure>
-          <div class="projects-content">
-            <div class="projects-meta">
-              <p class="projects-category">Power BI</p>
-            </div>
-            <h3 class="h3 projects-item-title">Healthcare Analytics</h3>
-            <p class="projects-text">
-              Interactive Power BI dashboard providing a comprehensive view of 55,500 patients, healthcare costs, admissions, demographics, medical conditions, treatments, insurance providers, and hospital performance. It enables stakeholders to identify patient trends, cost drivers, treatment patterns, and operational insights.
-            </p>
-          </div>
-        </a>
-      </li>
-      <li class="projects-post-item active" data-filter-item data-category="tableau dashboards">
-        <a href="https://public.tableau.com/app/profile/rohini.tembhurnikar/viz/Maven_SlopesChallenge/Dashboard1" target="_blank" rel="noopener">
-          <figure class="projects-banner-box">
-            <img src="./assets/images/slopes.png" alt="Tableau" loading="lazy">
-          </figure>
-          <div class="projects-content">
-            <div class="projects-meta">
-              <p class="projects-category">Tableau</p>
-            </div>
-            <h3 class="h3 projects-item-title">Maven Slopes</h3>
-            <p class="projects-text">
-              An interactive ski-resort exploration dashboard designed to help users plan a skiing trip. It analyzes resort locations, pricing, ski seasons, snow coverage, slopes, lifts, snow cannons, resort features, and altitude ranges, with filters for country, season, price, child-friendliness, and slope difficulty.
-            </p>
-          </div>
-        </a>
-      </li>
-      <li class="projects-post-item active" data-filter-item data-category="sql">
-        <a href="https://github.com/rohinirt/SQL_Projects/tree/main/Instacart_Market_Basket_Analysis" target="_blank" rel="noopener">
-          <figure class="projects-banner-box">
-            <img src="./assets/images/instacart.png" alt="SQL" loading="lazy">
-          </figure>
-          <div class="projects-content">
-            <div class="projects-meta">
-              <p class="projects-category">SQL</p>
-            </div>
-            <h3 class="h3 projects-item-title">Instacart Market Masket Analysis</h3>
-            <p class="projects-text">
-              Analyzed 1M+ orders and 32M+ order items using SQL to uncover product trends, peak ordering periods, and high-value customer segments.
-            </p>
-          </div>
-        </a>
-      </li>
-      <li class="projects-post-item active" data-filter-item data-category="sql">
-        <a href="https://github.com/rohinirt/SQL_Projects/tree/main/YouTube%20Top%20200%20Trending%20Video%20Analysis" target="_blank" rel="noopener">
-          <figure class="projects-banner-box">
-            <img src="./assets/images/youtube.png" alt="SQL" loading="lazy">
-          </figure>
-          <div class="projects-content">
-            <div class="projects-meta">
-              <p class="projects-category">SQL</p>
-            </div>
-            <h3 class="h3 projects-item-title">Youtube Top 200 Trending Video Analysis</h3>
-            <p class="projects-text">
-              Built an API-to-MySQL ETL pipeline and analyzed 200 trending videos using SQL to uncover engagement patterns and content performance insights.
-            </p>
-          </div>
-        </a>
-      </li>
-      <li class="projects-post-item active" data-filter-item data-category="sql">
-        <a href="https://github.com/rohinirt/SQL_Projects/tree/main/Spotify_Analysis" target="_blank" rel="noopener">
-          <figure class="projects-banner-box">
-            <img src="./assets/images/spotify.png" alt="SQL" loading="lazy">
-          </figure>
-          <div class="projects-content">
-            <div class="projects-meta">
-              <p class="projects-category">SQL</p>
-            </div>
-            <h3 class="h3 projects-item-title">Spotify Songs Analysis</h3>
-            <p class="projects-text">
-              Used advanced PostgreSQL techniques to analyze streams, engagement, audio attributes, and artist performance, solving business problems across tracks, albums, and platforms.
-            </p>
-          </div>
-        </a>
-      </li>
-      <li class="projects-post-item active" data-filter-item data-category="sql">
-        <a href="https://github.com/rohinirt/SQL_Projects/tree/main/Pizza%20Sales" target="_blank" rel="noopener">
-          <figure class="projects-banner-box">
-            <img src="./assets/images/pizza.png" alt="SQL" loading="lazy">
-          </figure>
-          <div class="projects-content">
-            <div class="projects-meta">
-              <p class="projects-category">SQL</p>
-            </div>
-            <h3 class="h3 projects-item-title">Pizza Hut Sales</h3>
-            <p class="projects-text">
-              Analyzed 21K+ orders using advanced SQL to identify revenue trends, peak ordering periods, top products, and opportunities for inventory and staffing optimization.
-            </p>
-          </div>
-        </a>
-      </li>
-      <li class="projects-post-item active" data-filter-item data-category="sql">
-        <a href="https://github.com/rohinirt/SQL_Projects/tree/main/Music-Store-Analysis" target="_blank" rel="noopener">
-          <figure class="projects-banner-box">
-            <img src="./assets/images/music.png" alt="SQL" loading="lazy">
-          </figure>
-          <div class="projects-content">
-            <div class="projects-meta">
-              <p class="projects-category">SQL</p>
-            </div>
-            <h3 class="h3 projects-item-title">Music Store Analysis</h3>
-            <p class="projects-text">
-              This SQL music store analysis project delves into customer behavior, sales patterns, and genre preferences. It identifies senior employees, top-selling countries, high-spending customers, and best-selling albums, aiding strategic decision-making.
-            </p>
-          </div>
-        </a>
-      </li>
-      <li class="projects-post-item active" data-filter-item data-category="sql">
-        <a href="https://github.com/rohinirt/SQL_Projects/tree/main/Superstore-Sales-Analysis" target="_blank" rel="noopener">
-          <figure class="projects-banner-box">
-            <img src="./assets/images/superstore.png" alt="SQL" loading="lazy">
-          </figure>
-          <div class="projects-content">
-            <div class="projects-meta">
-              <p class="projects-category">SQL</p>
-            </div>
-            <h3 class="h3 projects-item-title">Superstore Sales</h3>
-            <p class="projects-text">
-              This SQL project analyzes sales data to extract insights for strategic decisions, covering metrics like total sales and profit, as well as trends in sales distribution.
-            </p>
-          </div>
-        </a>
-      </li>
-      <li class="projects-post-item active" data-filter-item data-category="sql">
-        <a href="https://github.com/rohinirt/SQL_Projects/tree/main/Fraud-Detection" target="_blank" rel="noopener">
-          <figure class="projects-banner-box">
-            <img src="./assets/images/fraud.png" alt="SQL" loading="lazy">
-          </figure>
-          <div class="projects-content">
-            <div class="projects-meta">
-              <p class="projects-category">SQL</p>
-            </div>
-            <h3 class="h3 projects-item-title">Fraud Detection</h3>
-            <p class="projects-text">
-              This SQL project aims to detect fraud within transactional data by querying for anomalies or irregular patterns suggestive of fraudulent activity
-            </p>
-          </div>
-        </a>
-      </li>
-      <li class="projects-post-item active" data-filter-item data-category="sql">
-        <a href="https://github.com/rohinirt/SQL_Projects/tree/main/India-Census-2011" target="_blank" rel="noopener">
-          <figure class="projects-banner-box">
-            <img src="./assets/images/census.png" alt="SQL" loading="lazy">
-          </figure>
-          <div class="projects-content">
-            <div class="projects-meta">
-              <p class="projects-category">SQL</p>
-            </div>
-            <h3 class="h3 projects-item-title">India-Census 2011</h3>
-            <p class="projects-text">
-              This SQL project examines India Census datasets to analyze population demographics, literacy rates, and growth trends by state
-            </p>
-          </div>
-        </a>
-      </li>
-      <li class="projects-post-item active" data-filter-item data-category="sql">
-        <a href="https://github.com/rohinirt/SQL_Projects/tree/main/Customer-Segmentation" target="_blank" rel="noopener">
-          <figure class="projects-banner-box">
-            <img src="./assets/images/customer.png" alt="SQL" loading="lazy">
-          </figure>
-          <div class="projects-content">
-            <div class="projects-meta">
-              <p class="projects-category">SQL</p>
-            </div>
-            <h3 class="h3 projects-item-title">Customer Segmentation</h3>
-            <p class="projects-text">
-              This SQL-driven customer segmentation project explores diverse aspects of an e-commerce dataset, including demographics, purchasing behavior, and satisfaction levels. total customer count, popular categories.
-            </p>
-          </div>
-        </a>
-      </li>
-      <li class="projects-post-item active" data-filter-item data-category="python">
-        <a href="https://github.com/rohinirt/Python_Projects/tree/main/Case%20Study%3A%20Retail%20Price%20Optimization" target="_blank" rel="noopener">
-          <figure class="projects-banner-box">
-            <img src="./assets/images/retail.png" alt="Python" loading="lazy">
-          </figure>
-          <div class="projects-content">
-            <div class="projects-meta">
-              <p class="projects-category">Python</p>
-            </div>
-            <h3 class="h3 projects-item-title">Retail Price Optimization</h3>
-            <p class="projects-text">
-              Built a Random Forest demand model and pricing simulator, identifying optimal prices that delivered a 28% average revenue increase per product.
-            </p>
-          </div>
-        </a>
-      </li>
-      <li class="projects-post-item active" data-filter-item data-category="python">
-        <a href="https://github.com/rohinirt/Python_Projects/tree/main/Customer%20Lifetime%20Value%20Analysis" target="_blank" rel="noopener">
-          <figure class="projects-banner-box">
-            <img src="./assets/images/clv.png" alt="Python" loading="lazy">
-          </figure>
-          <div class="projects-content">
-            <div class="projects-meta">
-              <p class="projects-category">Python</p>
-            </div>
-            <h3 class="h3 projects-item-title">Customer Lifetime Value Analysis</h3>
-            <p class="projects-text">
-              Evaluated acquisition channels using CLTV, ROI, conversion, and revenue metrics, identifying Social Media for highest CLTV and Email for strongest ROI.
-            </p>
-          </div>
-        </a>
-      </li>
-      <li class="projects-post-item active" data-filter-item data-category="python">
-        <a href="https://github.com/rohinirt/Python_Projects/tree/main/Zepto%20Inventory%20-%20EDA" target="_blank" rel="noopener">
-          <figure class="projects-banner-box">
-            <img src="./assets/images/zepto.png" alt="Python" loading="lazy">
-          </figure>
-          <div class="projects-content">
-            <div class="projects-meta">
-              <p class="projects-category">Python</p>
-            </div>
-            <h3 class="h3 projects-item-title">Zepto Inventory - EDA</h3>
-            <p class="projects-text">
-              Analyzed 3,200+ Zepto products to uncover pricing, discount, inventory, and category trends, identifying opportunities for pricing optimization and stock planning.
-            </p>
-          </div>
-        </a>
-      </li>
-      <li class="projects-post-item active" data-filter-item data-category="python">
-        <a href="https://github.com/rohinirt/Python_Projects/tree/main/Amazon-Review_Sentiment-Analysis" target="_blank" rel="noopener">
-          <figure class="projects-banner-box">
-            <img src="./assets/images/amazon.png" alt="Python" loading="lazy">
-          </figure>
-          <div class="projects-content">
-            <div class="projects-meta">
-              <p class="projects-category">Python</p>
-            </div>
-            <h3 class="h3 projects-item-title">Amazon Review Sentiment Analysis</h3>
-            <p class="projects-text">
-              Performed sentiment analysis on amazon reviews of toys to distribute reviews as positive, negative and neutral reviews and finding ratings given and keywords of each sentiment.
-            </p>
-          </div>
-        </a>
-      </li>
-      <li class="projects-post-item active" data-filter-item data-category="python">
-        <a href="https://github.com/rohinirt/Python_Projects/tree/main/House%20Price%20Prediction" target="_blank" rel="noopener">
-          <figure class="projects-banner-box">
-            <img src="./assets/images/house.png" alt="Python" loading="lazy">
-          </figure>
-          <div class="projects-content">
-            <div class="projects-meta">
-              <p class="projects-category">Python</p>
-            </div>
-            <h3 class="h3 projects-item-title">House Price Prediction</h3>
-            <p class="projects-text">
-              Created a machine learning model using logistic regression to predict the house price based on variables such as location, size, year.
-            </p>
-          </div>
-        </a>
-      </li>
-      <li class="projects-post-item active" data-filter-item data-category="python">
-        <a href="https://github.com/rohinirt/Python_Projects/tree/main/Loan%20Approval%20Analysis" target="_blank" rel="noopener">
-          <figure class="projects-banner-box">
-            <img src="./assets/images/loan.png" alt="Python" loading="lazy">
-          </figure>
-          <div class="projects-content">
-            <div class="projects-meta">
-              <p class="projects-category">Python</p>
-            </div>
-            <h3 class="h3 projects-item-title">Loan Approval Analysis</h3>
-            <p class="projects-text">
-              Identified impact of various factors such as age, gender, income, employment, and credit history on the loan approval decisions.
-            </p>
-          </div>
-        </a>
-      </li>
-      <li class="projects-post-item active" data-filter-item data-category="python">
-        <a href="https://github.com/rohinirt/Python_Projects/tree/main/LinkedIn%20Data%20Analyst%20Jobs%20Analysis" target="_blank" rel="noopener">
-          <figure class="projects-banner-box">
-            <img src="./assets/images/linkedIn.png" alt="Python" loading="lazy">
-          </figure>
-          <div class="projects-content">
-            <div class="projects-meta">
-              <p class="projects-category">Python</p>
-            </div>
-            <h3 class="h3 projects-item-title">LinkedIn Data Analysts Jobs</h3>
-            <p class="projects-text">
-              Analysed data analyst jobs posted on LinkedIn to identify industry trends, popular keywords in job description,top paying industries and job roles, job availability by locations to enhance job applications strategies
-            </p>
-          </div>
-        </a>
-      </li>
-      <li class="projects-post-item active" data-filter-item data-category="python">
-        <a href="https://github.com/rohinirt/Python_Projects/tree/main/Heart%20Disease%20Risk%20Factors%20Analysis" target="_blank" rel="noopener">
-          <figure class="projects-banner-box">
-            <img src="./assets/images/heart.png" alt="Python" loading="lazy">
-          </figure>
-          <div class="projects-content">
-            <div class="projects-meta">
-              <p class="projects-category">Python</p>
-            </div>
-            <h3 class="h3 projects-item-title">Heart Disease Risk Factors</h3>
-            <p class="projects-text">
-              Investigated multifactorial influences such as lifestyle, genetics, and medical history to discern key risk factors contributing to increased susceptibility to cardiovascular issues.
-            </p>
-          </div>
-        </a>
-      </li>
-      <li class="projects-post-item active" data-filter-item data-category="excel">
-        <a href="https://drive.google.com/file/d/1tXsIa-Pic3MS9uvbG-iOjut7NohHQqdQ/view?usp=sharing" target="_blank" rel="noopener">
-          <figure class="projects-banner-box">
-            <img src="./assets/images/superstoreexcel.png" alt="Excel" loading="lazy">
-          </figure>
-          <div class="projects-content">
-            <div class="projects-meta">
-              <p class="projects-category">Excel</p>
-            </div>
-            <h3 class="h3 projects-item-title">Superstore Sales</h3>
-            <p class="projects-text">
-              This Dashboard provides insights into sales trends by segment, shipping mode, and top states. It also visualizes region-wise sales, sales distribution across categories and subcategories, and analyzes the relationship between discounts and profit percentages
-            </p>
-          </div>
-        </a>
-      </li>
-      <li class="projects-post-item active" data-filter-item data-category="excel">
-        <a href="https://drive.google.com/file/d/1FBemrkeipfGPZkB0wYiE2oa9oU0GKSgT/view?usp=sharing" target="_blank" rel="noopener">
-          <figure class="projects-banner-box">
-            <img src="./assets/images/bikeexcel.png" alt="Excel" loading="lazy">
-          </figure>
-          <div class="projects-content">
-            <div class="projects-meta">
-              <p class="projects-category">Excel</p>
-            </div>
-            <h3 class="h3 projects-item-title">Bike Sales</h3>
-            <p class="projects-text">
-              This Dashboard differentiates customers based on purchase status, offering insights into average income, purchase behavior, analyzes age-group preferences, average income by occupation, and purchase tendencies such as distance traveled and number of cars owned.
-            </p>
-          </div>
-        </a>
-      </li>
-      <li class="projects-post-item active" data-filter-item data-category="excel">
-        <a href="https://drive.google.com/file/d/1LrkPhWjNQGhs4eoedw62O0TpKvEVbfmA/view?usp=sharing" target="_blank" rel="noopener">
-          <figure class="projects-banner-box">
-            <img src="./assets/images/amazonexcel.png" alt="Excel" loading="lazy">
-          </figure>
-          <div class="projects-content">
-            <div class="projects-meta">
-              <p class="projects-category">Excel</p>
-            </div>
-            <h3 class="h3 projects-item-title">Amazon Ads</h3>
-            <p class="projects-text">
-              This Dashboard tracks weekly trends of impressions, clicks, carts added, and purchases of the advertised products, distinguishing between total and unique ASINs (Amazon Standard Identification Numbers). It also highlights top search queries by clicks, carts, and purchases.
-            </p>
-          </div>
-        </a>
-      </li>
-
-    </ul>
-
-  </section>
-
-</article>
-
-    </div>
-
-  </main>
-
-
-
-
-
-
-  <!--
-    - custom js link
-  -->
-  <script src="./assets/js/script.js"></script>
-
-  <!--
-    - ionicon link
-  -->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="./assets/js/script.js"></script>
 
 </body>
-
 </html>
-
-
-
-\
