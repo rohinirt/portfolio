@@ -58,7 +58,7 @@
   });
 
   window.addEventListener('popstate', () => {
-    const target = location.hash.replace('#', '') || 'home';
+    const target = location.hash.replace('#', '') || 'about';
     goTo(target, { push: false });
   });
 
@@ -68,7 +68,7 @@
   });
 
   // initial route
-  const initial = location.hash.replace('#', '') || 'home';
+  const initial = location.hash.replace('#', '') || 'about';
   goTo(initial, { push: false });
   // ensure underline positions after fonts/layout settle
   window.addEventListener('load', () => {
@@ -82,6 +82,28 @@
     topbar.classList.toggle('menu-open');
     hamburger.classList.toggle('active');
   });
+})();
+
+/* =========================================================
+   ROLE CYCLE (animated "I'm a ___" text)
+========================================================= */
+(() => {
+  const el = document.querySelector('[data-role-cycle]');
+  if (!el) return;
+
+  const roles = ['Data Analyst', 'Business Analyst', 'Data Visualization Expert', 'BI Analyst'];
+  let i = 0;
+
+  setInterval(() => {
+    i = (i + 1) % roles.length;
+    el.classList.add('role-out');
+    setTimeout(() => {
+      el.textContent = roles[i];
+      el.classList.remove('role-out');
+      el.classList.add('role-in');
+      setTimeout(() => el.classList.remove('role-in'), 400);
+    }, 280);
+  }, 2400);
 })();
 
 /* =========================================================
@@ -141,31 +163,69 @@
 })();
 
 /* =========================================================
-   CONTACT FORM (mailto handoff — static site, no backend)
+   CONTACT FORM
+   Submits to Formspree (https://formspree.io) so messages land
+   straight in your inbox — no backend needed on GitHub Pages.
+   Setup: create a free form at formspree.io, then replace
+   YOUR_FORM_ID in the form's "action" attribute in index.html
+   with the ID Formspree gives you (looks like /f/abcdwxyz).
+   Until that's done, this automatically falls back to opening
+   the visitor's email app with the message pre-filled.
 ========================================================= */
 (() => {
   const form = document.querySelector('[data-form]');
   if (!form) return;
 
-  const inputs = form.querySelectorAll('[data-form-input]');
   const submitBtn = form.querySelector('[data-form-btn]');
+  const btnText = form.querySelector('[data-form-btn-text]');
   const msg = form.querySelector('[data-form-msg]');
+  const isConfigured = !form.action.includes('YOUR_FORM_ID');
 
-  form.addEventListener('submit', (e) => {
+  function mailtoFallback(name, email, message) {
+    const subject = encodeURIComponent(`Portfolio message from ${name}`);
+    const body = encodeURIComponent(`${message}\n\n— ${name} (${email})`);
+    window.location.href = `mailto:rohinitembhurnikar3@gmail.com?subject=${subject}&body=${body}`;
+    if (msg) msg.textContent = 'Opening your email app to send this message…';
+  }
+
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
     const name = form.querySelector('#cf-name').value.trim();
     const email = form.querySelector('#cf-email').value.trim();
     const message = form.querySelector('#cf-message').value.trim();
-
     if (!name || !email || !message) return;
 
-    const subject = encodeURIComponent(`Portfolio message from ${name}`);
-    const body = encodeURIComponent(`${message}\n\n— ${name} (${email})`);
-    window.location.href = `mailto:rohinitembhurnikar3@gmail.com?subject=${subject}&body=${body}`;
+    if (!isConfigured) {
+      mailtoFallback(name, email, message);
+      form.reset();
+      return;
+    }
 
-    if (msg) msg.textContent = 'Opening your email app to send this message…';
-    form.reset();
+    if (submitBtn) submitBtn.style.pointerEvents = 'none';
+    if (btnText) btnText.textContent = 'Sending…';
+    if (msg) { msg.textContent = ''; msg.style.color = 'var(--pine)'; }
+
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (res.ok) {
+        if (msg) msg.textContent = "Thanks! Your message has been sent — I'll get back to you soon.";
+        form.reset();
+      } else {
+        throw new Error('Form submission failed');
+      }
+    } catch (err) {
+      if (msg) { msg.style.color = '#C2540C'; msg.textContent = "Couldn't send automatically — opening your email app instead."; }
+      mailtoFallback(name, email, message);
+    } finally {
+      if (submitBtn) submitBtn.style.pointerEvents = '';
+      if (btnText) btnText.textContent = 'Send Message';
+    }
   });
 })();
 
