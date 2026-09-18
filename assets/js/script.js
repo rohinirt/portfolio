@@ -58,7 +58,7 @@
   });
 
   window.addEventListener('popstate', () => {
-    const target = location.hash.replace('#', '') || 'about';
+    const target = location.hash.replace('#', '') || 'home';
     goTo(target, { push: false });
   });
 
@@ -68,7 +68,7 @@
   });
 
   // initial route
-  const initial = location.hash.replace('#', '') || 'about';
+  const initial = location.hash.replace('#', '') || 'home';
   goTo(initial, { push: false });
   // ensure underline positions after fonts/layout settle
   window.addEventListener('load', () => {
