@@ -1,739 +1,1560 @@
-/* =========================================================
-   ROHINI TEMBHURNIKAR — PORTFOLIO
-   Design tokens
-========================================================= */
-
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Caveat:wght@600;700&display=swap');
-
-:root{
-  /* palette — lavender theme */
-  --cream:        #F5F1FD;
-  --cream-soft:   #FAF7FE;
-  --card:         #FCFAFF;
-  --card-tint:    #F1EAFC;
-  --line:         #E4D9F7;
-
-  --ink:          #1F1147;   /* headings */
-  --ink-soft:     #5B5478;   /* body text */
-  --ink-faint:    #8D84A8;
-
-  --coral:        #664BA7;   /* primary lavender-purple accent */
-  --coral-dark:   #4F3A87;
-  --coral-tint:   #EDE3FB;
-
-  --pine:         #2E2159;   /* deep indigo secondary accent */
-  --pine-dark:    #1F1740;
-  --pine-tint:    #E7DCFB;
-
-  --mint:         #D9CBFA;
-  --peach:        #F1E6FE;
-
-  --tool-tableau-bg:  #E6EFFB; --tool-tableau-fg:  #1D5FA8;
-  --tool-vizzes-bg:   #E1F3EE; --tool-vizzes-fg:   #187A67;
-  --tool-powerbi-bg:  #FBEFD8; --tool-powerbi-fg:  #B47418;
-  --tool-looker-bg:   #F1E7FB; --tool-looker-fg:   #7C3AED;
-  --tool-python-bg:   #E9EAFB; --tool-python-fg:   #4338CA;
-  --tool-sql-bg:      #FDEBDF; --tool-sql-fg:      #C2540C;
-  --tool-excel-bg:    #E3F5E7; --tool-excel-fg:    #1E8449;
-  --tool-sheets-bg:   #DFF3E6; --tool-sheets-fg:   #0F9D58;
-  --tool-etl-bg:      #DDF1F0; --tool-etl-fg:      #0F7C7A;
-
-  --radius-s:  10px;
-  --radius-m:  16px;
-  --radius-l:  24px;
-  --radius-xl: 32px;
-  --radius-project: 12px;
-
-  --shadow-card: 0 10px 30px rgba(45,26,90,.07), 0 2px 6px rgba(45,26,90,.05);
-  --shadow-pop:  0 20px 45px rgba(45,26,90,.14);
-
-  --ease: cubic-bezier(.22,1,.36,1);
-  --dur-s: .2s;
-  --dur-m: .45s;
-  --dur-l: .7s;
-
-  --ff: 'Plus Jakarta Sans', 'Segoe UI', sans-serif;
-}
-
-*, *::before, *::after{ box-sizing: border-box; }
-
-html{ scroll-behavior: smooth; }
-
-body{
-  margin:0;
-  font-family: var(--ff);
-  background: var(--cream);
-  color: var(--ink-soft);
-  -webkit-font-smoothing: antialiased;
-  overflow-x: hidden;
-}
-
-img{ max-width:100%; display:block; }
-a{ color:inherit; text-decoration:none; }
-ul{ list-style:none; margin:0; padding:0; }
-button{ font-family:inherit; cursor:pointer; border:none; background:none; }
-input, textarea{ font-family:inherit; }
-
-::selection{ background: var(--coral); color:#fff; }
-
-@media (prefers-reduced-motion: reduce){
-  *{ animation-duration: .01ms !important; transition-duration: .01ms !important; }
-}
-
-.h1, h1{ font-size: clamp(2.1rem, 4vw, 3.15rem); line-height:1.08; font-weight:800; color:var(--ink); letter-spacing:-0.02em; margin:0; }
-.h2, h2{ font-size: clamp(1.7rem, 2.6vw, 2.3rem); line-height:1.15; font-weight:800; color:var(--ink); letter-spacing:-0.01em; margin:0; }
-.h3, h3{ font-size: 1.2rem; font-weight:700; color:var(--ink); margin:0; }
-.h4, h4{ font-size: 1rem; font-weight:700; color:var(--ink); margin:0; }
-
-.eyebrow{
-  display:inline-flex; align-items:center; gap:8px;
-  font-size:.75rem; font-weight:700; letter-spacing:.14em;
-  color: var(--coral-dark); text-transform:uppercase;
-  margin-bottom:12px;
-}
-.eyebrow::before{
-  content:''; width:16px; height:2px; background:var(--coral); border-radius:2px;
-}
-
-/* =========================================================
-   BACKGROUND DECORATION
-========================================================= */
-.bg-decor{
-  position:fixed; inset:0; z-index:0; overflow:hidden; pointer-events:none;
-}
-.bg-decor .bgb{
-  position:absolute; border-radius:50%; filter: blur(2px);
-  opacity:.55;
-}
-.blob-1{ width:520px; height:520px; right:-140px; top:-180px; background: radial-gradient(circle at 30% 30%, var(--peach), transparent 70%); }
-.blob-2{ width:460px; height:460px; left:-160px; top:340px; background: radial-gradient(circle at 60% 40%, var(--mint), transparent 70%); opacity:.5; }
-.blob-3{ width:380px; height:380px; right:-120px; bottom:-120px; background: radial-gradient(circle at 40% 60%, var(--coral-tint), transparent 70%); }
-
-/* soft lavender wave wash, echoing the reference's flowing bands */
-.blob-4{
-  width:640px; height:640px; left:-220px; bottom:-260px;
-  background: radial-gradient(circle at 55% 45%, #DCCFF7, transparent 68%);
-  opacity:.5;
-}
-.blob-5{
-  width:260px; height:260px; left:60px; bottom:60px;
-  background: radial-gradient(circle at 40% 40%, #C6B3F1, transparent 72%);
-  opacity:.4;
-}
-.blob-6{
-  width:420px; height:420px; left:10%; top:46%;
-  background: radial-gradient(circle at 50% 50%, #FCFAFF, transparent 70%);
-  opacity:.5;
-}
-
-.bg-pattern{
-  position:absolute; left:-10px; bottom:-10px; width:340px; height:340px; opacity:.3;
-  background-image: radial-gradient(circle, rgba(46,33,89,.28) 1.6px, transparent 1.6px);
-  background-size: 22px 22px;
-  -webkit-mask-image: radial-gradient(circle at 20% 80%, black 0%, transparent 70%);
-  mask-image: radial-gradient(circle at 20% 80%, black 0%, transparent 70%);
-}
-.bg-ring{
-  position:absolute; left:40px; bottom:120px; width:180px; height:180px;
-  border-radius:50%; border:2px solid rgba(46,33,89,.16); opacity:.6;
-}
-.bg-ring-2{
-  position:absolute; left:140px; bottom:40px; width:90px; height:90px;
-  border-radius:50%; border:2px dashed rgba(102,75,167,.25); opacity:.55;
-}
-
-/* =========================================================
-   TOP NAVIGATION
-========================================================= */
-.topbar{
-  position: sticky; top:0; z-index:100;
-  background: rgba(250,247,254,.9);
-  backdrop-filter: blur(14px);
-  border-bottom: 1px solid var(--line);
-}
-.topbar-inner{
-  max-width:1180px; margin:0 auto;
-  display:grid; grid-template-columns: 1fr auto 1fr;
-  align-items:center;
-  gap:16px;
-  padding: 16px clamp(20px,5vw,64px);
-}
-.brand{ display:flex; flex-direction:column; gap:1px; line-height:1.15; justify-self:start; }
-.brand-name{ font-weight:800; font-size:1.05rem; color:var(--ink); }
-.brand-role{ font-size:.72rem; font-weight:600; color:var(--ink-faint); }
-
-.nav-list{
-  display:flex; align-items:center; gap:2px;
-  position:relative;
-  justify-self:center;
-}
-.nav-link{
-  position:relative; z-index:2;
-  padding:9px 16px; font-size:.82rem; font-weight:700; letter-spacing:.05em; text-transform:uppercase;
-  color: var(--ink-soft);
-  border-radius:999px;
-  transition: color var(--dur-s) var(--ease);
-}
-.nav-link:hover{ color: var(--ink); }
-.nav-link.active{ color: var(--coral-dark); }
-.nav-underline{
-  position:absolute; bottom:2px; height:2px; background:var(--coral);
-  border-radius:2px; transition: left var(--dur-m) var(--ease), width var(--dur-m) var(--ease);
-}
-
-.nav-socials{ display:flex; align-items:center; gap:10px; }
-.nav-social{
-  width:36px; height:36px; border-radius:10px; flex:none;
-  display:flex; align-items:center; justify-content:center;
-  background: var(--coral-tint); color: var(--coral-dark);
-  transition: background var(--dur-s) var(--ease), color var(--dur-s) var(--ease), transform var(--dur-s) var(--ease);
-}
-.nav-social svg{ width:17px; height:17px; }
-.nav-social:hover{ background: var(--coral); color:#fff; transform: translateY(-2px); }
-
-.btn{
-  display:inline-flex; align-items:center; justify-content:center; gap:8px;
-  padding: 12px 22px;
-  border-radius:14px;
-  font-weight:700; font-size:.92rem;
-  transition: transform var(--dur-s) var(--ease), box-shadow var(--dur-s) var(--ease), background var(--dur-s) var(--ease);
-  white-space:nowrap;
-}
-.btn svg{ width:16px; height:16px; transition: transform var(--dur-s) var(--ease); }
-.btn:hover svg{ transform: translateX(3px); }
-.btn:active{ transform: scale(.97); }
-
-.btn-coral{ background: var(--coral); color:#fff; box-shadow: 0 10px 22px rgba(102,75,167,.32); }
-.btn-coral:hover{ background: var(--coral-dark); box-shadow: 0 12px 26px rgba(79,58,135,.38); }
-
-.btn-pine{ background: var(--pine); color:#fff; box-shadow: 0 10px 22px rgba(46,33,89,.28); }
-.btn-pine:hover{ background: var(--pine-dark); }
-
-.btn-outline{ background: #fff; color: var(--ink); border:1.5px solid var(--line); }
-.btn-outline:hover{ border-color: var(--coral); color: var(--coral-dark); }
-
-.btn-sm{ padding:9px 16px; font-size:.85rem; }
-
-.hamburger{
-  display:none; width:40px; height:40px; border-radius:50%;
-  align-items:center; justify-content:center; flex:none;
-  justify-self:end;
-}
-.hamburger span{ display:block; width:18px; height:2px; background:var(--ink); border-radius:2px; position:relative; transition: background var(--dur-s); }
-.hamburger span::before, .hamburger span::after{
-  content:''; position:absolute; left:0; width:18px; height:2px; background:var(--ink); border-radius:2px;
-  transition: transform var(--dur-m) var(--ease), top var(--dur-m) var(--ease);
-}
-.hamburger span::before{ top:-6px; }
-.hamburger span::after{ top:6px; }
-.hamburger.active span{ background:transparent; }
-.hamburger.active span::before{ top:0; transform: rotate(45deg); }
-.hamburger.active span::after{ top:0; transform: rotate(-45deg); }
-
-/* =========================================================
-   PAGE SWITCHER
-========================================================= */
-main{ position:relative; z-index:1; }
-
-.page{
-  display:none;
-  max-width:1180px; margin:0 auto;
-  padding: 32px clamp(20px,5vw,64px) 100px;
-}
-.page[data-page="home"]{ padding-top: 22px; }
-.page.active{ display:block; }
-.page.anim-in{
-  animation: pageIn var(--dur-l) var(--ease) both;
-}
-@keyframes pageIn{
-  from{ opacity:0; transform: translateY(18px); }
-  to{ opacity:1; transform: translateY(0); }
-}
-
-/* =========================================================
-   HOME
-========================================================= */
-.hero-band{
-  position:relative; overflow:hidden;
-  background: linear-gradient(135deg, #F2ECFE 0%, #E8DDFC 100%);
-  border-radius: 28px;
-  padding: 40px clamp(20px,4vw,48px) 30px;
-}
-.hero-ring{
-  position:absolute; right:6%; top:-10%;
-  width:420px; height:420px; border-radius:50%;
-  border: 22px solid rgba(255,255,255,.55);
-  pointer-events:none;
-}
-.hero-dots{
-  position:absolute; right:4%; top:8%;
-  width:120px; height:120px;
-  background-image: radial-gradient(circle, rgba(102,75,167,.35) 2px, transparent 2px);
-  background-size: 14px 14px;
-  pointer-events:none;
-}
-
-.hero{
-  display:grid; grid-template-columns: 1.05fr .95fr;
-  gap:40px; align-items:center;
-  min-width:0;
-  position:relative; z-index:1;
-}
-.hero-copy, .hero-visual{ min-width:0; }
-.hi-line{ font-size:1.1rem; color:var(--ink); font-weight:500; margin:0 0 2px; }
-.hero-copy p.lead{
-  font-size:1.02rem; color:var(--ink-soft); max-width:46ch; margin:14px 0 28px;
-}
-.hero-copy .h1 .accent{ color: var(--coral); }
-.hero-actions{ display:flex; gap:14px; flex-wrap:wrap; }
-
-.role-line{
-  font-size:1.05rem; font-weight:700; color:var(--coral-dark); margin:8px 0 0;
-  text-transform:uppercase; letter-spacing:.12em;
-}
-.role-cycle{
-  display:inline-block; position:relative;
-  transition: opacity .28s var(--ease), transform .28s var(--ease);
-}
-.role-cycle.role-out{ opacity:0; transform: translateY(6px); }
-.role-cycle.role-in{ animation: roleIn .4s var(--ease) both; }
-@keyframes roleIn{
-  from{ opacity:0; transform: translateY(-6px); }
-  to{ opacity:1; transform: translateY(0); }
-}
-
-.skills-section{ margin-top:56px; }
-
-.hero-visual{ position:relative; display:flex; justify-content:center; }
-.hero-visual .blob{
-  position:absolute; inset:6% 8%;
-  background: radial-gradient(circle at 35% 30%, #fff, var(--mint) 75%);
-  border-radius: 44% 56% 60% 40% / 50% 45% 55% 50%;
-  opacity:.95;
-  animation: blobMove 10s ease-in-out infinite;
-}
-@keyframes blobMove{
-  0%,100%{ border-radius: 44% 56% 60% 40% / 50% 45% 55% 50%; }
-  50%{ border-radius: 55% 45% 48% 52% / 44% 55% 45% 56%; }
-}
-.hero-photo{
-  position:relative; width:min(360px, 78vw); aspect-ratio: 4/5;
-  border-radius: 40% 60% 55% 45% / 55% 50% 50% 45%;
-  overflow:hidden; z-index:1;
-  box-shadow: var(--shadow-pop);
-  animation: floaty 6s ease-in-out infinite;
-  border: 5px solid rgba(255,255,255,.7);
-}
-.hero-photo img{ width:100%; height:100%; object-fit:cover; }
-@keyframes floaty{
-  0%,100%{ transform: translateY(0); }
-  50%{ transform: translateY(-10px); }
-}
-.hero-tag{
-  position:absolute; right:-4px; bottom:6%;
-  font-family:'Caveat', cursive; font-size:1.4rem; font-weight:700; color:var(--coral-dark);
-  line-height:1.15; text-align:right;
-  transform: rotate(-3deg);
-}
-.hero-tag .rule{ display:block; width:44px; height:2px; background:var(--coral); margin-top:4px; margin-left:auto; }
-
-.kpi-row{
-  margin-top:36px;
-  display:grid; grid-template-columns:repeat(3,1fr);
-  gap:14px;
-  background: var(--card);
-  border:1px solid var(--line);
-  border-radius: var(--radius-l);
-  padding: 22px 10px;
-  box-shadow: var(--shadow-card);
-}
-.kpi{
-  display:flex; align-items:center; gap:12px; padding: 0 14px;
-  border-right:1px solid var(--line);
-}
-.kpi:last-child{ border-right:none; }
-.kpi-icon{
-  width:42px; height:42px; border-radius:12px; flex:none;
-  display:flex; align-items:center; justify-content:center;
-  background: var(--coral-tint); color: var(--coral-dark);
-}
-.kpi:nth-child(2) .kpi-icon{ background: var(--pine-tint); color: var(--pine); }
-.kpi:nth-child(3) .kpi-icon{ background: #FBEFD8; color:#B47418; }
-.kpi-icon svg{ width:20px; height:20px; }
-.kpi-num{ font-size:1.35rem; font-weight:800; color:var(--ink); line-height:1; }
-.kpi-label{ font-size:.8rem; color:var(--ink-faint); margin-top:4px; }
-
-/* Home hero variant: no card background, just a light lavender stroke, sits under the buttons */
-.kpi-row-inline{
-  margin-top:28px; display:flex; flex-wrap:nowrap;
-  background:none; border:none; box-shadow:none; padding:0; gap:8px;
-}
-.kpi-row-inline .kpi.kpi-bare{
-  flex: 1 1 0; min-width:0; gap:8px; padding: 10px 10px;
-}
-.kpi-bare{
-  border: 1.5px solid rgba(102,75,167,.28);
-  border-radius: 14px; background: rgba(255,255,255,.35);
-}
-.kpi-row-inline .kpi.kpi-bare:last-child{ border-right: 1.5px solid rgba(102,75,167,.28); }
-.kpi-bare .kpi-icon{ width:32px; height:32px; border-radius:9px; flex:none; }
-.kpi-bare .kpi-icon svg{ width:15px; height:15px; }
-.kpi-bare .kpi-num{ font-size:1.02rem; }
-.kpi-bare .kpi-label{ font-size:.68rem; line-height:1.25; white-space:normal; }
-
-/* Testimonials */
-.testimonials{ margin-top:76px; }
-.section-head{
-  display:flex; align-items:flex-end; justify-content:space-between; margin-bottom:26px; gap:20px;
-}
-.section-head p{ color:var(--ink-faint); margin:6px 0 0; max-width:50ch; }
-
-.t-track-wrap{ position:relative; }
-.t-track{
-  display:flex; gap:20px; overflow-x:auto; scroll-behavior:smooth; scroll-snap-type:x mandatory;
-  padding-bottom:10px; margin: 0 -4px; padding-left:4px; padding-right:4px;
-  -ms-overflow-style:none; scrollbar-width:none;
-}
-.t-track::-webkit-scrollbar{ display:none; }
-.t-card{
-  flex: 0 0 min(380px, 84vw); scroll-snap-align:start;
-  background: var(--card); border:1px solid var(--line); border-radius: var(--radius-l);
-  padding: 26px; box-shadow: var(--shadow-card);
-  display:flex; flex-direction:column; gap:14px;
-  transition: transform var(--dur-s) var(--ease), box-shadow var(--dur-s) var(--ease);
-}
-.t-card:hover{ transform: translateY(-4px); box-shadow: var(--shadow-pop); }
-.t-person{ display:flex; align-items:center; gap:12px; }
-.t-avatar{ width:48px; height:48px; border-radius:50%; overflow:hidden; flex:none; border:2px solid var(--coral-tint); }
-.t-avatar img{ width:100%; height:100%; object-fit:cover; }
-.t-name{ font-weight:700; color:var(--ink); font-size:.95rem; }
-.t-role{ font-size:.78rem; color:var(--ink-faint); margin-top:2px; }
-.t-text{ font-size:.9rem; line-height:1.6; color:var(--ink-soft); }
-.t-text p{ margin:0 0 10px; }
-.t-text p:last-child{ margin:0; }
-
-.t-controls{ display:flex; gap:10px; margin-top:18px; justify-content:flex-end; }
-.t-arrow{
-  width:40px; height:40px; border-radius:50%; border:1px solid var(--line);
-  background:var(--card); display:flex; align-items:center; justify-content:center;
-  transition: background var(--dur-s), color var(--dur-s), transform var(--dur-s);
-}
-.t-arrow:hover{ background:var(--coral); color:#fff; transform: translateY(-2px); }
-.t-arrow svg{ width:16px; height:16px; }
-
-/* =========================================================
-   ABOUT
-========================================================= */
-.about-top{ display:grid; grid-template-columns:1fr .8fr; gap:48px; align-items:center; }
-.about-copy p{ font-size:1rem; line-height:1.7; margin:0 0 16px; max-width:52ch; }
-.about-photo{
-  position:relative; width:min(320px, 70vw); aspect-ratio:1/1.05; margin: 0 auto;
-  border-radius: 42% 58% 60% 40% / 55% 45% 55% 45%; overflow:hidden;
-  box-shadow: var(--shadow-pop);
-}
-.about-photo img{ width:100%; height:100%; object-fit:cover; }
-
-.doing-grid{
-  margin-top:52px;
-  display:grid; grid-template-columns:repeat(4,1fr); gap:18px;
-}
-.doing-card{
-  background:var(--card); border:1px solid var(--line); border-radius: var(--radius-m);
-  padding:24px 18px; text-align:left;
-  transition: transform var(--dur-s) var(--ease), box-shadow var(--dur-s) var(--ease), border-color var(--dur-s);
-}
-.doing-card:hover{ transform: translateY(-6px); box-shadow: var(--shadow-pop); border-color: var(--coral-tint); }
-.doing-icon{
-  width:44px; height:44px; border-radius:12px; margin-bottom:14px;
-  display:flex; align-items:center; justify-content:center; background:var(--coral-tint); color:var(--coral-dark);
-}
-.doing-card:nth-child(2) .doing-icon{ background:var(--pine-tint); color:var(--pine); }
-.doing-card:nth-child(3) .doing-icon{ background:#FBEFD8; color:#B47418; }
-.doing-card:nth-child(4) .doing-icon{ background:#F1E7FB; color:#7C3AED; }
-.doing-icon svg{ width:22px; height:22px; }
-.doing-title{ font-size:.98rem; font-weight:700; color:var(--ink); margin-bottom:6px; }
-.doing-text{ font-size:.83rem; color:var(--ink-faint); line-height:1.55; }
-
-.journey{
-  margin-top:56px; background:var(--card); border:1px solid var(--line); border-radius:var(--radius-l);
-  padding: 30px clamp(18px,4vw,40px);
-  box-shadow: var(--shadow-card);
-}
-.journey h3{ margin-bottom:26px; }
-.journey-track{ position:relative; display:grid; grid-template-columns:repeat(4,1fr); gap:16px; }
-.journey-track::before{
-  content:''; position:absolute; top:11px; left:6%; right:6%; height:2px; background: var(--line);
-}
-.journey-step{ position:relative; text-align:center; padding-top:34px; }
-.journey-dot{
-  position:absolute; top:0; left:50%; transform:translateX(-50%);
-  width:22px; height:22px; border-radius:50%; background:#fff; border:3px solid var(--coral);
-}
-.journey-step:nth-child(1) .journey-dot{ border-color:var(--coral); }
-.journey-step:nth-child(2) .journey-dot{ border-color:var(--pine); }
-.journey-step:nth-child(3) .journey-dot{ border-color:#B47418; }
-.journey-step:nth-child(4) .journey-dot{ border-color:#7C3AED; background:#7C3AED; }
-.journey-label{ font-size:.72rem; font-weight:700; letter-spacing:.06em; text-transform:uppercase; color:var(--ink-faint); margin-bottom:6px; }
-.journey-title{ font-size:.92rem; font-weight:700; color:var(--ink); }
-.journey-sub{ font-size:.78rem; color:var(--ink-faint); margin-top:4px; }
-
-/* =========================================================
-   RESUME
-========================================================= */
-.resume-head{ display:flex; align-items:flex-end; justify-content:space-between; gap:20px; flex-wrap:wrap; margin-bottom:40px; }
-.resume-actions{ display:flex; gap:12px; }
-
-.resume-grid{ display:grid; grid-template-columns: 1.5fr 1fr; gap:28px; align-items:stretch; }
-
-.panel{
-  background:var(--card); border:1px solid var(--line); border-radius:var(--radius-l);
-  padding: 28px clamp(18px,3vw,32px); box-shadow: var(--shadow-card);
-}
-.panel-head{ display:flex; align-items:center; gap:12px; margin-bottom:22px; }
-.panel-icon{
-  width:38px; height:38px; border-radius:11px; background:var(--coral-tint); color:var(--coral-dark);
-  display:flex; align-items:center; justify-content:center; flex:none;
-}
-.panel-icon svg{ width:19px; height:19px; }
-
-.exp-item + .exp-item{ margin-top:26px; padding-top:26px; border-top:1px dashed var(--line); }
-.exp-title{ font-size:1.02rem; }
-.exp-title b{ color:var(--ink); }
-.exp-span{ display:inline-block; font-size:.78rem; font-weight:700; color:var(--coral-dark); background:var(--coral-tint); padding:3px 10px; border-radius:999px; margin:8px 0 12px; }
-.exp-list{ display:flex; flex-direction:column; gap:8px; }
-.exp-list li{ font-size:.87rem; line-height:1.6; color:var(--ink-soft); padding-left:16px; position:relative; }
-.exp-list li::before{ content:''; position:absolute; left:0; top:9px; width:5px; height:5px; border-radius:50%; background:var(--coral); }
-
-.exp-item-rich{ display:flex; gap:16px; align-items:flex-start; }
-.company-badge{
-  flex:none; width:46px; height:46px; border-radius:14px;
-  display:flex; align-items:center; justify-content:center;
-  font-weight:800; font-size:1.1rem; color:#fff;
-  box-shadow: 0 8px 16px rgba(23,36,47,.14);
-}
-.company-badge-uber{ background: linear-gradient(135deg, #1B1B1B, #3A3A3A); }
-.company-badge-topn{ background: linear-gradient(135deg, var(--pine), #4A3A7D); }
-.exp-item-body{ flex:1; min-width:0; }
-.exp-desc{ font-size:.87rem; line-height:1.65; color:var(--ink-soft); margin:0; }
-.exp-tags{ display:flex; flex-wrap:wrap; gap:7px; margin-top:12px; }
-.exp-tag{
-  font-size:.72rem; font-weight:700; color:var(--pine);
-  background:var(--pine-tint); padding:4px 10px; border-radius:999px;
-}
-
-.edu-item + .edu-item{ margin-top:18px; padding-top:18px; border-top:1px dashed var(--line); }
-
-.skills-panel .skill-chip-list{ display:flex; flex-direction:column; gap:10px; }
-.skill-grid{ display:grid !important; grid-template-columns: repeat(2,1fr); gap:10px; }
-.skill-chip{
-  display:flex; align-items:center; gap:12px; padding:9px 12px;
-  border-radius:12px; background: var(--cream-soft); border:1px solid var(--line);
-  font-size:.86rem; font-weight:600; color:var(--ink);
-  transition: transform var(--dur-s) var(--ease), box-shadow var(--dur-s) var(--ease);
-}
-.skill-chip:hover{ transform: translateX(4px); box-shadow: var(--shadow-card); }
-.skill-chip .dot{ width:9px; height:9px; border-radius:50%; flex:none; }
-.chip-icon{
-  width:30px; height:30px; border-radius:9px; flex:none;
-  display:flex; align-items:center; justify-content:center;
-}
-.chip-icon svg{ width:16px; height:16px; }
-
-.cert-item{ display:flex; gap:12px; align-items:flex-start; }
-.cert-item + .cert-item{ margin-top:16px; }
-.cert-dot{ width:8px; height:8px; border-radius:50%; background: var(--coral); margin-top:7px; flex:none; }
-.cert-sub{ font-size:.78rem; color:var(--ink-faint); margin-top:1px; }
-
-.cert-list-compact{ display:flex; flex-direction:column; gap:14px; }
-.cert-row{ display:flex; gap:10px; align-items:flex-start; }
-.cert-name-link{
-  font-weight:700; font-size:.87rem; color:var(--ink); line-height:1.35;
-  display:inline-block; transition: color var(--dur-s) var(--ease);
-}
-.cert-name-link:hover{ color: var(--coral-dark); text-decoration: underline; }
-
-/* =========================================================
-   PROJECTS
-========================================================= */
-.projects-head{ margin-bottom:28px; }
-.filter-list{ display:flex; flex-wrap:wrap; gap:10px; margin-bottom:34px; }
-.filter-btn{
-  padding:10px 18px; border-radius:999px; font-size:.85rem; font-weight:600;
-  background:var(--card); border:1px solid var(--line); color:var(--ink-soft);
-  transition: all var(--dur-s) var(--ease);
-}
-.filter-btn:hover{ border-color: var(--coral); color: var(--coral-dark); }
-.filter-btn.active{ background:var(--coral); border-color:var(--coral); color:#fff; box-shadow: 0 8px 18px rgba(200,92,76,.3); }
-
-.projects-grid{
-  display:grid; grid-template-columns:repeat(2, 1fr); gap:30px;
-}
-.project-card{
-  background:var(--card); border:1px solid var(--line); border-radius: var(--radius-project);
-  overflow:hidden; box-shadow: var(--shadow-card);
-  opacity:0; transform: scale(.96); pointer-events:none; position:absolute; width:0; height:0; overflow:hidden;
-  transition: transform var(--dur-m) var(--ease), box-shadow var(--dur-s) var(--ease);
-}
-.project-card.show{
-  opacity:1; transform: scale(1); pointer-events:auto; position:relative; width:auto; height:auto;
-  animation: cardIn var(--dur-m) var(--ease) both;
-}
-@keyframes cardIn{
-  from{ opacity:0; transform: translateY(14px) scale(.97); }
-  to{ opacity:1; transform: translateY(0) scale(1); }
-}
-.project-card:hover{ box-shadow: var(--shadow-pop); }
-
-.project-thumb{
-  position:relative; background: var(--card);
-}
-.project-thumb-inner{
-  position:relative; overflow:hidden; aspect-ratio:2/1; background:#fff; width:100%;
-}
-.project-thumb-inner img{ width:100%; height:100%; object-fit:cover; display:block; transition: transform var(--dur-m) var(--ease); }
-.project-card:hover .project-thumb-inner img{ transform: scale(1.04); }
-
-.project-overlay{
-  position:absolute; inset:0; background: rgba(255,255,255,.95);
-  display:flex; flex-direction:column; align-items:flex-start; justify-content:center; gap:14px;
-  padding: 26px 30px;
-  opacity:0; transition: opacity var(--dur-s) var(--ease);
-  overflow-y:auto;
-}
-.project-thumb-inner:hover .project-overlay{ opacity:1; }
-.project-overlay p{ font-size:.88rem; line-height:1.6; color: var(--ink-soft); margin:0; }
-.project-cta{ font-size:.82rem; font-weight:700; color:var(--coral-dark); display:inline-flex; align-items:center; gap:6px; flex:none; }
-.project-cta svg{ width:14px; height:14px; }
-
-.project-body{ padding: 18px 20px 22px; }
-.project-tool{
-  display:inline-block; font-size:.72rem; font-weight:700; padding:4px 11px; border-radius:999px; margin-bottom:10px;
-}
-.project-title{ font-size:1.05rem; margin-bottom:0; }
-
-.projects-empty{ text-align:center; padding:60px 0; color:var(--ink-faint); display:none; }
-
-/* =========================================================
-   CONTACT
-========================================================= */
-.contact-head p{ max-width:56ch; }
-.contact-grid{ margin-top:36px; display:grid; grid-template-columns: .85fr 1.15fr; gap:24px; align-items:start; }
-
-.contact-list{ display:flex; flex-direction:column; gap:14px; }
-.contact-row{
-  display:flex; align-items:center; gap:14px;
-  background:var(--card); border:1px solid var(--line); border-radius:var(--radius-m);
-  padding:16px 18px; box-shadow: var(--shadow-card);
-  transition: transform var(--dur-s) var(--ease), box-shadow var(--dur-s) var(--ease);
-}
-.contact-row:hover{ transform: translateX(4px); box-shadow: var(--shadow-pop); }
-.contact-icon{
-  width:42px; height:42px; border-radius:12px; flex:none; background:var(--coral-tint); color:var(--coral-dark);
-  display:flex; align-items:center; justify-content:center;
-}
-.contact-icon.icon-email{ background:var(--coral); color:#fff; }
-.contact-icon.icon-phone{ background:var(--coral); color:#fff; }
-.contact-icon.icon-linkedin{ background:var(--coral); color:#fff; }
-.contact-icon.icon-github{ background:var(--coral); color:#fff; }
-.contact-icon.icon-location{ background:var(--coral); color:#fff; }
-.contact-icon svg{ width:20px; height:20px; }
-.contact-label{ font-size:.76rem; color:var(--ink-faint); font-weight:600; }
-.contact-value{ font-size:.92rem; font-weight:700; color:var(--ink); margin-top:2px; word-break:break-word; }
-
-.contact-note{
-  margin-top:18px; display:flex; gap:14px; align-items:flex-start;
-  background: var(--pine-tint); border-radius:var(--radius-m); padding:18px;
-}
-.contact-note-icon{
-  width:40px; height:40px; border-radius:11px; background:var(--pine); color:#fff; flex:none;
-  display:flex; align-items:center; justify-content:center;
-}
-.contact-note-icon svg{ width:20px; height:20px; }
-.contact-note b{ font-size:.88rem; color: var(--pine-dark); display:block; margin-bottom:3px; }
-.contact-note span{ font-size:.8rem; color: var(--ink-soft); line-height:1.5; }
-
-.contact-form{
-  background:var(--card); border:1px solid var(--line); border-radius:var(--radius-l);
-  padding: 28px clamp(18px,3vw,34px); box-shadow: var(--shadow-card);
-}
-.contact-form-title{ margin-bottom:20px; font-size:1.1rem; }
-.field{ margin-bottom:18px; }
-.field label{ display:block; font-size:.8rem; font-weight:700; color:var(--ink); margin-bottom:7px; }
-.field input, .field textarea{
-  width:100%; padding:13px 15px; border-radius:12px; border:1.5px solid var(--line);
-  background: var(--cream-soft); font-size:.9rem; color:var(--ink);
-  transition: border-color var(--dur-s) var(--ease), box-shadow var(--dur-s) var(--ease);
-}
-.field input:focus, .field textarea:focus{
-  outline:none; border-color: var(--coral); box-shadow: 0 0 0 4px var(--coral-tint);
-}
-.field textarea{ resize:vertical; min-height:120px; }
-.form-msg{ font-size:.82rem; margin-top:6px; min-height:1em; color: var(--pine); }
-
-.contact-footer-band{
-  margin-top:48px; position:relative; overflow:hidden;
-  background: linear-gradient(135deg, #F2ECFE 0%, #E4D6FB 100%);
-  border-radius: 28px; padding: 34px 24px; text-align:center;
-  min-height:120px;
-}
-.contact-footer-caption{
-  position:absolute; right:6%; top:50%; transform: translateY(-50%) rotate(-3deg);
-  font-family:'Caveat', cursive; font-size:1.3rem; font-weight:700; color:var(--coral-dark);
-  line-height:1.2; text-align:right; margin:0;
-}
-.contact-footer-thanks{ font-weight:800; font-size:1.05rem; color:var(--ink); margin:0; }
-.contact-footer-sub{ font-size:.88rem; color:var(--ink-soft); margin:4px 0 0; }
-
-/* =========================================================
-   FOOTER
-========================================================= */
-.site-footer{
-  position:relative; z-index:1; text-align:center; padding: 28px 20px 40px;
-  font-size:.8rem; color: var(--ink-faint);
-}
-
-/* =========================================================
-   RESPONSIVE
-========================================================= */
-@media (max-width: 980px){
-  .hero{ grid-template-columns:1fr; }
-  .hero-visual{ order:-1; padding-top:6px; }
-  .hero-tag{ right:2%; }
-  .about-top{ grid-template-columns:1fr; text-align:center; }
-  .about-copy p{ margin-left:auto; margin-right:auto; }
-  .doing-grid{ grid-template-columns:repeat(2,1fr); }
-  .resume-grid{ grid-template-columns:1fr; }
-  .projects-grid{ grid-template-columns:repeat(2,1fr); }
-  .contact-grid{ grid-template-columns:1fr; }
-  .journey-track{ grid-template-columns:repeat(2,1fr); row-gap:30px; }
-  .journey-track::before{ display:none; }
-}
-
-@media (max-width: 720px){
-  .nav-list{ display:none; }
-  .hamburger{ display:flex; }
-  .topbar.menu-open .nav-list{
-    display:flex; flex-direction:column; align-items:stretch; gap:2px;
-    position:absolute; top:64px; left:20px; right:20px;
-    background:var(--card); border:1px solid var(--line); border-radius:var(--radius-m);
-    padding:10px; box-shadow: var(--shadow-pop);
-  }
-  .topbar.menu-open .nav-underline{ display:none; }
-  .topbar{ position:sticky; }
-  .kpi-row{ grid-template-columns:1fr; gap:16px; }
-  .kpi{ border-right:none; border-bottom:1px solid var(--line); padding-bottom:14px; }
-  .kpi:last-child{ border-bottom:none; padding-bottom:0; }
-  .kpi-row-inline{ flex-wrap:wrap; }
-  .kpi-row-inline .kpi.kpi-bare{ flex:1 1 auto; min-width:44%; }
-  .doing-grid{ grid-template-columns:1fr; }
-  .projects-grid{ grid-template-columns:1fr; }
-  .resume-head{ flex-direction:column; align-items:flex-start; }
-  .brand-name{ font-size:.95rem; }
-  .nav-socials{ gap:6px; }
-  .nav-social{ width:32px; height:32px; }
-  .hero-tag{ display:none; }
-  .contact-footer-caption{ display:none; }
-  .hero-ring, .hero-dots{ display:none; }
-  .hero-actions{ flex-direction:column; align-items:stretch; }
-  .hero-actions .btn{ width:100%; }
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rohini Tembhurnikar — Data Analyst</title>
+<meta name="description" content="Rohini Tembhurnikar — Data Analyst portfolio. Dashboards, SQL &amp; Python projects, and analytics case studies.">
+<link rel="icon" href="./assets/images/favicon.ico" type="image/x-icon">
+<link rel="icon" href="./assets/images/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="./assets/images/favicon.png">
+<link rel="stylesheet" href="./assets/css/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+
+<div class="bg-decor" aria-hidden="true">
+  <span class="bgb blob-1"></span>
+  <span class="bgb blob-2"></span>
+  <span class="bgb blob-3"></span>
+  <span class="bgb blob-4"></span>
+  <span class="bgb blob-5"></span>
+  <span class="bgb blob-6"></span>
+  <span class="bg-pattern"></span>
+  <span class="bg-ring"></span>
+  <span class="bg-ring-2"></span>
+</div>
+
+<!-- =========================================================
+     TOP NAVIGATION
+========================================================= -->
+<header class="topbar" data-topbar>
+  <div class="topbar-inner">
+    <a href="#" class="brand" data-nav-link data-target="home">
+      <span class="brand-name">Rohini Tembhurnikar</span>
+      <span class="brand-role">Data Analyst</span>
+    </a>
+
+    <ul class="nav-list" data-nav-list>
+      <li><button class="nav-link active" data-nav-link data-target="home">Home</button></li>
+      <li><button class="nav-link" data-nav-link data-target="resume">Resume</button></li>
+      <li><button class="nav-link" data-nav-link data-target="projects">Projects</button></li>
+      <li><button class="nav-link" data-nav-link data-target="contact">Contact</button></li>
+      <span class="nav-underline" data-nav-underline></span>
+    </ul>
+
+    <button class="hamburger" data-hamburger aria-label="Toggle menu">
+      <span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+<!-- =========================================================
+     ABOUT (Home + About merged)
+========================================================= -->
+<section class="page active" data-page="home" id="home">
+
+  <div class="hero-band">
+    <span class="hero-ring"></span>
+    <span class="hero-dots"></span>
+    <div class="hero">
+      <div class="hero-copy">
+        <p class="hi-line">Hi, I'm</p>
+        <h1 class="h1">Rohini Tembhurnikar</h1>
+        <p class="role-line"><span class="role-cycle" data-role-cycle>Data Analyst</span></p>
+        <p class="lead">I analyze, visualize, and tell stories with data — helping teams move from raw numbers to decisions they can act on. With hands-on experience at Uber and TopN Analytics, I've built automated pipelines, migrated reporting systems, and partnered with stakeholders across regions to keep numbers honest and decisions fast.</p>
+        <div class="hero-actions">
+          <button class="btn btn-coral" data-nav-link data-target="projects">
+            <span>View My Projects</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </button>
+          <a class="btn btn-outline" href="./assets/Resume.pdf" download>
+            <span>Download Resume</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 4v12m0 0l-4-4m4 4l4-4M5 20h14"/></svg>
+          </a>
+        </div>
+
+        <div class="kpi-row kpi-row-inline">
+          <div class="kpi kpi-bare">
+            <div class="kpi-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+            </div>
+            <div><div class="kpi-num">1+</div><div class="kpi-label">Years Experience</div></div>
+          </div>
+          <div class="kpi kpi-bare">
+            <div class="kpi-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>
+            </div>
+            <div><div class="kpi-num">50+</div><div class="kpi-label">Projects Completed</div></div>
+          </div>
+          <div class="kpi kpi-bare">
+            <div class="kpi-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94Z"/></svg>
+            </div>
+            <div><div class="kpi-num">6+</div><div class="kpi-label">Tools &amp; Technologies</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <span class="blob"></span>
+        <figure class="hero-photo">
+          <img src="./assets/images/rohini.png" alt="Rohini Tembhurnikar">
+        </figure>
+        <span class="hero-tag">Analyse<br>Visualise<br>Create Impact<span class="rule"></span></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="skills-section">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">What I'm Best At</p>
+        <h2 class="h2">Core Strengths</h2>
+      </div>
+    </div>
+    <div class="doing-grid">
+      <div class="doing-card">
+        <div class="doing-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><rect x="7" y="12" width="3" height="6"/><rect x="12" y="8" width="3" height="10"/><rect x="17" y="5" width="3" height="13"/></svg>
+        </div>
+        <div class="doing-title">SQL &amp; Data Querying</div>
+        <div class="doing-text">Writing efficient SQL &amp; BigQuery queries to extract, clean and analyze high-volume compliance and sales datasets.</div>
+      </div>
+      <div class="doing-card">
+        <div class="doing-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        </div>
+        <div class="doing-title">Dashboard &amp; BI Development</div>
+        <div class="doing-text">Building Tableau, Looker Studio, Power BI &amp; Streamlit dashboards that turn raw metrics into decisions.</div>
+      </div>
+      <div class="doing-card">
+        <div class="doing-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3L4 7l4 4M16 3l4 4-4 4M14 3l-4 18"/></svg>
+        </div>
+        <div class="doing-title">Python Automation</div>
+        <div class="doing-text">Using Python, Pandas &amp; BeautifulSoup to automate reporting workflows and cut manual effort by 40%.</div>
+      </div>
+      <div class="doing-card">
+        <div class="doing-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4.5 8-11V5l-8-3-8 3v6c0 6.5 8 11 8 11Z"/><path d="M9 12l2 2 4-4"/></svg>
+        </div>
+        <div class="doing-title">Data Quality &amp; Cross-Functional Ops</div>
+        <div class="doing-text">Partnering with global stakeholders to audit pipelines, resolve discrepancies and improve reporting accuracy.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="testimonials">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">Kind Words</p>
+        <h2 class="h2">Recommendations</h2>
+        <p>What managers, mentors and collaborators say about working with me.</p>
+      </div>
+      <div class="t-controls">
+        <button class="t-arrow" data-t-prev aria-label="Previous">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M15 6l-6 6 6 6"/></svg>
+        </button>
+        <button class="t-arrow" data-t-next aria-label="Next">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M9 6l6 6-6 6"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="t-track-wrap">
+      <ul class="t-track" data-t-track>
+      <li class="t-card">
+        <div class="t-person">
+          <div class="t-avatar"><img src="./assets/images/danish.jpg" alt="Danish Sayyed"></div>
+          <div>
+            <p class="t-name">Danish Sayyed</p>
+            <p class="t-role">VR Analyst, Hawk-Eye Innovations</p>
+          </div>
+        </div>
+        <div class="t-text">
+          <p>I have had the pleasure of mentoring Rohini since the start of her career in 2023. Over the past three years, I have been consistently impressed by her confidence, sincerity, and exceptional ability to multitask.</p>
+          <p>Rohini is a dynamic and deeply talented data professional who brings immense value to any team, I&#x27;ll be keenly watching her future endeavours.</p>
+        </div>
+      </li>
+      <li class="t-card">
+        <div class="t-person">
+          <div class="t-avatar"><img src="./assets/images/penelope.jpg" alt="Penelope Apostolatou"></div>
+          <div>
+            <p class="t-name">Penelope Apostolatou</p>
+            <p class="t-role">Global Quality Analytics Lead, Uber</p>
+          </div>
+        </div>
+        <div class="t-text">
+          <p>Rohini combines sharp analytical skills with reliable, cross-functional teamwork. From identifying data discrepancies to designing intuitive dashboards, she approaches projects with a high standard for quality and user experience.</p>
+          <p>She navigates fast-paced environments effectively, keeps stakeholders clearly informed, and consistently turns complex data into actionable answers.</p>
+        </div>
+      </li>
+      <li class="t-card">
+        <div class="t-person">
+          <div class="t-avatar"><img src="./assets/images/tasneem.jpg" alt="Tasneem Hesham"></div>
+          <div>
+            <p class="t-name">Tasneem Hesham</p>
+            <p class="t-role">Global Quality Compliance – Program Specialist</p>
+          </div>
+        </div>
+        <div class="t-text">
+          <p>I had the pleasure of working with Rohini on several Payment Compliance Quality data projects, and I was consistently impressed by her expertise. She played a key role in building global dashboards for Payment Compliance Quality data, creating multiple views that made it easier to analyze and monitor quality trends.</p>
+          <p>I highly recommend Rohini to anyone looking for a skilled, reliable, and professional Data Analyst who is genuinely committed to supporting her stakeholders and delivering high-quality work.</p>
+        </div>
+      </li>
+      <li class="t-card">
+        <div class="t-person">
+          <div class="t-avatar"><img src="./assets/images/anany.jpg" alt="Anany Porwal"></div>
+          <div>
+            <p class="t-name">Anany Porwal</p>
+            <p class="t-role">Data Analytics Specialist, Uber</p>
+          </div>
+        </div>
+        <div class="t-text">
+          <p>I had the opportunity to mentor Rohini during her time with the Quality Analytics team at Uber, and she was a great teammate to work with. Rohini consistently demonstrated a strong sense of ownership, taking responsibility for her work and quickly picking up new skills and concepts.</p>
+          <p>Her technical proficiency in SQL, Python, Looker, and Tableau enabled her to translate data into meaningful insights and contribute to impactful outcomes for the team.</p>
+        </div>
+      </li>
+      <li class="t-card">
+        <div class="t-person">
+          <div class="t-avatar"><img src="./assets/images/mary.png" alt="Mary Ann Simuangco"></div>
+          <div>
+            <p class="t-name">Mary Ann Simuangco</p>
+            <p class="t-role">Program Specialist, Uber</p>
+          </div>
+        </div>
+        <div class="t-text">
+          <p>Rohini is a fantastic collaborator who brings an impressive level of detail to everything she does. Throughout our project together, she proved to be thorough, meticulous, and incredibly cooperative, always willing to step up and work together to get the job done right.</p>
+          <p>Any team would be incredibly lucky to have her, and I am confident she will be a valuable asset wherever she goes.</p>
+        </div>
+      </li>
+      </ul>
+    </div>
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     RESUME
+========================================================= -->
+<section class="page" data-page="resume" id="resume">
+
+  <div class="resume-head">
+    <div>
+      <p class="eyebrow">My Resume</p>
+      <h2 class="h2">Experience, Skills &amp; More</h2>
+      <p style="margin-top:8px;max-width:48ch;">A quick overview of my professional journey.</p>
+    </div>
+    <div class="resume-actions">
+      <a class="btn btn-coral" href="./assets/Resume.pdf" download>
+        <span>Download Resume</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 4v12m0 0l-4-4m4 4l4-4M5 20h14"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <div class="resume-grid">
+      <div class="panel">
+        <div class="panel-head">
+          <div class="panel-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 7h-4V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2H4a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1Z"/><path d="M10 5h4v2h-4z"/></svg>
+          </div>
+          <h3>Work Experience</h3>
+        </div>
+
+        <div class="exp-item exp-item-rich">
+          <div class="company-badge company-badge-uber">
+            <img src="./assets/images/logo-uber.png" alt="Uber">
+          </div>
+          <div class="exp-item-body">
+            <p class="exp-title h4"><b>Data Analytics Specialist</b> — <span class="exp-company">Uber</span></p>
+            <span class="exp-span">January 2026 – August 2026</span>
+            <p class="exp-desc">Analyzed global quality operations using SQL, BigQuery, Python, and BI dashboards, automating reporting, resolving data discrepancies, and delivering performance insights to stakeholders.</p>
+            <div class="exp-tags">
+              <span class="exp-tag">SQL</span><span class="exp-tag">BigQuery</span><span class="exp-tag">Python</span><span class="exp-tag">BI Dashboards</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="exp-item exp-item-rich">
+          <div class="company-badge company-badge-topn">
+            <img src="./assets/images/logo-topn.png" alt="TopN Analytics">
+          </div>
+          <div class="exp-item-body">
+            <p class="exp-title h4"><b>Data Analyst Intern</b> — <span class="exp-company">TopN Analytics</span></p>
+            <span class="exp-span">October 2024 – March 2025</span>
+            <p class="exp-desc">Built interactive Tableau and Looker Studio dashboards and processed real-time data using Python, improving reporting efficiency and data accuracy across multiple business domains.</p>
+            <div class="exp-tags">
+              <span class="exp-tag">Tableau</span><span class="exp-tag">Looker Studio</span><span class="exp-tag">Python</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel skills-panel">
+        <div class="panel-head">
+          <div class="panel-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.6 6.6L22 9l-5.4 4.3L18 22l-6-4-6 4 1.4-8.7L2 9l7.4-.4L12 2Z"/></svg>
+          </div>
+          <h3>Skills</h3>
+        </div>
+        <ul class="skill-chip-list skill-grid">
+          <li class="skill-chip">
+            <span class="chip-icon" style="background:var(--tool-sql-bg);color:var(--tool-sql-fg);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="6" rx="8" ry="3"/><path d="M4 6v6c0 1.7 3.6 3 8 3s8-1.3 8-3V6"/><path d="M4 12v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></svg></span>
+            SQL
+          </li>
+          <li class="skill-chip">
+            <span class="chip-icon" style="background:var(--tool-tableau-bg);color:var(--tool-tableau-fg);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v18M4 8h16M4 16h16M8 3v5M16 3v5M8 16v5M16 16v5"/></svg></span>
+            Tableau
+          </li>
+          <li class="skill-chip">
+            <span class="chip-icon" style="background:var(--tool-python-bg);color:var(--tool-python-fg);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3L4 7l4 4M16 3l4 4-4 4M14 3l-4 18"/></svg></span>
+            Python
+          </li>
+          <li class="skill-chip">
+            <span class="chip-icon" style="background:var(--tool-powerbi-bg);color:var(--tool-powerbi-fg);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><rect x="7" y="12" width="3" height="6"/><rect x="12" y="8" width="3" height="10"/><rect x="17" y="5" width="3" height="13"/></svg></span>
+            Power BI
+          </li>
+          <li class="skill-chip">
+            <span class="chip-icon" style="background:var(--tool-excel-bg);color:var(--tool-excel-fg);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M3 14h18M9 4v16M15 4v16"/></svg></span>
+            Excel
+          </li>
+          <li class="skill-chip">
+            <span class="chip-icon" style="background:var(--tool-looker-bg);color:var(--tool-looker-fg);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/><path d="M7 13l3-4 3 2 3-5"/></svg></span>
+            Looker Studio
+          </li>
+          <li class="skill-chip">
+            <span class="chip-icon" style="background:var(--tool-sheets-bg);color:var(--tool-sheets-fg);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M4 9h16M9 9v12"/></svg></span>
+            Google Sheets
+          </li>
+          <li class="skill-chip">
+            <span class="chip-icon" style="background:#FBEFD8;color:#B47418;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg></span>
+            Data Visualization
+          </li>
+          <li class="skill-chip">
+            <span class="chip-icon" style="background:var(--tool-etl-bg);color:var(--tool-etl-fg);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="5" cy="6" r="2.2"/><circle cx="19" cy="18" r="2.2"/><circle cx="5" cy="18" r="2.2"/><path d="M7 6h6a4 4 0 0 1 4 4v0M7 18h10"/></svg></span>
+            ETL Pipelines
+          </li>
+          <li class="skill-chip">
+            <span class="chip-icon" style="background:var(--pine-tint);color:var(--pine);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></span>
+            Storytelling
+          </li>
+          <li class="skill-chip">
+            <span class="chip-icon" style="background:#E9EAFB;color:#4338CA;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M7 14l3-4 3 3 4-6"/><circle cx="7" cy="14" r="1.4" fill="currentColor" stroke="none"/><circle cx="10" cy="10" r="1.4" fill="currentColor" stroke="none"/><circle cx="13" cy="13" r="1.4" fill="currentColor" stroke="none"/><circle cx="17" cy="7" r="1.4" fill="currentColor" stroke="none"/></svg></span>
+            Statistical Analysis
+          </li>
+          <li class="skill-chip">
+            <span class="chip-icon" style="background:#FDEBDF;color:#C2540C;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></span>
+            Data Cleaning
+          </li>
+        </ul>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head">
+          <div class="panel-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10L12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5"/></svg>
+          </div>
+          <h3>Education</h3>
+        </div>
+
+        <div class="edu-item">
+          <p class="exp-title h4"><b>Master of Computer Application</b></p>
+          <span class="exp-span">SNDT University, Mumbai · May 2025</span>
+        </div>
+        <div class="edu-item">
+          <p class="exp-title h4"><b>Bachelor of Science</b></p>
+          <span class="exp-span">Nagpur University · June 2023</span>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head">
+          <div class="panel-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 15a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z"/><path d="M5.5 21l1-4.5M17.5 21l-1-4.5"/><path d="M9 20.5l3-1.7 3 1.7"/></svg>
+          </div>
+          <h3>Certifications</h3>
+        </div>
+        <ul class="cert-list cert-list-compact">
+          <li class="cert-row">
+            <span class="cert-dot"></span>
+            <div class="cert-info">
+              <a class="cert-name cert-name-link" href="https://www.coursera.org/account/accomplishments/specialization/certificate/6HJ5TBTMMM7S" target="_blank" rel="noopener">Google Data Analytics Certificate</a>
+              <p class="cert-sub">Coursera</p>
+            </div>
+          </li>
+          <li class="cert-row">
+            <span class="cert-dot"></span>
+            <div class="cert-info">
+              <a class="cert-name cert-name-link" href="https://www.linkedin.com/learning/certificates/5621136c30ed2647aca4b7724b80ca655171557a973f7fce4012e782f79840cb" target="_blank" rel="noopener">SQL: Data Reporting &amp; Analysis</a>
+              <p class="cert-sub">LinkedIn Learning</p>
+            </div>
+          </li>
+          <li class="cert-row">
+            <span class="cert-dot"></span>
+            <div class="cert-info">
+              <a class="cert-name cert-name-link" href="https://www.mygreatlearning.com/certificate/MVXMBYOV" target="_blank" rel="noopener">Data Visualization Using Tableau</a>
+              <p class="cert-sub">Great Learning</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+  </div>
+
+</section>
+
+<!-- =========================================================
+     PROJECTS
+========================================================= -->
+<section class="page" data-page="projects" id="projects">
+
+  <div class="projects-head">
+    <p class="eyebrow">My Work</p>
+    <h2 class="h2">Projects</h2>
+    <p style="margin-top:8px;max-width:56ch;">A collection of dashboards and data-analytics projects turning raw numbers into meaningful insights.</p>
+  </div>
+
+  <ul class="filter-list" data-filter-list>
+    <li><button class="filter-btn active" data-filter-btn data-filter="all">All</button></li>
+    <li><button class="filter-btn" data-filter-btn data-filter="tableau-dashboards">Tableau Dashboards</button></li>
+    <li><button class="filter-btn" data-filter-btn data-filter="tableau-vizzes">Tableau Vizzes</button></li>
+    <li><button class="filter-btn" data-filter-btn data-filter="power-bi">Power BI</button></li>
+    <li><button class="filter-btn" data-filter-btn data-filter="looker-studio">Looker Studio</button></li>
+    <li><button class="filter-btn" data-filter-btn data-filter="python">Python</button></li>
+    <li><button class="filter-btn" data-filter-btn data-filter="sql">SQL</button></li>
+    <li><button class="filter-btn" data-filter-btn data-filter="excel">Excel</button></li>
+  </ul>
+
+  <ul class="projects-grid" data-projects-grid>
+      <li class="project-card show" data-category="tableau-dashboards">
+        <a href="https://public.tableau.com/app/profile/rohini.tembhurnikar/viz/MerchaniseSales/PRODUCTS" target="_blank" rel="noopener" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/merchandise.png" alt="Merchandise Sales" loading="lazy">
+              <div class="project-overlay">
+                <p>Built a 5-page interactive Merchandise Sales Dashboard for the Onyx Data #DataDNA Challenge, analyzing product performance, sales, orders, geography, customer demographics, and review sentiment. Runner-up in the January 2025 challenge, demonstrating strong data visualization and business analytics skills.</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-tableau-bg); color:var(--tool-tableau-fg);">Tableau</span>
+            <h3 class="project-title h3">Merchandise Sales</h3>
+          </div>
+        </a>
+      </li>
+      <li class="project-card show" data-category="tableau-dashboards">
+        <a href="https://public.tableau.com/app/profile/rohini.tembhurnikar/viz/HealthcareDashboard_17800441891940/HEALTHCARE" target="_blank" rel="noopener" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/healthcare.png" alt="Healthcare Analytics" loading="lazy">
+              <div class="project-overlay">
+                <p>Interactive Tableau dashboard providing a comprehensive view of 55,500 patients, healthcare costs, admissions, demographics, medical conditions, treatments, insurance providers, and hospital performance. It enables stakeholders to identify patient trends, cost drivers, treatment patterns, and operational insights.</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-tableau-bg); color:var(--tool-tableau-fg);">Tableau</span>
+            <h3 class="project-title h3">Healthcare Analytics</h3>
+          </div>
+        </a>
+      </li>
+      <li class="project-card show" data-category="looker-studio">
+        <a href="#" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/hr.png" alt="HR Attrition Dashboard" loading="lazy">
+              <div class="project-overlay">
+                <p>An interactive Dashboard analyzing 1,470 employees, with demographic, job, compensation, tenure, travel, and work-environment insights to identify key attrition patterns and support targeted employee retention strategies.</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-looker-bg); color:var(--tool-looker-fg);">Looker Studio</span>
+            <h3 class="project-title h3">HR Attrition Dashboard</h3>
+          </div>
+        </a>
+      </li>
+      <li class="project-card show" data-category="tableau-dashboards">
+        <a href="https://public.tableau.com/app/profile/rohini.tembhurnikar/viz/AmazonStockMarketTrends_17800442486380/Dashboard1" target="_blank" rel="noopener" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/amazonstocks.png" alt="Amazon Stock Market Trends" loading="lazy">
+              <div class="project-overlay">
+                <p>Interactive Tableau dashboard analyzing Amazon’s stock performance across price, volume, daily movements, and moving averages. It enables users to monitor market trends, identify volatility, compare price movements, and evaluate short-term momentum through dynamic time-period and metric selections.</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-tableau-bg); color:var(--tool-tableau-fg);">Tableau</span>
+            <h3 class="project-title h3">Amazon Stock Market Trends</h3>
+          </div>
+        </a>
+      </li>
+      <li class="project-card show" data-category="power-bi">
+        <a href="https://app.powerbi.com/view?r=eyJrIjoiZGU5NDI2MmItY2Y2OC00YTcwLTkzMjktNWRhYTAzNTc5YjM2IiwidCI6ImMwZDdmYjJmLTczZDItNDA5NC1iNzY5LTFkZTQ0NDNlNzg5YiJ9" target="_blank" rel="noopener" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/content.png" alt="Social Media Content Performance" loading="lazy">
+              <div class="project-overlay">
+                <p>Built a 2-page interactive Social Media Content Performance dashboard for the Onyx Data Challenge, analyzing 213 posts across platforms, content categories, regions, engagement, clicks, views, hashtags, and audience response to identify high-performing content and posting opportunities.</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-powerbi-bg); color:var(--tool-powerbi-fg);">Power BI</span>
+            <h3 class="project-title h3">Social Media Content Performance</h3>
+          </div>
+        </a>
+      </li>
+      <li class="project-card show" data-category="tableau-vizzes">
+        <a href="https://public.tableau.com/app/profile/rohini.tembhurnikar/viz/WTC-2023/TOURNAMENT" target="_blank" rel="noopener" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/wtc.png" alt="World Test Championship 2023" loading="lazy">
+              <div class="project-overlay">
+                <p>A multipage Tableau dashboard analyzing the World Test Championship cycle through tournament and team-level views. It explores points-table performance, win rates, batting and bowling contributions, opponent matchups, partnerships, scoring patterns, and ground-level performance to uncover competitive trends and team strengths.</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-vizzes-bg); color:var(--tool-vizzes-fg);">Tableau</span>
+            <h3 class="project-title h3">World Test Championship 2023</h3>
+          </div>
+        </a>
+      </li>
+      <li class="project-card show" data-category="tableau-vizzes">
+        <a href="https://public.tableau.com/app/profile/rohini.tembhurnikar/viz/AkshayKumarMovies/Dashboard1" target="_blank" rel="noopener" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/akshay.png" alt="Akshay Kumar Movies" loading="lazy">
+              <div class="project-overlay">
+                <p>A single-page  viz exploring Akshay Kumar’s movies through IMDb ratings, audience votes, genres, release years, and ranking. Interactive highlights enable comparison of film performance, revealing rating patterns, audience engagement, genre distribution, and career trends across the century.</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-vizzes-bg); color:var(--tool-vizzes-fg);">Tableau</span>
+            <h3 class="project-title h3">Akshay Kumar Movies</h3>
+          </div>
+        </a>
+      </li>
+      <li class="project-card show" data-category="tableau-dashboards">
+        <a href="https://public.tableau.com/app/profile/rohini.tembhurnikar/viz/EmployeePerformanceDashboard_17800432813530/MetrixOverview" target="_blank" rel="noopener" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/employee.png" alt="Employee Performance" loading="lazy">
+              <div class="project-overlay">
+                <p>A three-page dashboard analyzing 200 employees across performance, productivity, satisfaction, feedback, salary, experience, and project metrics. Interactive department, position, and employee filters enable comparison of workforce performance, identify high-performing employees, and uncover organizational trends</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-tableau-bg); color:var(--tool-tableau-fg);">Tableau</span>
+            <h3 class="project-title h3">Employee Performance</h3>
+          </div>
+        </a>
+      </li>
+      <li class="project-card show" data-category="tableau-vizzes">
+        <a href="https://public.tableau.com/app/profile/rohini.tembhurnikar/viz/ViratKohliTestCareer/Dashboard1" target="_blank" rel="noopener" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/kohli.png" alt="Virat Kohli Test Career" loading="lazy">
+              <div class="project-overlay">
+                <p>A single-page Viz analyzing Virat Kohli’s 14-year Test career through runs, averages, strike rate, milestones, opposition performance, venues, innings, and yearly trends. It combines career KPIs with detailed visual analysis to highlight consistency, evolution, achievements, and performance patterns.</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-vizzes-bg); color:var(--tool-vizzes-fg);">Tableau</span>
+            <h3 class="project-title h3">Virat Kohli Test Career</h3>
+          </div>
+        </a>
+      </li>
+      <li class="project-card show" data-category="tableau-vizzes">
+        <a href="https://public.tableau.com/app/profile/rohini.tembhurnikar/viz/CustomerChurnReport_17800433402480/ChurnReport" target="_blank" rel="noopener" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/churn.png" alt="Customer Churn Report" loading="lazy">
+              <div class="project-overlay">
+                <p>A three-page analytical report investigating bank customer churn across demographics, account behavior, balances, products, tenure, salary, and credit scores. It examines independent variables, relationships between measures, and high-risk customer segments to identify patterns associated with increased churn.</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-vizzes-bg); color:var(--tool-vizzes-fg);">Tableau</span>
+            <h3 class="project-title h3">Customer Churn Report</h3>
+          </div>
+        </a>
+      </li>
+      <li class="project-card show" data-category="tableau-vizzes">
+        <a href="https://public.tableau.com/app/profile/rohini.tembhurnikar/viz/VineetaSinghsInvestmentsinSharkTankIndiaS1-S3/Dashboard1" target="_blank" rel="noopener" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/vineeta.png" alt="Vineeta Singh&#x27;s Investments in Shark Tank India" loading="lazy">
+              <div class="project-overlay">
+                <p>A single-page Tableau dashboard analyzing Vineeta Singh’s 67 Shark Tank India investments across seasons, industries, deal structures, equity, valuation, and investment ranges. It highlights investment patterns, industry preferences, deal sizes, and company-level insights to evaluate her investment strategy.</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-vizzes-bg); color:var(--tool-vizzes-fg);">Tableau</span>
+            <h3 class="project-title h3">Vineeta Singh&#x27;s Investments in Shark Tank India</h3>
+          </div>
+        </a>
+      </li>
+      <li class="project-card show" data-category="tableau-vizzes">
+        <a href="https://public.tableau.com/app/profile/rohini.tembhurnikar/viz/ArijitSinghallSongs/Dashboard3" target="_blank" rel="noopener" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/arijit.png" alt="Arijit Singh all Songs" loading="lazy">
+              <div class="project-overlay">
+                <p>A single-page data-driven infographic exploring Arijit Singh’s musical journey through 731 songs, 492 albums, languages, composers, writers, co-singers, and career milestones. It combines storytelling, timelines, charts, and interactive song exploration to highlight his evolving musical contributions and collaborations.</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-vizzes-bg); color:var(--tool-vizzes-fg);">Tableau</span>
+            <h3 class="project-title h3">Arijit Singh all Songs</h3>
+          </div>
+        </a>
+      </li>
+      <li class="project-card show" data-category="tableau-dashboards">
+        <a href="https://public.tableau.com/app/profile/rohini.tembhurnikar/viz/MarketingCampaignInsights_17800421171760/POSTENGAGEMENT" target="_blank" rel="noopener" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/marketing.png" alt="Marketing Campaign Analytics" loading="lazy">
+              <div class="project-overlay">
+                <p>A two-page dashboard evaluating marketing campaign performance across post engagement and link clicks. It tracks 1M engagements, 95K link clicks, CTR, CPC, engagement rates, and campaign-level performance to identify high-performing campaigns and optimize content and advertising efficiency</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-tableau-bg); color:var(--tool-tableau-fg);">Tableau</span>
+            <h3 class="project-title h3">Marketing Campaign Analytics</h3>
+          </div>
+        </a>
+      </li>
+      <li class="project-card show" data-category="tableau-dashboards">
+        <a href="https://public.tableau.com/app/profile/rohini.tembhurnikar/viz/FitnessCompanyFinanceTracker/Dashboard1" target="_blank" rel="noopener" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/fitness.png" alt="Fitness Financial Analytics" loading="lazy">
+              <div class="project-overlay">
+                <p>A single-page financial dashboard evaluating revenue, expenses, gross profit, net profit, and margins across business lines. It highlights cost structures, monthly trends, sub-category performance, and profitability gaps, with actionable recommendations for cost optimization, pricing, and improving underperforming segments.</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-tableau-bg); color:var(--tool-tableau-fg);">Tableau</span>
+            <h3 class="project-title h3">Fitness Financial Analytics</h3>
+          </div>
+        </a>
+      </li>
+      <li class="project-card show" data-category="tableau-dashboards">
+        <a href="https://public.tableau.com/app/profile/rohini.tembhurnikar/viz/SupplyChainDashboard_17800431050760/PRODUCTS" target="_blank" rel="noopener" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/supply.png" alt="Supply Chain Dashboard" loading="lazy">
+              <div class="project-overlay">
+                <p>A three-page interactive dashboard analyzing 4,922 orders, 46.1K products sold, ₹578K revenue, shipping costs, product availability, suppliers, carriers, and defects. It connects product, shipping, and supplier performance to identify operational inefficiencies and supply-chain improvement opportunities</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-tableau-bg); color:var(--tool-tableau-fg);">Tableau</span>
+            <h3 class="project-title h3">Supply Chain Dashboard</h3>
+          </div>
+        </a>
+      </li>
+      <li class="project-card show" data-category="tableau-dashboards">
+        <a href="https://public.tableau.com/app/profile/rohini.tembhurnikar/viz/Top15NSEStocksbyMarketCapitalization/NSEStocks" target="_blank" rel="noopener" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/nse.png" alt="Top 15 NSE Stocks" loading="lazy">
+              <div class="project-overlay">
+                <p>A single-page Tableau dashbard comparing 15 leading NSE stocks by market capitalization across 1-month, 6-month, 1-year, and custom periods. It highlights price movements, relative performance, and trend direction, enabling quick comparison of short- and long-term market behavior.</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-tableau-bg); color:var(--tool-tableau-fg);">Tableau</span>
+            <h3 class="project-title h3">Top 15 NSE Stocks</h3>
+          </div>
+        </a>
+      </li>
+      <li class="project-card show" data-category="tableau-vizzes">
+        <a href="https://public.tableau.com/app/profile/rohini.tembhurnikar/viz/GooglePlaystoreAnalysis_17800429453970/PLAYSTORE" target="_blank" rel="noopener" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/playstore.png" alt="Google Playstore" loading="lazy">
+              <div class="project-overlay">
+                <p>A single-page Viz analyzing Google Play Store apps through ratings, reviews, installs, genres, and Android-version compatibility. It explores rating distributions, highly reviewed apps, review-to-rating relationships, and platform adoption patterns to uncover trends in app performance and user engagement.</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-vizzes-bg); color:var(--tool-vizzes-fg);">Tableau</span>
+            <h3 class="project-title h3">Google Playstore</h3>
+          </div>
+        </a>
+      </li>
+      <li class="project-card show" data-category="tableau-dashboards">
+        <a href="https://public.tableau.com/app/profile/rohini.tembhurnikar/viz/PuneUberTrips/Dashboard1" target="_blank" rel="noopener" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/uber.png" alt="Uber Pune Rides" loading="lazy">
+              <div class="project-overlay">
+                <p>A single-page Tableau dashboard analyzing Pune Uber trips by distance, fare, duration, weekday, time of day, and pickup or drop-off location. Interactive metric selection and map-based filtering reveal travel patterns, demand distribution, and variations in trip characteristics across time.</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-tableau-bg); color:var(--tool-tableau-fg);">Tableau</span>
+            <h3 class="project-title h3">Uber Pune Rides</h3>
+          </div>
+        </a>
+      </li>
+      <li class="project-card show" data-category="tableau-dashboards">
+        <a href="https://public.tableau.com/app/profile/rohini.tembhurnikar/viz/ExecutiveCEDashboard/Overview" target="_blank" rel="noopener" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/ceo.png" alt="Executive CEO Dashboard" loading="lazy">
+              <div class="project-overlay">
+                <p>A five-page executive dashboard providing a consolidated view of business performance across revenue, customers, products, marketing, sales leads, finance, and customer support. It tracks key KPIs, trends, operational metrics, and performance drivers to support data-driven executive decision-making.</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-tableau-bg); color:var(--tool-tableau-fg);">Tableau</span>
+            <h3 class="project-title h3">Executive CEO Dashboard</h3>
+          </div>
+        </a>
+      </li>
+      <li class="project-card show" data-category="tableau-vizzes">
+        <a href="https://public.tableau.com/app/profile/rohini.tembhurnikar/viz/PIXARMOVIES/MovieSpotlight" target="_blank" rel="noopener" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/pixer.png" alt="Pixar Films" loading="lazy">
+              <div class="project-overlay">
+                <p>A four-page Tableau viz exploring Pixar’s movies through box office performance, budgets, ROI, ratings, reviews, genres, awards, and creators. It combines financial and audience metrics to compare films, identify standout releases, and uncover patterns across Pixar’s cinematic history.</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-vizzes-bg); color:var(--tool-vizzes-fg);">Tableau</span>
+            <h3 class="project-title h3">Pixar Films</h3>
+          </div>
+        </a>
+      </li>
+      <li class="project-card show" data-category="tableau-dashboards">
+        <a href="https://public.tableau.com/app/profile/rohini.tembhurnikar/viz/GlobalHighVoltageTransmissionProjects/OVERVIEW" target="_blank" rel="noopener" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/voltage.png" alt="Global High Voltage Transmission Projects" loading="lazy">
+              <div class="project-overlay">
+                <p>A multipage dashboard analyzing 106 global high-voltage transmission projects with $180.7B estimated cost, $2.5B funding, and 43,222 km of line length. It examines project status, regions, technologies, voltage levels, developers, project types, and geographic distribution.</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-tableau-bg); color:var(--tool-tableau-fg);">Tableau</span>
+            <h3 class="project-title h3">Global High Voltage Transmission Projects</h3>
+          </div>
+        </a>
+      </li>
+      <li class="project-card show" data-category="tableau-vizzes">
+        <a href="https://public.tableau.com/app/profile/rohini.tembhurnikar/viz/MavenRewardsChallenge_17800424569720/Dashboard2" target="_blank" rel="noopener" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/rewards.png" alt="Maven Rewards Challenge" loading="lazy">
+              <div class="project-overlay">
+                <p>A single-page dashboard evaluating a 30-day rewards campaign through offer completion, engagement, rewards distribution, customer demographics, and channel performance. It identifies stronger offer types, high-engagement segments, optimal durations, and effective multi-channel combinations to improve promotional performance.</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-vizzes-bg); color:var(--tool-vizzes-fg);">Tableau</span>
+            <h3 class="project-title h3">Maven Rewards Challenge</h3>
+          </div>
+        </a>
+      </li>
+      <li class="project-card show" data-category="tableau-dashboards">
+        <a href="https://public.tableau.com/app/profile/rohini.tembhurnikar/viz/BikeSalesinEurope_17800428612320/Overview" target="_blank" rel="noopener" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/bike.png" alt="Bike Sales" loading="lazy">
+              <div class="project-overlay">
+                <p>A two-page dashboard analyzing 289K orders, £20.0M revenue, £7.5M profit, and £2.4M discounts across bike sales. It explores customer age groups, geographic revenue, product categories, profit performance, discounting, and relationships between revenue, profitability, and pricing.</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-tableau-bg); color:var(--tool-tableau-fg);">Tableau</span>
+            <h3 class="project-title h3">Bike Sales</h3>
+          </div>
+        </a>
+      </li>
+      <li class="project-card show" data-category="tableau-dashboards">
+        <a href="https://public.tableau.com/app/profile/rohini.tembhurnikar/viz/FlipcartClone/FlipkartClone" target="_blank" rel="noopener" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/flipkart.png" alt="Flipkart Clone" loading="lazy">
+              <div class="project-overlay">
+                <p>A single-page interactive e-commerce Dashboard replicating a Flipkart-style laptop shopping experience. It enables product discovery through filters for brand, price, processor, RAM, storage, graphics, gaming, and other specifications, with price sorting and detailed product-level hardware information.</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-tableau-bg); color:var(--tool-tableau-fg);">Tableau</span>
+            <h3 class="project-title h3">Flipkart Clone</h3>
+          </div>
+        </a>
+      </li>
+      <li class="project-card show" data-category="tableau-dashboards">
+        <a href="https://public.tableau.com/app/profile/rohini.tembhurnikar/viz/PersonalFinanceDashboard_17800427751280/Dashboard1" target="_blank" rel="noopener" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/finance.png" alt="Personal Finance" loading="lazy">
+              <div class="project-overlay">
+                <p>A two-page personal finance dashboard tracking bank balances, investments, cash, rent, and financial contributions over time. It provides portfolio-level and account-specific analysis through trends, distributions, forecasts, contribution history, and transaction details to monitor financial performance and allocation patterns.</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-tableau-bg); color:var(--tool-tableau-fg);">Tableau</span>
+            <h3 class="project-title h3">Personal Finance</h3>
+          </div>
+        </a>
+      </li>
+      <li class="project-card show" data-category="tableau-dashboards">
+        <a href="https://public.tableau.com/app/profile/rohini.tembhurnikar/viz/CabRidesAnalysis/OVERVIEW" target="_blank" rel="noopener" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/cabs.png" alt="Cab Rides" loading="lazy">
+              <div class="project-overlay">
+                <p>A two-page dashboard analyzing 4,785 cab rides, $1.30M in trip costs, 57,981 km traveled, and average ratings. It explores ride categories, trip purposes, gender, distance, time-of-day patterns, monthly trends, driver and commission shares, and ride frequency.</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-tableau-bg); color:var(--tool-tableau-fg);">Tableau</span>
+            <h3 class="project-title h3">Cab Rides</h3>
+          </div>
+        </a>
+      </li>
+      <li class="project-card show" data-category="tableau-dashboards">
+        <a href="https://public.tableau.com/app/profile/rohini.tembhurnikar/viz/Gen-AITrendsin2024/Dashboard1" target="_blank" rel="noopener" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/genai.png" alt="Gen AI Google Trends" loading="lazy">
+              <div class="project-overlay">
+                <p>A single-page Tableau dashboard analyzing Google search interest in generative AI during 2024. It compares trends for major AI tools, regional interest, related queries, and topics, highlighting shifts in search behavior and growing interest across the global AI landscape.</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-tableau-bg); color:var(--tool-tableau-fg);">Tableau</span>
+            <h3 class="project-title h3">Gen AI Google Trends</h3>
+          </div>
+        </a>
+      </li>
+      <li class="project-card show" data-category="tableau-vizzes">
+        <a href="https://public.tableau.com/app/profile/rohini.tembhurnikar/viz/LokSabhaElections2019_17800435164240/Dashboard1" target="_blank" rel="noopener" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/elections.png" alt="Lok Sabha Elections 2019" loading="lazy">
+              <div class="project-overlay">
+                <p>The project analyzes the 2019 Lok Sabha election from multiple perspectives, including party-wise seats and vote share, alliance performance by region, candidate demographics, state-level results, winning margins, NOTA votes, metro-city seat distribution, and performance of top candidates.</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-vizzes-bg); color:var(--tool-vizzes-fg);">Tableau</span>
+            <h3 class="project-title h3">Lok Sabha Elections 2019</h3>
+          </div>
+        </a>
+      </li>
+      <li class="project-card show" data-category="tableau-vizzes">
+        <a href="https://public.tableau.com/app/profile/rohini.tembhurnikar/viz/NewYorkCityAccidentAnalysisJan2020-Aug2020/Dashboard1" target="_blank" rel="noopener" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/nyc.png" alt="New York City Accidents 2020" loading="lazy">
+              <div class="project-overlay">
+                <p>A single-page Tableau dashboard analyzing 74,881 NYC accidents, including 27,448 injuries and 144 fatalities. It examines accident hotspots, boroughs, weekly and hourly patterns, contributing reasons, and vehicle involvement to identify temporal and geographic accident patterns.</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-vizzes-bg); color:var(--tool-vizzes-fg);">Tableau</span>
+            <h3 class="project-title h3">New York City Accidents 2020</h3>
+          </div>
+        </a>
+      </li>
+      <li class="project-card show" data-category="tableau-vizzes">
+        <a href="https://public.tableau.com/app/profile/rohini.tembhurnikar/viz/UnemplymentStatusinIndia/Dashboard1" target="_blank" rel="noopener" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/unemployment.png" alt="Unemployment in India" loading="lazy">
+              <div class="project-overlay">
+                <p>A single-page infographic examining India’s unemployment trends from 2016 to 2023. It compares national, rural, urban, and state-level unemployment rates, highlighting changes over time, regional disparities, pandemic impact, and states with notable increases or declines.</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-vizzes-bg); color:var(--tool-vizzes-fg);">Tableau</span>
+            <h3 class="project-title h3">Unemployment in India</h3>
+          </div>
+        </a>
+      </li>
+      <li class="project-card show" data-category="tableau-vizzes">
+        <a href="https://public.tableau.com/app/profile/rohini.tembhurnikar/viz/MavenLegoChallenge/Dashboard1" target="_blank" rel="noopener" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/lego.png" alt="Maven Lego" loading="lazy">
+              <div class="project-overlay">
+                <p>A data-driven visual exploration of LEGO’s evolution across decades, analyzing the growth of sets, themes, theme groups, product longevity, age ranges, pricing, and the most prominent LEGO sets. The infographic combines historical trends with detailed product-level analysis to show how LEGO’s product portfolio has evolved over time.</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-vizzes-bg); color:var(--tool-vizzes-fg);">Tableau</span>
+            <h3 class="project-title h3">Maven Lego</h3>
+          </div>
+        </a>
+      </li>
+      <li class="project-card show" data-category="power-bi">
+        <a href="https://app.powerbi.com/view?r=eyJrIjoiM2MwNWE3MTAtYzg3OS00ZGI3LWI5NDUtMmRiM2EyNTJiM2U5IiwidCI6ImMwZDdmYjJmLTczZDItNDA5NC1iNzY5LTFkZTQ0NDNlNzg5YiJ9" target="_blank" rel="noopener" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/healthcare.png" alt="Healthcare Analytics" loading="lazy">
+              <div class="project-overlay">
+                <p>Interactive Power BI dashboard providing a comprehensive view of 55,500 patients, healthcare costs, admissions, demographics, medical conditions, treatments, insurance providers, and hospital performance. It enables stakeholders to identify patient trends, cost drivers, treatment patterns, and operational insights.</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-powerbi-bg); color:var(--tool-powerbi-fg);">Power BI</span>
+            <h3 class="project-title h3">Healthcare Analytics</h3>
+          </div>
+        </a>
+      </li>
+      <li class="project-card show" data-category="tableau-dashboards">
+        <a href="https://public.tableau.com/app/profile/rohini.tembhurnikar/viz/Maven_SlopesChallenge/Dashboard1" target="_blank" rel="noopener" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/slopes.png" alt="Maven Slopes" loading="lazy">
+              <div class="project-overlay">
+                <p>An interactive ski-resort exploration dashboard designed to help users plan a skiing trip. It analyzes resort locations, pricing, ski seasons, snow coverage, slopes, lifts, snow cannons, resort features, and altitude ranges, with filters for country, season, price, child-friendliness, and slope difficulty.</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-tableau-bg); color:var(--tool-tableau-fg);">Tableau</span>
+            <h3 class="project-title h3">Maven Slopes</h3>
+          </div>
+        </a>
+      </li>
+      <li class="project-card show" data-category="sql">
+        <a href="https://github.com/rohinirt/SQL_Projects/tree/main/Instacart_Market_Basket_Analysis" target="_blank" rel="noopener" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/instacart.png" alt="Instacart Market Masket Analysis" loading="lazy">
+              <div class="project-overlay">
+                <p>Analyzed 1M+ orders and 32M+ order items using SQL to uncover product trends, peak ordering periods, and high-value customer segments.</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-sql-bg); color:var(--tool-sql-fg);">SQL</span>
+            <h3 class="project-title h3">Instacart Market Masket Analysis</h3>
+          </div>
+        </a>
+      </li>
+      <li class="project-card show" data-category="sql">
+        <a href="https://github.com/rohinirt/SQL_Projects/tree/main/YouTube%20Top%20200%20Trending%20Video%20Analysis" target="_blank" rel="noopener" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/youtube.png" alt="Youtube Top 200 Trending Video Analysis" loading="lazy">
+              <div class="project-overlay">
+                <p>Built an API-to-MySQL ETL pipeline and analyzed 200 trending videos using SQL to uncover engagement patterns and content performance insights.</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-sql-bg); color:var(--tool-sql-fg);">SQL</span>
+            <h3 class="project-title h3">Youtube Top 200 Trending Video Analysis</h3>
+          </div>
+        </a>
+      </li>
+      <li class="project-card show" data-category="sql">
+        <a href="https://github.com/rohinirt/SQL_Projects/tree/main/Spotify_Analysis" target="_blank" rel="noopener" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/spotify.png" alt="Spotify Songs Analysis" loading="lazy">
+              <div class="project-overlay">
+                <p>Used advanced PostgreSQL techniques to analyze streams, engagement, audio attributes, and artist performance, solving business problems across tracks, albums, and platforms.</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-sql-bg); color:var(--tool-sql-fg);">SQL</span>
+            <h3 class="project-title h3">Spotify Songs Analysis</h3>
+          </div>
+        </a>
+      </li>
+      <li class="project-card show" data-category="sql">
+        <a href="https://github.com/rohinirt/SQL_Projects/tree/main/Pizza%20Sales" target="_blank" rel="noopener" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/pizza.png" alt="Pizza Hut Sales" loading="lazy">
+              <div class="project-overlay">
+                <p>Analyzed 21K+ orders using advanced SQL to identify revenue trends, peak ordering periods, top products, and opportunities for inventory and staffing optimization.</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-sql-bg); color:var(--tool-sql-fg);">SQL</span>
+            <h3 class="project-title h3">Pizza Hut Sales</h3>
+          </div>
+        </a>
+      </li>
+      <li class="project-card show" data-category="sql">
+        <a href="https://github.com/rohinirt/SQL_Projects/tree/main/Music-Store-Analysis" target="_blank" rel="noopener" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/music.png" alt="Music Store Analysis" loading="lazy">
+              <div class="project-overlay">
+                <p>This SQL music store analysis project delves into customer behavior, sales patterns, and genre preferences. It identifies senior employees, top-selling countries, high-spending customers, and best-selling albums, aiding strategic decision-making.</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-sql-bg); color:var(--tool-sql-fg);">SQL</span>
+            <h3 class="project-title h3">Music Store Analysis</h3>
+          </div>
+        </a>
+      </li>
+      <li class="project-card show" data-category="sql">
+        <a href="https://github.com/rohinirt/SQL_Projects/tree/main/Superstore-Sales-Analysis" target="_blank" rel="noopener" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/superstore.png" alt="Superstore Sales" loading="lazy">
+              <div class="project-overlay">
+                <p>This SQL project analyzes sales data to extract insights for strategic decisions, covering metrics like total sales and profit, as well as trends in sales distribution.</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-sql-bg); color:var(--tool-sql-fg);">SQL</span>
+            <h3 class="project-title h3">Superstore Sales</h3>
+          </div>
+        </a>
+      </li>
+      <li class="project-card show" data-category="sql">
+        <a href="https://github.com/rohinirt/SQL_Projects/tree/main/Fraud-Detection" target="_blank" rel="noopener" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/fraud.png" alt="Fraud Detection" loading="lazy">
+              <div class="project-overlay">
+                <p>This SQL project aims to detect fraud within transactional data by querying for anomalies or irregular patterns suggestive of fraudulent activity</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-sql-bg); color:var(--tool-sql-fg);">SQL</span>
+            <h3 class="project-title h3">Fraud Detection</h3>
+          </div>
+        </a>
+      </li>
+      <li class="project-card show" data-category="sql">
+        <a href="https://github.com/rohinirt/SQL_Projects/tree/main/India-Census-2011" target="_blank" rel="noopener" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/census.png" alt="India-Census 2011" loading="lazy">
+              <div class="project-overlay">
+                <p>This SQL project examines India Census datasets to analyze population demographics, literacy rates, and growth trends by state</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-sql-bg); color:var(--tool-sql-fg);">SQL</span>
+            <h3 class="project-title h3">India-Census 2011</h3>
+          </div>
+        </a>
+      </li>
+      <li class="project-card show" data-category="sql">
+        <a href="https://github.com/rohinirt/SQL_Projects/tree/main/Customer-Segmentation" target="_blank" rel="noopener" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/customer.png" alt="Customer Segmentation" loading="lazy">
+              <div class="project-overlay">
+                <p>This SQL-driven customer segmentation project explores diverse aspects of an e-commerce dataset, including demographics, purchasing behavior, and satisfaction levels. total customer count, popular categories.</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-sql-bg); color:var(--tool-sql-fg);">SQL</span>
+            <h3 class="project-title h3">Customer Segmentation</h3>
+          </div>
+        </a>
+      </li>
+      <li class="project-card show" data-category="python">
+        <a href="https://github.com/rohinirt/Python_Projects/tree/main/Case%20Study%3A%20Retail%20Price%20Optimization" target="_blank" rel="noopener" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/retail.png" alt="Retail Price Optimization" loading="lazy">
+              <div class="project-overlay">
+                <p>Built a Random Forest demand model and pricing simulator, identifying optimal prices that delivered a 28% average revenue increase per product.</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-python-bg); color:var(--tool-python-fg);">Python</span>
+            <h3 class="project-title h3">Retail Price Optimization</h3>
+          </div>
+        </a>
+      </li>
+      <li class="project-card show" data-category="python">
+        <a href="https://github.com/rohinirt/Python_Projects/tree/main/Customer%20Lifetime%20Value%20Analysis" target="_blank" rel="noopener" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/clv.png" alt="Customer Lifetime Value Analysis" loading="lazy">
+              <div class="project-overlay">
+                <p>Evaluated acquisition channels using CLTV, ROI, conversion, and revenue metrics, identifying Social Media for highest CLTV and Email for strongest ROI.</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-python-bg); color:var(--tool-python-fg);">Python</span>
+            <h3 class="project-title h3">Customer Lifetime Value Analysis</h3>
+          </div>
+        </a>
+      </li>
+      <li class="project-card show" data-category="python">
+        <a href="https://github.com/rohinirt/Python_Projects/tree/main/Zepto%20Inventory%20-%20EDA" target="_blank" rel="noopener" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/zepto.png" alt="Zepto Inventory - EDA" loading="lazy">
+              <div class="project-overlay">
+                <p>Analyzed 3,200+ Zepto products to uncover pricing, discount, inventory, and category trends, identifying opportunities for pricing optimization and stock planning.</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-python-bg); color:var(--tool-python-fg);">Python</span>
+            <h3 class="project-title h3">Zepto Inventory - EDA</h3>
+          </div>
+        </a>
+      </li>
+      <li class="project-card show" data-category="python">
+        <a href="https://github.com/rohinirt/Python_Projects/tree/main/Amazon-Review_Sentiment-Analysis" target="_blank" rel="noopener" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/amazon.png" alt="Amazon Review Sentiment Analysis" loading="lazy">
+              <div class="project-overlay">
+                <p>Performed sentiment analysis on amazon reviews of toys to distribute reviews as positive, negative and neutral reviews and finding ratings given and keywords of each sentiment.</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-python-bg); color:var(--tool-python-fg);">Python</span>
+            <h3 class="project-title h3">Amazon Review Sentiment Analysis</h3>
+          </div>
+        </a>
+      </li>
+      <li class="project-card show" data-category="python">
+        <a href="https://github.com/rohinirt/Python_Projects/tree/main/House%20Price%20Prediction" target="_blank" rel="noopener" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/house.png" alt="House Price Prediction" loading="lazy">
+              <div class="project-overlay">
+                <p>Created a machine learning model using logistic regression to predict the house price based on variables such as location, size, year.</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-python-bg); color:var(--tool-python-fg);">Python</span>
+            <h3 class="project-title h3">House Price Prediction</h3>
+          </div>
+        </a>
+      </li>
+      <li class="project-card show" data-category="python">
+        <a href="https://github.com/rohinirt/Python_Projects/tree/main/Loan%20Approval%20Analysis" target="_blank" rel="noopener" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/loan.png" alt="Loan Approval Analysis" loading="lazy">
+              <div class="project-overlay">
+                <p>Identified impact of various factors such as age, gender, income, employment, and credit history on the loan approval decisions.</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-python-bg); color:var(--tool-python-fg);">Python</span>
+            <h3 class="project-title h3">Loan Approval Analysis</h3>
+          </div>
+        </a>
+      </li>
+      <li class="project-card show" data-category="python">
+        <a href="https://github.com/rohinirt/Python_Projects/tree/main/LinkedIn%20Data%20Analyst%20Jobs%20Analysis" target="_blank" rel="noopener" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/linkedIn.png" alt="LinkedIn Data Analysts Jobs" loading="lazy">
+              <div class="project-overlay">
+                <p>Analysed data analyst jobs posted on LinkedIn to identify industry trends, popular keywords in job description,top paying industries and job roles, job availability by locations to enhance job applications strategies</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-python-bg); color:var(--tool-python-fg);">Python</span>
+            <h3 class="project-title h3">LinkedIn Data Analysts Jobs</h3>
+          </div>
+        </a>
+      </li>
+      <li class="project-card show" data-category="python">
+        <a href="https://github.com/rohinirt/Python_Projects/tree/main/Heart%20Disease%20Risk%20Factors%20Analysis" target="_blank" rel="noopener" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/heart.png" alt="Heart Disease Risk Factors" loading="lazy">
+              <div class="project-overlay">
+                <p>Investigated multifactorial influences such as lifestyle, genetics, and medical history to discern key risk factors contributing to increased susceptibility to cardiovascular issues.</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-python-bg); color:var(--tool-python-fg);">Python</span>
+            <h3 class="project-title h3">Heart Disease Risk Factors</h3>
+          </div>
+        </a>
+      </li>
+      <li class="project-card show" data-category="excel">
+        <a href="https://drive.google.com/file/d/1tXsIa-Pic3MS9uvbG-iOjut7NohHQqdQ/view?usp=sharing" target="_blank" rel="noopener" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/superstoreexcel.png" alt="Superstore Sales" loading="lazy">
+              <div class="project-overlay">
+                <p>This Dashboard provides insights into sales trends by segment, shipping mode, and top states. It also visualizes region-wise sales, sales distribution across categories and subcategories, and analyzes the relationship between discounts and profit percentages</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-excel-bg); color:var(--tool-excel-fg);">Excel</span>
+            <h3 class="project-title h3">Superstore Sales</h3>
+          </div>
+        </a>
+      </li>
+      <li class="project-card show" data-category="excel">
+        <a href="https://drive.google.com/file/d/1FBemrkeipfGPZkB0wYiE2oa9oU0GKSgT/view?usp=sharing" target="_blank" rel="noopener" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/bikeexcel.png" alt="Bike Sales" loading="lazy">
+              <div class="project-overlay">
+                <p>This Dashboard differentiates customers based on purchase status, offering insights into average income, purchase behavior, analyzes age-group preferences, average income by occupation, and purchase tendencies such as distance traveled and number of cars owned.</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-excel-bg); color:var(--tool-excel-fg);">Excel</span>
+            <h3 class="project-title h3">Bike Sales</h3>
+          </div>
+        </a>
+      </li>
+      <li class="project-card show" data-category="excel">
+        <a href="https://drive.google.com/file/d/1LrkPhWjNQGhs4eoedw62O0TpKvEVbfmA/view?usp=sharing" target="_blank" rel="noopener" class="project-link">
+          <div class="project-thumb">
+            <div class="project-thumb-inner">
+              <img src="./assets/images/amazonexcel.png" alt="Amazon Ads" loading="lazy">
+              <div class="project-overlay">
+                <p>This Dashboard tracks weekly trends of impressions, clicks, carts added, and purchases of the advertised products, distinguishing between total and unique ASINs (Amazon Standard Identification Numbers). It also highlights top search queries by clicks, carts, and purchases.</p>
+                <span class="project-cta">Click to view project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tool" style="background:var(--tool-excel-bg); color:var(--tool-excel-fg);">Excel</span>
+            <h3 class="project-title h3">Amazon Ads</h3>
+          </div>
+        </a>
+      </li>
+  </ul>
+
+  <p class="projects-empty" data-projects-empty>No projects in this category yet.</p>
+
+</section>
+
+<!-- =========================================================
+     CONTACT
+========================================================= -->
+<section class="page" data-page="contact" id="contact">
+
+  <div class="contact-head">
+    <p class="eyebrow">Get In Touch</p>
+    <h2 class="h2">Let's Connect</h2>
+    <p style="margin-top:8px;">I'm always open to discussing new opportunities, collaborations, or just talking about data.</p>
+  </div>
+
+  <div class="contact-grid">
+    <div>
+      <div class="contact-list">
+        <div class="contact-row">
+          <div class="contact-icon icon-email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+          </div>
+          <div>
+            <div class="contact-label">Email</div>
+            <a class="contact-value" href="mailto:rohinitembhurnikar3@gmail.com">rohinitembhurnikar3@gmail.com</a>
+          </div>
+        </div>
+        <div class="contact-row">
+          <div class="contact-icon icon-phone">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .3 2 .6 3a2 2 0 0 1-.4 2.1L8 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c1 .3 2 .5 3 .6a2 2 0 0 1 1.6 2Z"/></svg>
+          </div>
+          <div>
+            <div class="contact-label">Phone</div>
+            <a class="contact-value" href="tel:+918010132326">+91 80101 32326</a>
+          </div>
+        </div>
+        <div class="contact-row">
+          <div class="contact-icon icon-linkedin">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="18" rx="3"/><rect x="6" y="9" width="3" height="9"/><circle cx="7.5" cy="6" r="1.3" fill="currentColor" stroke="none"/><path d="M12 9v9M12 13c0-2.2 1.8-4 4-4s3 1.8 3 4v5"/></svg>
+          </div>
+          <div>
+            <div class="contact-label">LinkedIn</div>
+            <a class="contact-value" href="https://www.linkedin.com/in/rohinit3/" target="_blank" rel="noopener">linkedin.com/in/rohinit3</a>
+          </div>
+        </div>
+        <div class="contact-row">
+          <div class="contact-icon icon-github">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.3 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.35 4.68-4.58 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>
+          </div>
+          <div>
+            <div class="contact-label">GitHub</div>
+            <a class="contact-value" href="https://github.com/rohinirt" target="_blank" rel="noopener">github.com/rohinirt</a>
+          </div>
+        </div>
+        <div class="contact-row">
+          <div class="contact-icon icon-location">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s7-6.4 7-12A7 7 0 0 0 5 10c0 5.6 7 12 7 12Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+          </div>
+          <div>
+            <div class="contact-label">Location</div>
+            <div class="contact-value">Gondia, India</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-note">
+        <div class="contact-note-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 7h-4V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2H4a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1Z"/><path d="M10 5h4v2h-4z"/><path d="M3 12h5l1 2h6l1-2h5"/></svg>
+        </div>
+        <div>
+          <b>Open to opportunities</b>
+          <span>Feel free to reach out for full-time roles, freelance projects, or just a friendly chat about data.</span>
+        </div>
+      </div>
+    </div>
+
+    <form class="contact-form" data-form action="https://formspree.io/f/mrpbenyn" method="POST">
+      <h3 class="contact-form-title">Send Me a Message</h3>
+      <input type="hidden" name="_subject" value="New message from portfolio site">
+      <div class="field">
+        <label for="cf-name">Name</label>
+        <input id="cf-name" name="name" type="text" placeholder="Your name" required data-form-input>
+      </div>
+      <div class="field">
+        <label for="cf-email">Email</label>
+        <input id="cf-email" name="email" type="email" placeholder="Your email" required data-form-input>
+      </div>
+      <div class="field">
+        <label for="cf-message">Message</label>
+        <textarea id="cf-message" name="message" placeholder="Write your message here..." required data-form-input></textarea>
+      </div>
+      <button type="submit" class="btn btn-coral" data-form-btn style="width:100%;">
+        <span data-form-btn-text>Send Message</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </button>
+      <p class="form-msg" data-form-msg></p>
+    </form>
+  </div>
+
+  <div class="contact-footer-band">
+    <p class="contact-footer-caption">Data<br>People<br>Better Decisions</p>
+    <p class="contact-footer-thanks">Thank you for visiting!</p>
+    <p class="contact-footer-sub">Let's build a data-driven tomorrow together.</p>
+  </div>
+
+</section>
+
+</main>
+
+<footer class="site-footer">
+  © <span data-year></span> Rohini Tembhurnikar. Built with data, curiosity and a lot of dashboards.
+</footer>
+
+<script src="./assets/js/script.js"></script>
+
+</body>
+</html>
